@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-12-02T06:04:12.466Z",
+  "formUrl": "https://www.zoho.com/forms/?campaignid=22356223675&adgroup=176257410643&keyword=create%20a%20form&matchtype=e&device=c&network=g&adposition=&placement=&gad_source=1&gad_campaignid=22356223675&gbraid=0AAAAACg12AvYfxbxAxAu3dJaX0Hy3MSxw&gclid=CjwKCAiAraXJBhBJEiwAjz7MZRlHuRRVKglX_KJLqfkQoiKP4SvRG8brBdtAV7Q-Ax6I3OoQTxyweBoCUOIQAvD_BwE",
+  "formFieldCount": 17,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "mappedFields": [],
+    "missingFields": [
+      {
+        "label": "Search for product overviews, FAQs, and more...",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "I'm looking for…",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Company Name *",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Email *",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Password *",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Country Code",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Phone Number *",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Phone number (Optional)",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Enter the word seen in the below image *",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Country",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Country State",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Enter OTP",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Search zoho.com",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "reason": "Dataset does not contain this information"
+      }
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "timestamp": "2025-12-02T06:51:37.143Z",
+  "url": "https://www.zoho.com/forms/?campaignid=22356223675&adgroup=176257410643&keyword=create%20a%20form&matchtype=e&device=c&network=g&adposition=&placement=&gad_source=1&gad_campaignid=22356223675&gbraid=0AAAAACg12AvYfxbxAxAu3dJaX0Hy3MSxw&gclid=CjwKCAiAraXJBhBJEiwAjz7MZRlHuRRVKglX_KJLqfkQoiKP4SvRG8brBdtAV7Q-Ax6I3OoQTxyweBoCUOIQAvD_BwE",
+  "commands": [
+    {
+      "fieldId": "r_account.account_name",
+      "selector": "[name='r_account.account_name']",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Company Name *",
+      "confidence": 1
+    },
+    {
+      "fieldId": "email",
+      "selector": "[name='email']",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email *",
+      "confidence": 1
+    },
+    {
+      "fieldId": "rmobile",
+      "selector": "[name='rmobile']",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Phone Number *",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country",
+      "selector": "[name='country']",
+      "value": "India",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "country_state",
+      "selector": "[name='country_state']",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country State",
+      "confidence": 0.5
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "r_account.account_name",
+        "label": "Company Name *",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Company name matches exactly with organization name in dataset",
+        "selector": "[name='r_account.account_name']"
+      },
+      {
+        "fieldId": "email",
+        "label": "Email *",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email address matches exactly with dataset email field",
+        "selector": "[name='email']"
+      },
+      {
+        "fieldId": "rmobile",
+        "label": "Phone Number *",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Phone number matches mobile number field from dataset",
+        "selector": "[name='rmobile']"
+      },
+      {
+        "fieldId": "country",
+        "label": "Country",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Country inferred from Chennai location and Tamil Nadu state in dataset",
+        "selector": "[name='country']"
+      },
+      {
+        "fieldId": "country_state",
+        "label": "Country State",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "State matches Tamil Nadu from dataset but option list shows only US states",
+        "selector": "[name='country_state']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Search for product overviews, FAQs, and more...",
+        "reason": "Dataset does not contain search query information"
+      },
+      {
+        "label": "I'm looking for…",
+        "reason": "Dataset does not contain user preference information"
+      },
+      {
+        "label": "Password *",
+        "reason": "Dataset does not contain password information"
+      },
+      {
+        "label": "Country Code",
+        "reason": "Dataset does not contain explicit country code information"
+      },
+      {
+        "label": "Phone number (Optional)",
+        "reason": "Dataset does not contain additional phone number information"
+      },
+      {
+        "label": "Enter the word seen in the below image *",
+        "reason": "Dataset does not contain captcha information"
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "reason": "Dataset does not contain marketing preference information"
+      },
+      {
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "reason": "Dataset does not contain terms acceptance information"
+      },
+      {
+        "label": "Enter OTP",
+        "reason": "Dataset does not contain OTP information"
+      },
+      {
+        "label": "Search zoho.com",
+        "reason": "Dataset does not contain search query information"
+      }
+    ]
+  }
+}

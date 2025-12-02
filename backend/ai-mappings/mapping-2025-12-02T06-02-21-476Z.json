@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-12-02T06:02:21.476Z",
+  "formUrl": "https://www.tickingminds.com/contact-us/",
+  "formFieldCount": 5,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain name information"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain email information"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain phone number information"
+      },
+      {
+        "fieldId": "services[]",
+        "label": "Services",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain services information"
+      },
+      {
+        "fieldId": "your-message",
+        "label": "Your Message",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain message content information"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Your Name (Required)",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Your Email (Required)",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Your Phone Number (Required)",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Services",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Your Message",
+        "reason": "Dataset does not contain this information"
+      }
+    ]
+  }
+}

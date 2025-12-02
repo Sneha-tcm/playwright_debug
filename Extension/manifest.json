@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "AI Autofill Extension1",
-  "version": "1.0.0",
-  "description": "Autofill forms using backend-provided JSON mappings and user-selected documents.",
+  "name": "AI Autofill Extension - Direct Fill",
+  "version": "2.0.0",
+  "description": "Automatically fill forms using AI-powered field mapping with direct autofill",
 
   "action": {
     "default_popup": "popup/popup.html",
@@ -21,11 +21,14 @@
     "activeTab",
     "scripting",
     "storage",
-    "identity"
+    "identity",
+    "contextMenus",
+    "notifications"
   ],
 
   "host_permissions": [
-    "https://www.googleapis.com/*"
+    "https://www.googleapis.com/*",
+    "http://localhost:3000/*"
   ],
 
   "oauth2": {
@@ -41,7 +44,6 @@
         "picker/picker.html",
         "picker/*.html",
         "assets/*",
-
         "lib/mammoth.browser.min.js",
         "lib/pdf.min.js",
         "lib/pdf.worker.min.js",
@@ -50,10 +52,6 @@
       "matches": ["<all_urls>"]
     }
   ],
-
-  "externally_connectable": {
-    "matches": []
-  },
 
   "background": {
     "service_worker": "background/background.js"
@@ -65,5 +63,15 @@
       "js": ["content/content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+
+  "commands": {
+    "trigger-autofill": {
+      "suggested_key": {
+        "default": "Alt+A",
+        "mac": "Alt+A"
+      },
+      "description": "Trigger AI Autofill"
+    }
+  }
 }

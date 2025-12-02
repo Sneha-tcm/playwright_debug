@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-12-02T07:00:44.779Z",
+  "url": "https://meet.google.com/vkp-hmcx-csf",
+  "commands": [
+    {
+      "fieldId": "i2",
+      "selector": "#i2",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Your name",
+      "confidence": 0.8
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "i2",
+        "label": "Your name",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Mapped from Founder's name field in dataset as most appropriate match for personal name field",
+        "selector": "#i2"
+      }
+    ],
+    "missingFields": []
+  }
+}

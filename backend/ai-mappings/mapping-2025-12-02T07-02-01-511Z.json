@@ -1,0 +1,167 @@
+{
+  "timestamp": "2025-12-02T07:02:01.511Z",
+  "url": "https://www.zoho.com/forms/?campaignid=22356223675&adgroup=176257410643&keyword=create%20a%20form&matchtype=e&device=c&network=g&adposition=&placement=&gad_source=1&gad_campaignid=22356223675&gbraid=0AAAAACg12AvYfxbxAxAu3dJaX0Hy3MSxw&gclid=CjwKCAiAraXJBhBJEiwAjz7MZRlHuRRVKglX_KJLqfkQoiKP4SvRG8brBdtAV7Q-Ax6I3OoQTxyweBoCUOIQAvD_BwE",
+  "commands": [
+    {
+      "fieldId": "r_account.account_name",
+      "selector": "input[name='r_account.account_name']",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Company Name *",
+      "confidence": 1
+    },
+    {
+      "fieldId": "email",
+      "selector": "input[name='email']",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email *",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country_code",
+      "selector": "select[name='country_code']",
+      "value": "India (+91)",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country Code",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "rmobile",
+      "selector": "input[name='rmobile']",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Phone Number *",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country",
+      "selector": "select[name='country']",
+      "value": "India",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "country_state",
+      "selector": "select[name='country_state']",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country State",
+      "confidence": 0
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "r_account.account_name",
+        "label": "Company Name *",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in dataset as Organization name",
+        "selector": "input[name='r_account.account_name']"
+      },
+      {
+        "fieldId": "email",
+        "label": "Email *",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email address found in dataset",
+        "selector": "input[name='email']"
+      },
+      {
+        "fieldId": "password",
+        "label": "Password *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Password not available in dataset",
+        "selector": "input[name='password']"
+      },
+      {
+        "fieldId": "country_code",
+        "label": "Country Code",
+        "mappedValue": "India (+91)",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Inferred from Tamil Nadu location in India",
+        "selector": "select[name='country_code']"
+      },
+      {
+        "fieldId": "rmobile",
+        "label": "Phone Number *",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number found in dataset",
+        "selector": "input[name='rmobile']"
+      },
+      {
+        "fieldId": "country",
+        "label": "Country",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Inferred from Tamil Nadu location in India",
+        "selector": "select[name='country']"
+      },
+      {
+        "fieldId": "country_state",
+        "label": "Country State",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Tamil Nadu not available in state dropdown options",
+        "selector": "select[name='country_state']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Search for product overviews, FAQs, and more...",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "I'm looking for…",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Phone number (Optional)",
+        "reason": "Alternative phone number not available"
+      },
+      {
+        "label": "Enter the word seen in the below image *",
+        "reason": "CAPTCHA cannot be pre-filled"
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "reason": "User preference not available"
+      },
+      {
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "reason": "User preference not available"
+      },
+      {
+        "label": "Enter OTP",
+        "reason": "OTP cannot be pre-filled"
+      },
+      {
+        "label": "Search zoho.com",
+        "reason": "Dataset does not contain this information"
+      }
+    ]
+  }
+}

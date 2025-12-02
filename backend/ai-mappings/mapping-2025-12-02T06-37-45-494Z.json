@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-12-02T06:37:45.502Z",
+  "url": "https://www.tickingminds.com/contact-us/",
+  "commands": [
+    {
+      "fieldId": "your-name",
+      "selector": "#your-name",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Your Name (Required)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "your-email",
+      "selector": "#your-email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Your Email (Required)",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "your-phone",
+      "selector": "#your-phone",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "tel",
+      "action": "fill",
+      "label": "Your Phone Number (Required)",
+      "confidence": 0.9
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Founder's name is the closest match for a contact name in the dataset",
+        "selector": "#your-name"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Email field found in the dataset organization data",
+        "selector": "#your-email"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mobile number from dataset matches phone number field requirement",
+        "selector": "#your-phone"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Services",
+        "reason": "Dataset does not contain information about available services"
+      },
+      {
+        "label": "Your Message",
+        "reason": "This is a free-text field requiring user input, not pre-filled data"
+      }
+    ]
+  }
+}
