@@ -1,0 +1,14 @@
+{
+  "filename": "1.docx",
+  "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "extension": "docx",
+  "size": 11828,
+  "lastModified": "2025-10-23T12:37:14.938Z",
+  "extractedAt": "2025-11-27T10:30:40.693Z",
+  "data": {
+    "type": "unstructured_text",
+    "lineCount": 7,
+    "content": "1.search for csr\n\n2.filter grants\n\n3.based on give small details\n\n4.ngo type🡪summary give\n\n5.automaticatlly file form but login faced issues\n\n6.pdf alos available \n\n7.\n\n\n\n",
+    "detectedPatterns": []
+  }
+}

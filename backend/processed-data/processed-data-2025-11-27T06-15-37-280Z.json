@@ -1,0 +1,15 @@
+{
+  "errorCount": 1,
+  "files": [
+    {
+      "error": "Failed to extract from Generative AI Concepts (1).docx: Mammoth.js library not loaded. Cannot process DOCX files.",
+      "extractedAt": "2025-11-27T06:15:37.278Z",
+      "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "filename": "Generative AI Concepts (1).docx",
+      "size": 25097
+    }
+  ],
+  "processedAt": "2025-11-27T06:15:37.280Z",
+  "successCount": 0,
+  "totalFiles": 1
+}

@@ -1,0 +1,188 @@
+{
+  "timestamp": "2025-12-02T05:23:02.772Z",
+  "formUrl": "https://www.zoho.com/forms/?campaignid=22356223675&adgroup=176257410643&keyword=create%20a%20form&matchtype=e&device=c&network=g&adposition=&placement=&gad_source=1&gad_campaignid=22356223675&gbraid=0AAAAACg12AvYfxbxAxAu3dJaX0Hy3MSxw&gclid=CjwKCAiAraXJBhBJEiwAjz7MZRlHuRRVKglX_KJLqfkQoiKP4SvRG8brBdtAV7Q-Ax6I3OoQTxyweBoCUOIQAvD_BwE",
+  "formFieldCount": 17,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "mappedFields": [
+      {
+        "fieldId": "query",
+        "label": "Search for product overviews, FAQs, and more...",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain this information"
+      },
+      {
+        "fieldId": "i_m_looking_for_",
+        "label": "I'm looking for…",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain this information"
+      },
+      {
+        "fieldId": "r_account.account_name",
+        "label": "Company Name *",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization name found directly in dataset"
+      },
+      {
+        "fieldId": "email",
+        "label": "Email *",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email found directly in dataset"
+      },
+      {
+        "fieldId": "password",
+        "label": "Password *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain password information"
+      },
+      {
+        "fieldId": "country_code",
+        "label": "Country Code",
+        "mappedValue": "India (+91)",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Inferred from mobile number and address location in Chennai, India"
+      },
+      {
+        "fieldId": "rmobile",
+        "label": "Phone Number *",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number found directly in dataset"
+      },
+      {
+        "fieldId": "r_address/1.phone",
+        "label": "Phone number (Optional)",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Same mobile number from dataset"
+      },
+      {
+        "fieldId": "captcha",
+        "label": "Enter the word seen in the below image *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain captcha information"
+      },
+      {
+        "fieldId": "country",
+        "label": "Country",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Inferred from address location in Chennai, Tamil Nadu"
+      },
+      {
+        "fieldId": "country_state",
+        "label": "Country State",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset contains Tamil Nadu but not in US state format"
+      },
+      {
+        "fieldId": "newsletter",
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain marketing preference information"
+      },
+      {
+        "fieldId": "tos",
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain terms acceptance information"
+      },
+      {
+        "fieldId": "otp",
+        "label": "Enter OTP",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain OTP information"
+      },
+      {
+        "fieldId": "search_for_product_overviews_faqs_and_more_",
+        "label": "Search for product overviews, FAQs, and more...",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain this information"
+      },
+      {
+        "fieldId": "search_zoho.com",
+        "label": "Search zoho.com",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain this information"
+      },
+      {
+        "fieldId": "i18n_onclick_handler",
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain marketing preference information"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Search for product overviews, FAQs, and more...",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "I'm looking for…",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Password *",
+        "reason": "Dataset does not contain password information"
+      },
+      {
+        "label": "Enter the word seen in the below image *",
+        "reason": "Dataset does not contain captcha information"
+      },
+      {
+        "label": "Country State",
+        "reason": "Dataset contains Tamil Nadu but form expects US state format"
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho's products, services, and events from Zoho and its regional partners.",
+        "reason": "Dataset does not contain marketing preference information"
+      },
+      {
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "reason": "Dataset does not contain terms acceptance information"
+      },
+      {
+        "label": "Enter OTP",
+        "reason": "Dataset does not contain OTP information"
+      },
+      {
+        "label": "Search zoho.com",
+        "reason": "Dataset does not contain this information"
+      }
+    ]
+  }
+}

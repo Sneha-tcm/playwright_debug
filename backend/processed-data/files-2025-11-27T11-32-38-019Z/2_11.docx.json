@@ -1,0 +1,19 @@
+{
+  "data": {
+    "content": "❌ 1. chrome.storage has EXTREMELY small storage\n\nLimits:\n\nchrome.storage.sync → 100KB total\n\nchrome.storage.local → 5MB max\n\nYour NGO documents will be:\n\nPDF (2–20MB each)\n\nWord files\n\nImages\n\nScanned certificates\n\n➡ They will NOT fit in chrome.storage.Even one PDF breaks the limit.\n\n\n\n❌ 2. chrome.storage cannot store files\n\nIt can store ONLY:\n\nstrings\n\nJSON\n\nsmall base64 data\n\nIt cannot store large PDFs or DOCX files properly.\n\nTo store 5MB PDF, you must convert to base64 → becomes 7MB → FAIL.\n\n\n\n❌ 3. Data is lost if user clears browser\n\nIf user:\n\nuninstalls the extension\n\nclears cookies\n\nclears browser storage\n\n➡ All NGO documents are permanently lostYou have no backup.\n\nThis is VERY risky for NGO official documents.\n\n\n\n❌ 4. chrome.storage works only on one device\n\nIf user uploads documents on:\n\nLaptop → ✓Phone → ❌ (extension not synced)Another laptop → ❌\n\nThere is no multi-device syncing.\n\nNGO team members cannot share documents.\n\n\n\n❌ 5. No security\n\nchrome.storage is stored inside the browser.\n\nAnyone can:\n\nOpen DevTools → Application → chrome.storage\n\nView all data\n\nEdit all data\n\nDelete all data\n\nNo encryption.No access control.Not safe for personal or NGO data.\n\n\n\n❌ 6. No user accounts / No login\n\nYour project needs:\n\nmultiple NGOs\n\neach NGO with separate files\n\nsecure authentication\n\nrole-based access\n\nchrome.storage does not support login.Everything is stored together.\n\n\n\n❌ 7. Not scalable\n\nToday: 2 PDFsTomorrow: 20–200 documents\n\nchrome.storage will fail.\n\nYour AI features (RAG, system prompt, autofill) need a reliable document store.\n\n\n\n❌ 8. Not accessible by backend / cloud\n\nchrome.storage is local to the browser.\n\nYour backend MCP server cannot fetch documents stored inside chrome.storage.\n\nBut your autofill workflow needs:\n\nBrowser Extension → Backend (MCP) → AI Model → Playwright → Autofill\n\nBack-end cannot access chrome.storage → breaks workflo\n\n\n\n",
+    "detectedPatterns": [
+      "key-value"
+    ],
+    "keyValuePairs": {
+      "Today": "2 PDFsTomorrow: 20–200 documents"
+    },
+    "lineCount": 54,
+    "type": "unstructured_text"
+  },
+  "extension": "docx",
+  "extractedAt": "2025-11-27T11:32:36.542Z",
+  "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  "filename": "11.docx",
+  "lastModified": "2025-11-19T16:08:16.284Z",
+  "size": 15776
+}

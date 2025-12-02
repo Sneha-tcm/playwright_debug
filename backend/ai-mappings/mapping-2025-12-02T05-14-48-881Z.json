@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-12-02T05:14:48.882Z",
+  "formUrl": "https://www.tickingminds.com/contact-us/",
+  "formFieldCount": 5,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Founder name mapped from dataset"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email address mapped from dataset"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number mapped from dataset"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Services",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Your Message",
+        "reason": "Dataset does not contain this information"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-02T05:13:49.186Z",
+  "formUrl": "https://www.tickingminds.com/contact-us/",
+  "formFieldCount": 5,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "error": "No content in API response",
+    "errorType": "unknown",
+    "mappedFields": [],
+    "missingFields": []
+  }
+}

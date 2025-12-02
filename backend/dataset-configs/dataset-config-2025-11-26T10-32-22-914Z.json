@@ -1,0 +1,20 @@
+{
+  "drive": {
+    "link": "https://docs.google.com/document/d/1RfPuVgAx28xyVPhjThf8I_BnafuS2-4bQaURTvd3m-s/edit?usp=drive_link",
+    "id": "1RfPuVgAx28xyVPhjThf8I_BnafuS2-4bQaURTvd3m-s",
+    "name": "File",
+    "type": "document"
+  },
+  "lastSaved": 1764153142877,
+  "local": {
+    "items": [
+      {
+        "name": "Documents",
+        "path": "Documents",
+        "type": "folder"
+      }
+    ],
+    "totalFiles": 144
+  },
+  "type": "local"
+}

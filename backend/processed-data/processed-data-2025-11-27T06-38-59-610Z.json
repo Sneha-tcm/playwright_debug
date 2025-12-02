@@ -1,0 +1,22 @@
+{
+  "totalFiles": 1,
+  "successCount": 1,
+  "errorCount": 0,
+  "processedAt": "2025-11-27T06:38:59.610Z",
+  "files": [
+    {
+      "filename": "Questions.docx",
+      "fileType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "extension": "docx",
+      "size": 17208,
+      "lastModified": "2025-11-27T06:37:49.811Z",
+      "extractedAt": "2025-11-27T06:38:59.610Z",
+      "data": {
+        "type": "unstructured_text",
+        "lineCount": 38,
+        "content": "NGO Proposal & Donor Management Questionnaire\n\nA. NGO Operations & Project Scope\n\nWhat are the exact areas of operation other than women empowerment, leadership, or CSR programs?\n\nHow to access information related to previous projects and financial status?\n\nWhich locations are feasible or executable?\n\nWhat are the existing projects or information related to all existing projects and their donors?\n\nDo we have certain programs or schemes for women in various areas, or do we need to implement programs specific to or beneficial for women across diverse locations?\n\nWhat age groups do you primarily serve?\n\nDo you work in rural areas, urban areas, or both?\n\nWhat types of projects are most important for the AI to prioritize for grants?\n\nHow do you calculate the funding gap for upcoming projects or programs?\n\nB. Donor Engagement & Fundraising\n\nHow do they search for grants or donors? Do you prefer to approach donors directly or through intermediary platforms?\n\nWhich types of funding should the LLM search for (e.g., government, corporate CSR, international foundations, NGOs), and should it prioritize certain funders or sources over others?\n\nHow to approach new donors?\n\nAre there any regular or frequent donors whom we can approach for every project?\n\nAre there specific types of donors you wish to target in the future?\n\nC. Proposal Management & Tracking\n\nHow do you like to track the proposal and at which frequency do you want to receive status updates? (Internal tracking or after approaching donors)\n\nHow do you like to get reminded or receive follow-ups regarding the status of proposals? (e.g., emails or Google Calendar)\n\nWhat are the appropriate supporting materials that need to be attached with the proposal, and how can we access them?\n\nCan we get access to proposals that were previously sent to donors for reference?\n\nWhat are the next steps after responding to proposals, and how can they be tracked?\n\nHow do you prioritize proposals if multiple opportunities arrive simultaneously?\n\nD. Proposal Validation & AI Integration\n\nWhat are all the mandates (tie-ups, compliance, regulations) the LLM should look for in a proposal before responding to it?\n\nHow to ensure the credibility of a proposal received from an external body?\n\nWhat are all the validations that need to be done before responding to a proposal, other than area of operation, geography, and mandates?\n\nIn what situations do you need the LLM to flag a proposal for manual review?\n\nWhile generating a proposal for a government tender, are there any mandates that need to be included?\n\n\n\nE. Monitoring & Evaluation\n\nWhat are the ways we are going to collect information or feedback on a program executed and its impact? How have you done this in the past?\n\nHow is project impact measured — by number of beneficiaries, outcomes, or social indicators?\n\nHow often are monitoring reports sent to grantors — monthly, quarterly, or annually?\n\nDo you want the AI to automatically generate donor-ready reports and summaries?\n\nF. Challenges & Process Improvements\n\nWhat are the biggest challenges currently faced while handling proposals manually?\n\nHow are proposals reviewed internally before submission — is there a multi-level approval process?\n\n\n\n",
+        "detectedPatterns": []
+      }
+    }
+  ]
+}

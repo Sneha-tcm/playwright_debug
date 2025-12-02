@@ -1,0 +1,81 @@
+{
+  "totalFiles": 1,
+  "successCount": 1,
+  "errorCount": 0,
+  "processedAt": "2025-12-02T04:40:49.178Z",
+  "files": [
+    {
+      "filename": "Sample_Testing_Sheet.xlsx",
+      "fileType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "extension": "xlsx",
+      "size": 6273,
+      "lastModified": "2025-12-01T12:25:12.227Z",
+      "extractedAt": "2025-12-02T04:40:49.178Z",
+      "data": {
+        "Sheet1": [
+          [
+            "Organization name(as per PAN)",
+            "Organization PAN number",
+            "Date of Establishment (as per PAN card)",
+            "Registered under which Act?*",
+            "Office location(address)",
+            "Pincode",
+            "Registration number of 12A / 10(23C) and Validity",
+            "Registration number of 80G and validity",
+            "FCRA Validity",
+            "Registration number",
+            "Date of registration",
+            "NPO type",
+            "Last registration renewal date",
+            "State",
+            "Registration authority",
+            "Number of office bearers including members",
+            "Founder's name",
+            "Mobile number",
+            "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+            "Does the organisation have a valid 12A or 10(23C), as applicable?",
+            "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+            "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+            "Registered under which Act?",
+            "Brief description of the organization/agency including Goals and Objectives.",
+            "Gender",
+            "Email"
+          ],
+          [
+            "Global Adjustments Foundation",
+            "AAGCG8730N",
+            42452,
+            "Sec 8 of Companys act",
+            "NO 5 3rd main road, R A Puram Chennai",
+            600018,
+            "AAGCG8730N23ch01 - valid - 2027-28",
+            "AAGCG8730N23ch02 - valid - 2027-28",
+            "NA",
+            "NA",
+            "NA",
+            "Not for profit public benefit organisation",
+            null,
+            "Tamil Nadu",
+            "Comapnys ACT",
+            5,
+            "Ranjini Manian",
+            90877675242,
+            "yes",
+            null,
+            "yes",
+            null,
+            "Companys ACT",
+            "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+            "Female",
+            "sneha@gmail.com"
+          ],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "filename": "popup.css",
+  "fileType": "text/css",
+  "extension": "css",
+  "size": 210,
+  "lastModified": "2025-10-29T07:18:21.900Z",
+  "extractedAt": "2025-11-27T07:09:53.991Z",
+  "data": {
+    "type": "unstructured_text",
+    "lineCount": 13,
+    "content": "body {\r\n  font-family: Arial, sans-serif;\r\n  padding: 10px;\r\n  width: 300px;\r\n}\r\n\r\nh3 {\r\n  margin-top: 0;\r\n}\r\n\r\n#fieldList div {\r\n  margin-bottom: 8px;\r\n  padding: 4px;\r\n  border-bottom: 1px solid #ccc;\r\n}\r\n",
+    "detectedPatterns": []
+  }
+}

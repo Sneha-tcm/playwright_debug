@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-12-02T04:48:46.296Z",
+  "formUrl": "https://www.tickingminds.com/contact-us/",
+  "formFieldCount": 5,
+  "endpointUsed": {
+    "name": "Z.AI General API (Primary)",
+    "url": "https://api.z.ai/api/paas/v4/chat/completions",
+    "model": "glm-4.6"
+  },
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "error": "All API endpoints failed",
+    "details": "All endpoints failed. Last error: 401 - {\"error\":{\"code\":\"1000\",\"message\":\"身份验证失败。\"}}",
+    "mappedFields": [],
+    "missingFields": []
+  }
+}

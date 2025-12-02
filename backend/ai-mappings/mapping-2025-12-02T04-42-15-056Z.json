@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-02T04:42:15.056Z",
+  "formUrl": "https://www.tickingminds.com/contact-us/",
+  "formFieldCount": 5,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "error": "Invalid Z.AI API key",
+    "errorType": "unknown",
+    "mappedFields": [],
+    "missingFields": []
+  }
+}

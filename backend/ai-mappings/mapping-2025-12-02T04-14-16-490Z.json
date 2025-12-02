@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-02T04:14:16.491Z",
+  "formUrl": "https://atalfoundation.ind.in/online-application/",
+  "formFieldCount": 37,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764592090729,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "error": "request to https://api.ollamacloud.com/v1/chat/completions failed, reason: getaddrinfo ENOTFOUND api.ollamacloud.com",
+    "errorType": "ENOTFOUND",
+    "mappedFields": [],
+    "missingFields": []
+  }
+}

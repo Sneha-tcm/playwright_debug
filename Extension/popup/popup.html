@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Autofill — Dataset Picker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">AI Autofill</h2>
+<!-- 
+    <div class="controls">
+      <label class="label">Choose source</label> -->
+      <!-- <div class="btn-row">
+        <button id="chooseLocal" class="btn">📁 Local File</button>
+        <button id="chooseDrive" class="btn">☁️ Google Drive</button>
+      </div> -->
+    <!-- </div> -->
+
+    <!-- <div id="selectedArea" class="selected-area" aria-live="polite">
+      <div id="noFile" class="no-file">No file selected</div>
+      <div id="fileCard" class="file-card hidden">
+        <div class="file-meta">
+          <div id="fileName" class="file-name"></div>
+          <div id="fileTs" class="file-ts"></div>
+        </div>
+        <div class="file-actions">
+          <button id="removeFile" class="mini-btn">Remove</button>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="gap"></div>
+
+    <button id="scanBtn" class="btn primary">🔎 Scan & Autofill</button>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="../utils/messaging.js"></script>
+  <script src="../utils/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "totalFiles": 1,
+  "successCount": 1,
+  "errorCount": 0,
+  "processedAt": "2025-11-27T09:19:12.272Z",
+  "files": [
+    {
+      "filename": "content.js",
+      "fileType": "text/javascript",
+      "extension": "js",
+      "size": 523,
+      "lastModified": "2025-10-29T09:05:15.866Z",
+      "extractedAt": "2025-11-27T09:19:12.271Z",
+      "data": {
+        "type": "unstructured_text",
+        "lineCount": 11,
+        "content": "const fields = document.querySelectorAll(\"input, textarea, select\");\r\nconst fieldData = [];\r\n\r\nfields.forEach((field, index) => {\r\n  const label = field.labels?.[0]?.innerText || field.getAttribute(\"aria-label\") || \"Unknown\";\r\n  const fieldId = field.id || `input_${index}`;\r\n\r\n  field.style.border = \"2px solid #4CAF50\";\r\n  field.style.backgroundColor = \"#f0fff0\";\r\n  field.title = `Detected: ${label}`;\r\n\r\n  fieldData.push({ fieldId, label });\r\n});\r\n\r\nchrome.runtime.sendMessage({ type: \"fieldData\", data: fieldData });\r\n",
+        "detectedPatterns": []
+      }
+    }
+  ]
+}

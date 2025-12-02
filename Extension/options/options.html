@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Dataset Configuration</title>
+  <link rel="stylesheet" href="./options.css" />
+  <style>
+    /* Additional styles for new elements */
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: #667eea;
+    }
+
+    .checkbox-group label {
+      font-size: 14px;
+      color: #555;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    #processingStatus {
+      padding: 12px 16px;
+      background: #fff3e0;
+      border: 2px solid #ffb74d;
+      border-radius: 8px;
+      color: #e65100;
+      font-size: 13px;
+      margin-top: 12px;
+      display: none;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .info-box {
+      background: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      padding: 12px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #1565c0;
+      margin-top: 12px;
+    }
+
+    .info-box strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-card">
+    <h2>Dataset Configuration</h2>
+    <div class="data-set">
+      <!-- Local choose: folder or multiple files -->
+      <div class="row">
+        <button class="icon-btn" id="localBtn" title="Choose local files or folder">
+          📁
+          <span class="btn-text">Local Files / Folder</span>
+        </button>
+        <p class="helper">Browse local folder or select multiple files. Supported: PDF, CSV, XLSX, TXT, images.</p>
+        <div class="summary" id="localSummary">No local selection</div>
+        
+        <!-- File Processing Option -->
+        <div class="checkbox-group">
+          <input type="checkbox" id="processFilesCheckbox" checked>
+          <label for="processFilesCheckbox">
+            Extract and process file content (converts to JSON)
+          </label>
+        </div>
+        
+        <!-- Processing Status -->
+        <div id="processingStatus"></div>
+        
+        <!-- Info Box -->
+        <div class="info-box">
+          <strong>💡 Supported File Types:</strong>
+          TXT, CSV, JSON, PDF, DOCX, XLSX, XLS
+        </div>
+      </div>
+
+      <!-- Google Drive Link Input -->
+      <div class="row">
+        <div class="drive-input-container">
+          <input 
+            type="text" 
+            id="driveInput" 
+            class="drive-input" 
+            placeholder="Paste Google Drive link here (folder or file)"
+          />
+        </div>
+        <p class="helper">Paste a shareable Google Drive link (folder or file). Supported: PDF, CSV, XLSX, TXT, images.</p>
+        <div class="summary" id="driveSummary">No Drive link provided</div>
+        
+        <!-- Info Box for Drive -->
+        <div class="info-box">
+          <strong>💡 Supported Links:</strong>
+          Files, Folders, Docs, Sheets, Slides, Forms
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="saveBtn" class="primary" disabled>Save Configuration</button>
+      <button id="clearBtn" class="secondary" disabled>Clear Configuration</button>
+    </div>
+
+    <div class="timestamp" id="timestamp"></div>
+  </div>
+
+  <!-- Load external libraries for file processing -->
+<script src="../lib/pdf.min.js"></script>
+<script src="../lib/pdf-config.js"></script>
+<script src="../lib/mammoth.browser.min.js"></script>
+<script src="../lib/xlsx.full.min.js"></script>
+
+<!-- Main options script -->
+
+  <script src="./options.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-12-01T13:23:06.994Z",
+  "formUrl": "https://grih.info/grant-application-form/",
+  "formFieldCount": 75,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764592090729,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "error": "fetch failed",
+    "mappedFields": [],
+    "missingFields": []
+  }
+}

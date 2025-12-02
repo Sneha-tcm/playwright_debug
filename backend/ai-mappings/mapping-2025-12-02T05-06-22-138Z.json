@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-12-02T05:06:22.139Z",
+  "formUrl": "https://atalfoundation.ind.in/online-application/",
+  "formFieldCount": 37,
+  "datasetUsed": {
+    "type": "local",
+    "lastSaved": 1764650463956,
+    "summary": "1 files"
+  },
+  "mappingResult": {
+    "error": "API request failed: 400 - {\"error\":\"prompt too long, limit is 202752 tokens\"}\n",
+    "errorType": "unknown",
+    "mappedFields": [],
+    "missingFields": []
+  }
+}
