@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-12-02T11:25:10.527Z",
+  "url": "https://appi.fluxx.io/lois/1243502/edit",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [],
+    "missingFields": [
+      {
+        "label": "Username",
+        "reason": "Dataset does not contain this information"
+      },
+      {
+        "label": "Password",
+        "reason": "Dataset does not contain this information"
+      }
+    ]
+  }
+}

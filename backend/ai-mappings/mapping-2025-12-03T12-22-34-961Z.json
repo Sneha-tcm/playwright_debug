@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-03T12:22:34.962Z",
+  "url": "https://appi.fluxx.io/lois/1243761/edit",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "g-recaptcha-response",
+        "label": "G-Recaptcha-Response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Recaptcha response cannot be automatically filled.",
+        "selector": null
+      }
+    ],
+    "missingFields": []
+  }
+}

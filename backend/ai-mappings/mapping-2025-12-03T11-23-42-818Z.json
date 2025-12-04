@@ -1,0 +1,458 @@
+{
+  "timestamp": "2025-12-03T11:23:42.828Z",
+  "url": "https://appi.fluxx.io/lois/1243735/edit",
+  "commands": [
+    {
+      "fieldId": "loi[organization_name]",
+      "selector": "loi[organization_name]",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation Name (As per your registration document)*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[tax_id]",
+      "selector": "loi[tax_id]",
+      "value": "AAGCG8730N",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation PAN (as per your PAN card)*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[date_of_establishment]",
+      "selector": "loi[date_of_establishment]",
+      "value": "07/03/1916",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Date of Establishment (as per PAN card)*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[specify_org_registered_under_which_act]",
+      "selector": "loi[specify_org_registered_under_which_act]",
+      "value": "Sec 8 of Companys act",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Registered under which Act?*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[address]",
+      "selector": "loi[address]",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address 1*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[city]",
+      "selector": "loi[city]",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "City*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[org_geo_state_1]",
+      "selector": "loi[org_geo_state_1]",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State / Province*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[postal_code]",
+      "selector": "loi[postal_code]",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Pin Code*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[org_email]",
+      "selector": "loi[org_email]",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation E-mail",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[org_phone]",
+      "selector": "loi[org_phone]",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation Phone",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[founders_name]",
+      "selector": "loi[founders_name]",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Founders Name*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[a12a_validity]",
+      "selector": "loi[a12a_validity]",
+      "value": "AAGCG8730N23ch01 - valid - 2027-28",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "12A / 10(23C) Validity*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[a80g_validity]",
+      "selector": "loi[a80g_validity]",
+      "value": "AAGCG8730N23ch02 - valid - 2027-28",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "80G Validity",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[fcra_validity]",
+      "selector": "loi[fcra_validity]",
+      "value": "NA",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "FCRA Validity",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[first_name_1]",
+      "selector": "loi[first_name_1]",
+      "value": "Ranjini",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "First Name*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[last_name_1]",
+      "selector": "loi[last_name_1]",
+      "value": "Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Last Name*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[mobile]",
+      "selector": "loi[mobile]",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "**Mobile Number*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[email]",
+      "selector": "loi[email]",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "**E-mail*",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "loi[organization_name]",
+        "label": "Organisation Name (As per your registration document)*",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Organization name from the dataset matches the form field label.",
+        "selector": "loi[organization_name]"
+      },
+      {
+        "fieldId": "loi[tax_id]",
+        "label": "Organisation PAN (as per your PAN card)*",
+        "mappedValue": "AAGCG8730N",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Organization PAN from the dataset matches the form field label.",
+        "selector": "loi[tax_id]"
+      },
+      {
+        "fieldId": "loi[date_of_establishment]",
+        "label": "Date of Establishment (as per PAN card)*",
+        "mappedValue": "07/03/1916",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Date of Establishment from the dataset matches the form field label. Converted excel date to dd/mm/yyyy",
+        "selector": "loi[date_of_establishment]"
+      },
+      {
+        "fieldId": "loi[nature_of_establishment]",
+        "label": "Nature of Establishment*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "No direct match found in the dataset, but 'Not for profit public benefit organisation' is closest.",
+        "selector": "loi[nature_of_establishment]"
+      },
+      {
+        "fieldId": "loi[specify_org_registered_under_which_act]",
+        "label": "Registered under which Act?*",
+        "mappedValue": "Sec 8 of Companys act",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Registered under which Act from the dataset matches the form field label.",
+        "selector": "loi[specify_org_registered_under_which_act]"
+      },
+      {
+        "fieldId": "loi[address]",
+        "label": "Address 1*",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Address from the dataset matches the form field label.",
+        "selector": "loi[address]"
+      },
+      {
+        "fieldId": "loi[street_address2]",
+        "label": "Address 2",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "No specific 'Address 2' field found, assuming it's part of the main address.",
+        "selector": "loi[street_address2]"
+      },
+      {
+        "fieldId": "loi[city]",
+        "label": "City*",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Extracted city from the 'Office location(address)' field in the dataset.",
+        "selector": "loi[city]"
+      },
+      {
+        "fieldId": "loi[org_geo_state_1]",
+        "label": "State / Province*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Matched state from the 'State' field in the dataset.",
+        "selector": "loi[org_geo_state_1]"
+      },
+      {
+        "fieldId": "loi[postal_code]",
+        "label": "Pin Code*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Matched pin code from the 'Pincode' field in the dataset.",
+        "selector": "loi[postal_code]"
+      },
+      {
+        "fieldId": "loi[communication_address]",
+        "label": "Communication Address (if different from Registered Address)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "No separate communication address available in the dataset.",
+        "selector": "loi[communication_address]"
+      },
+      {
+        "fieldId": "loi[org_email]",
+        "label": "Organisation E-mail",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Matched email from the 'Email' field in the dataset.",
+        "selector": "loi[org_email]"
+      },
+      {
+        "fieldId": "loi[org_phone]",
+        "label": "Organisation Phone",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Extracted phone number from the excel sheet.",
+        "selector": "loi[org_phone]"
+      },
+      {
+        "fieldId": "loi[org_url]",
+        "label": "Organisation Website",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website found in the dataset.",
+        "selector": "loi[org_url]"
+      },
+      {
+        "fieldId": "loi[founders_name]",
+        "label": "Founders Name*",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Extracted founder's name from the excel sheet.",
+        "selector": "loi[founders_name]"
+      },
+      {
+        "fieldId": "loi[a12a_validity]",
+        "label": "12A / 10(23C) Validity*",
+        "mappedValue": "AAGCG8730N23ch01 - valid - 2027-28",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Extracted 12A validity from the excel sheet.",
+        "selector": "loi[a12a_validity]"
+      },
+      {
+        "fieldId": "loi[a80g_validity]",
+        "label": "80G Validity",
+        "mappedValue": "AAGCG8730N23ch02 - valid - 2027-28",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Extracted 80G validity from the excel sheet.",
+        "selector": "loi[a80g_validity]"
+      },
+      {
+        "fieldId": "loi[fcra_validity]",
+        "label": "FCRA Validity",
+        "mappedValue": "NA",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Extracted FCRA validity from the excel sheet.",
+        "selector": "loi[fcra_validity]"
+      },
+      {
+        "fieldId": "loi[thematic_area]",
+        "label": "Choose your areas of work - 1/3*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No direct match in the dataset, requires manual selection.",
+        "selector": "loi[thematic_area]"
+      },
+      {
+        "fieldId": "loi[thematic_area_2]",
+        "label": "Choose your areas of work - 2/3",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No direct match in the dataset, requires manual selection.",
+        "selector": "loi[thematic_area_2]"
+      },
+      {
+        "fieldId": "loi[thematic_area_3]",
+        "label": "Choose your areas of work - 3/3",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No direct match in the dataset, requires manual selection.",
+        "selector": "loi[thematic_area_3]"
+      },
+      {
+        "fieldId": "loi[first_name_1]",
+        "label": "First Name*",
+        "mappedValue": "Ranjini",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Extracted founder's first name from the dataset.",
+        "selector": "loi[first_name_1]"
+      },
+      {
+        "fieldId": "loi[last_name_1]",
+        "label": "Last Name*",
+        "mappedValue": "Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Extracted founder's last name from the dataset.",
+        "selector": "loi[last_name_1]"
+      },
+      {
+        "fieldId": "loi[user_title]",
+        "label": "Designation/Title*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "No designation/title information available in the dataset.",
+        "selector": "loi[user_title]"
+      },
+      {
+        "fieldId": "loi[mobile]",
+        "label": "**Mobile Number*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Extracted mobile number from the dataset.",
+        "selector": "loi[mobile]"
+      },
+      {
+        "fieldId": "loi[email]",
+        "label": "**E-mail*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Extracted email from the dataset.",
+        "selector": "loi[email]"
+      },
+      {
+        "fieldId": "g-recaptcha-response",
+        "label": "G-Recaptcha-Response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Recaptcha response cannot be automatically filled.",
+        "selector": "g-recaptcha-response"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Nature of Establishment*",
+        "reason": "The exact nature of establishment is not available in the dataset. Closest value is 'Not for profit public benefit organisation'."
+      },
+      {
+        "label": "Designation/Title*",
+        "reason": "No designation/title information available in the dataset."
+      },
+      {
+        "label": "Choose your areas of work - 1/3*",
+        "reason": "No direct match in the dataset, requires manual selection."
+      },
+      {
+        "label": "Choose your areas of work - 2/3",
+        "reason": "No direct match in the dataset, requires manual selection."
+      },
+      {
+        "label": "Choose your areas of work - 3/3",
+        "reason": "No direct match in the dataset, requires manual selection."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 5,
+    "successfulChunks": 5
+  }
+}

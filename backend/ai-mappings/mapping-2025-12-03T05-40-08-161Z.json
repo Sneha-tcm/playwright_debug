@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-12-03T05:40:08.168Z",
+  "url": "https://appi.fluxx.io/apply/registration",
+  "commands": [
+    {
+      "fieldId": "answer_0",
+      "selector": "#answer_0",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+      "confidence": 1
+    },
+    {
+      "fieldId": "answer_1",
+      "selector": "#answer_1",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Does the organisation have a valid 12A or 10(23C), as applicable?",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "answer_2",
+      "selector": "#answer_2",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "answer_3",
+      "selector": "#answer_3",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+      "confidence": 0.6
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "answer_0",
+        "label": "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "The dataset indicates the organization is registered as a Section 8 company.",
+        "selector": "#answer_0"
+      },
+      {
+        "fieldId": "answer_1",
+        "label": "Does the organisation have a valid 12A or 10(23C), as applicable?",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "The dataset contains registration information for 12A/10(23C).",
+        "selector": "#answer_1"
+      },
+      {
+        "fieldId": "answer_2",
+        "label": "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "The dataset indicates the organization has filed income tax returns.",
+        "selector": "#answer_2"
+      },
+      {
+        "fieldId": "answer_3",
+        "label": "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "Assuming audit reports are available if income tax returns are filed.",
+        "selector": "#answer_3"
+      }
+    ],
+    "missingFields": []
+  }
+}

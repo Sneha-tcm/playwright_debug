@@ -1,54 +1,66 @@
 const { chromium } = require("playwright");
 
 async function loadPage(url) {
-    console.log(`🌐 Loading page: ${url}`);
-    
-    const browser = await chromium.launch({ 
-        headless: false,
-        timeout: 60000 // Increase browser launch timeout
-    });
-    
-    const context = await browser.newContext({
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        viewport: { width: 1920, height: 1080 }
-    });
-    
+  console.log(`🔗 Connecting to user Chrome session (port 9222): ${url}`);
+
+  let browser = null;
+  try {
+    // Connect to user's running Chrome with remote debugging
+    browser = await chromium.connectOverCDP("http://localhost:9222");
+
+    // Use user's authenticated Chrome context
+    const context = browser.contexts()[0];
     const page = await context.newPage();
-    
-    // Try multiple strategies for loading
-    try {
-        // First try with networkidle (waits for network to be quiet)
-        await page.goto(url, { 
-            waitUntil: 'networkidle',
-            timeout: 60000  // 60 seconds
-        });
-        console.log(`✅ Page loaded with networkidle`);
-    } catch (error) {
-        console.log('⚠️ Networkidle timeout, trying with load event...');
-        try {
-            // Fallback: just wait for load event
-            await page.goto(url, { 
-                waitUntil: 'load',
-                timeout: 60000
-            });
-            console.log(`✅ Page loaded with load event`);
-        } catch (error2) {
-            console.log('⚠️ Load timeout, trying with domcontentloaded...');
-            // Last fallback: original method
-            await page.goto(url, { 
-                waitUntil: 'domcontentloaded',
-                timeout: 60000
-            });
-            console.log(`✅ Page loaded with domcontentloaded`);
-        }
-    }
-    
-    // Wait a bit more for any dynamic content to load
+
+    // Stealth patches (safe)
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, "webdriver", { get: () => false });
+      Object.defineProperty(navigator, "plugins", { get: () => [1, 2, 3, 4, 5] });
+      window.chrome = { runtime: {} };
+      Object.defineProperty(navigator, "languages", { get: () => ["en-US", "en"] });
+
+      const originalQuery = window.navigator.permissions.query;
+      window.navigator.permissions.query = (parameters) =>
+        parameters.name === "notifications"
+          ? Promise.resolve({ state: Notification.permission })
+          : originalQuery(parameters);
+    });
+
+    await page.goto(url, {
+      waitUntil: "domcontentloaded",
+      timeout: 60000
+    });
     await page.waitForTimeout(2000);
-    
-    console.log(`✅ Page ready for extraction`);
-    
-    return page;
+
+    console.log("✅ Connected to authenticated user session!");
+    return page; // Very important — do NOT close browser
+
+  } catch (error) {
+    console.log("❌ ERROR in loadPage:", error.message);
+
+    // ❗ FIX: Remove browser.disconnect() — Playwright doesn't support it
+    // Instead, we safely close context ONLY if needed
+    try {
+      if (browser) {
+        console.log("🔌 Closing Playwright context only (not Chrome)");
+        const ctx = browser.contexts()[0];
+        if (ctx) await ctx.close().catch(() => {});
+      }
+    } catch (e) {
+      // Ignore cleanup errors
+    }
+
+    // Special error message for missing debug Chrome
+    if (error.message.includes("could not connect") || error.message.includes("9222")) {
+      throw new Error(
+        "❌ Chrome is NOT running in debugging mode.\n" +
+        "Start Chrome first:\n" +
+        `"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:\\Users\\HP\\temp\\chrome-session"`
+      );
+    }
+
+    throw error;
+  }
 }
 
 module.exports = { loadPage };

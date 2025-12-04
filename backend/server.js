@@ -23,59 +23,54 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 console.log("Initializing server...");
 
 // ========================================
-// AI MAPPING CONFIGURATION
+// AI MAPPING CONFIGURATION - FIXED
 // ========================================
-const OLLAMA_API_KEY = "7f45a572cf934e9e8628ddbb0270ace4.dgCQnMABb_97Im-lX-O75RF3";
-const API_ENDPOINT = "https://ollama.com/api/chat";
-const MODEL_NAME = "glm-4.6";
+const GEMINI_API_KEY = "AIzaSyBxXhphs_azmK0TbZyigbVsOzIRwZJ1-qI";
 
-const AI_MAPPING_PROMPT = `You are an AI Field-Mapping Engine tasked with generating content for form fields based on an organization dataset.
+// FIXED: Use correct model name
+const MODEL_NAME = "gemini-2.0-flash-001";
 
-Input you will receive:
+// FIXED: Use v1 endpoint for stable models
+const API_ENDPOINT = `https://generativelanguage.googleapis.com/v1/models/${MODEL_NAME}:generateContent?key=${GEMINI_API_KEY}`;
 
-1. form_fields → JSON extracted from Playwright containing label, type, description.
-2. dataset → JSON detailing organization profile, registration, projects, financials, documents, addresses, and other relevant information.
+const AI_MAPPING_PROMPT = `You are an AI Field-Mapping Engine. Generate ONLY valid JSON with no additional text.
 
-Output format: Always produce valid JSON:
+INPUT:
+1. form_fields - JSON with label, type, description
+2. dataset - Organization data (profile, registration, projects, financials, documents, addresses)
 
+OUTPUT FORMAT (STRICTLY VALID JSON):
 {
-"mappedFields": [
-{
-"fieldId": "<ID from form_fields>",
-"label": "<label from form_fields>",
-"mappedValue": "<value or generated document text>",
-"valueType": "text" | "document",
-"confidence": "<0-1>",
-"reasoning": "<one sentence>",
-"selector": "<CSS selector to find the field>"
-}
-],
-"missingFields": [
-{
-"label": "<label from form_fields>",
-"reason": "Dataset does not contain this information"
-}
-]
+  "mappedFields": [
+    {
+      "fieldId": "string",
+      "label": "string",
+      "mappedValue": "string or null",
+      "valueType": "text or document",
+      "confidence": "0.0-1.0",
+      "reasoning": "brief explanation",
+      "selector": "CSS selector"
+    }
+  ],
+  "missingFields": [
+    {
+      "label": "string",
+      "reason": "explanation"
+    }
+  ]
 }
 
-Mapping rules:
+MAPPING RULES:
+1. Match by meaning, not exact labels
+2. For TEXT fields: provide exact value from dataset
+3. For FILE UPLOAD fields: generate full document content as text (no file paths)
+4. Format dates/phone numbers as required by form
+5. Map PAN, registration numbers, addresses exactly (or portion if form requires it)
+6. For project fields: select most relevant project from dataset
+7. If data missing: set mappedValue to null and add to missingFields
+8. Include CSS selector for each field (use id, name, or aria-label)
 
-1. Match by meaning, not just exact label names.
-2. If the field expects TEXT, provide the value from the dataset.
-   * Modification allowed: If the form field requires a specific portion or format of the data (e.g., only the state from a full address), return only what the form requires.
-3. If the field expects a FILE UPLOAD (PDF, DOC, certificate, project summary, registration proof, etc.):
-   * Do not return file paths.
-   * Generate the full document content as plain text.
-   * Summaries must use only information present in the dataset.
-   * Follow any suggested document format (declaration, certificate, summary) in the description.
-   * Do not invent any data unless the form explicitly asks for placeholders.
-4. Dates, phone numbers, and other formatted fields must be returned in the format required by the form.
-5. PAN, registration numbers, addresses, and contact info must be mapped exactly, except when the form requires only a portion of the value.
-6. For project-related fields, select the dataset project most relevant to the field description.
-7. If data is missing, set mappedValue to null and list it in missingFields.
-8. Include a CSS selector for each field (use id, name, or aria-label).
-
-Important: Never return anything outside this JSON structure.`;
+CRITICAL: Return ONLY the JSON object. No explanations, no markdown, no extra text.`;
 
 // ========================================
 // HELPER: GET LATEST DATASET CONFIG
@@ -105,88 +100,248 @@ function getLatestDatasetConfig() {
   }
 }
 
+function chunkFields(fields, size = 10) {
+  const entries = Object.entries(fields);
+  const chunks = [];
+
+  for (let i = 0; i < entries.length; i += size) {
+    const chunk = Object.fromEntries(entries.slice(i, i + size));
+    chunks.push(chunk);
+  }
+
+  return chunks;
+}
+
 // ========================================
-// AI MAPPING FUNCTION (FIXED)
+// AI MAPPING FUNCTION - FIXED
 // ========================================
 async function performAIMapping(formSchema, datasetConfig) {
-  console.log("\n🤖 Starting AI Mapping...");
-  console.log("Form fields count:", Object.keys(formSchema.fields || formSchema).length);
-  console.log("Dataset type:", datasetConfig?.type);
-  console.log("Model:", MODEL_NAME);
+  console.log("\n🤖 Starting AI Mapping with GEMINI...");
 
   try {
-    const mappingRequest = {
-      form_fields: formSchema.fields || formSchema,
-      dataset: datasetConfig
-    };
-
-    const userMessage = `${AI_MAPPING_PROMPT}
+    const promptText = `${AI_MAPPING_PROMPT}
 
 FORM FIELDS:
-${JSON.stringify(mappingRequest.form_fields, null, 2)}
+${JSON.stringify(formSchema.fields || formSchema, null, 2)}
 
 DATASET:
-${JSON.stringify(mappingRequest.dataset, null, 2)}
+${JSON.stringify(datasetConfig, null, 2)}
 
-Please map the form fields to the dataset and return ONLY valid JSON with mappedFields and missingFields.`;
+IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }. Do not include any explanatory text before or after the JSON.`;
 
-    console.log("📤 Sending request to API...");
+    console.log("📤 Sending request to Gemini...");
+    console.log("🔧 Using model:", MODEL_NAME);
+    console.log("📏 Prompt length:", promptText.length, "characters");
 
     const response = await fetch(API_ENDPOINT, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${OLLAMA_API_KEY}`
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: MODEL_NAME,
-        messages: [
-          { 
-            role: "system", 
-            content: "You are an AI assistant that maps form fields to dataset values. Always respond with valid JSON only." 
-          },
-          { 
-            role: "user", 
-            content: userMessage 
+        contents: [
+          {
+            role: "user",
+            parts: [{ text: promptText }]
           }
         ],
-        temperature: 0.3,
-        max_tokens: 4000,
-        stream: false
+        generationConfig: {
+          temperature: 0.1,
+          maxOutputTokens: 16384,
+          topP: 0.95,
+          topK: 40
+        }
       })
     });
 
     if (!response.ok) {
       const errorText = await response.text();
       console.error("❌ API Error Response:", errorText);
-      throw new Error(`API request failed: ${response.status}`);
+      
+      // Check if it's a quota/billing error
+      if (errorText.includes("quota") || errorText.includes("billing")) {
+        throw new Error("Gemini API quota exceeded or billing issue. Please check your API key and quota.");
+      }
+      
+      throw new Error(`Gemini API Error (${response.status}): ${errorText}`);
     }
 
     const data = await response.json();
-    const aiContent = data.message?.content;
 
-    if (!aiContent) {
-      throw new Error("No content in API response");
+    // Check for errors in response
+    if (data.error) {
+      throw new Error(`Gemini API Error: ${data.error.message}`);
     }
 
-    let cleanContent = aiContent.trim();
-    cleanContent = cleanContent.replace(/```json\n?/g, '').replace(/```\n?/g, '');
-    
-    const mappingResult = JSON.parse(cleanContent);
-    console.log("✅ Successfully parsed AI mapping result");
-    console.log(`   - Mapped fields: ${mappingResult.mappedFields?.length || 0}`);
-    console.log(`   - Missing fields: ${mappingResult.missingFields?.length || 0}`);
+    console.log("📋 Gemini Response Status:", response.status);
 
-    return mappingResult;
+    const textOutput = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    if (!textOutput) {
+      console.error("Full response:", JSON.stringify(data, null, 2));
+      throw new Error("Gemini returned no output");
+    }
+
+    console.log("📝 Raw Gemini output length:", textOutput.length);
+    
+    // Log first 200 characters to see what we got
+    console.log("📄 Response preview:", textOutput.substring(0, 200));
+
+    // Clean the response more thoroughly
+    let cleanText = textOutput
+      .replace(/```json/gi, "")
+      .replace(/```/g, "")
+      .trim();
+    
+    // Remove any text before the first { and after the last }
+    const firstBrace = cleanText.indexOf('{');
+    const lastBrace = cleanText.lastIndexOf('}');
+    
+    if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+      cleanText = cleanText.substring(firstBrace, lastBrace + 1);
+      console.log("✂️ Extracted JSON portion");
+    }
+
+    // Try to parse JSON
+    let parsedJSON;
+    try {
+      parsedJSON = JSON.parse(cleanText);
+    } catch (parseError) {
+      console.error("❌ JSON Parse Error:", parseError.message);
+      console.log("🔍 Attempting to fix JSON...");
+      
+      // Check if JSON is truncated
+      const openBraces = (cleanText.match(/\{/g) || []).length;
+      const closeBraces = (cleanText.match(/\}/g) || []).length;
+      const openBrackets = (cleanText.match(/\[/g) || []).length;
+      const closeBrackets = (cleanText.match(/\]/g) || []).length;
+      
+      console.log(`📊 JSON Structure: { ${openBraces}/${closeBraces} } [ ${openBrackets}/${closeBrackets} ]`);
+      
+      let fixedText = cleanText;
+      
+      // If truncated, try to close it properly
+      if (openBraces > closeBraces || openBrackets > closeBrackets) {
+        console.log("⚠️ JSON appears truncated, attempting to close...");
+        
+        // Remove incomplete last item
+        fixedText = fixedText.replace(/,?\s*\{[^}]*$/g, ''); // Remove incomplete object
+        fixedText = fixedText.replace(/,?\s*"[^"]*$/g, '');   // Remove incomplete string
+        
+        // Close arrays and objects
+        for (let i = 0; i < (openBrackets - closeBrackets); i++) {
+          fixedText += ']';
+        }
+        for (let i = 0; i < (openBraces - closeBraces); i++) {
+          fixedText += '}';
+        }
+        
+        console.log("🔧 Added closing brackets/braces");
+      }
+      
+      // Try to extract JSON from the response
+      const jsonMatch = fixedText.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        try {
+          // Try common fixes
+          let cleanedText = jsonMatch[0]
+            .replace(/,(\s*[}\]])/g, '$1')  // Remove trailing commas
+            .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
+            .replace(/\r\n/g, ' ')           // Replace CRLF with space
+            .replace(/\n/g, ' ')             // Replace newlines with space
+            .replace(/\r/g, '')              // Remove carriage returns
+            .replace(/\t/g, ' ')             // Replace tabs with spaces
+            .replace(/\s+/g, ' ');           // Collapse multiple spaces
+          
+          parsedJSON = JSON.parse(cleanedText);
+          console.log("✅ JSON fixed successfully!");
+        } catch (fixError) {
+          console.error("❌ Could not fix JSON:", fixError.message);
+          
+          // Show context around error
+          const errorPos = parseInt(fixError.message.match(/\d+/)?.[0]) || 0;
+          const contextStart = Math.max(0, errorPos - 200);
+          const contextEnd = Math.min(cleanText.length, errorPos + 200);
+          console.log("📄 Context around error:");
+          console.log(cleanText.substring(contextStart, contextEnd));
+          
+          throw new Error(`Invalid JSON from Gemini: ${parseError.message}`);
+        }
+      } else {
+        console.log("📄 Response text (first 500 chars):", cleanText.substring(0, 500));
+        console.log("📄 Response text (last 500 chars):", cleanText.substring(cleanText.length - 500));
+        throw new Error(`No valid JSON found in response: ${parseError.message}`);
+      }
+    }
+
+    console.log("✅ Gemini Mapping Completed");
+    console.log(`   - Mapped fields: ${parsedJSON.mappedFields?.length || 0}`);
+    console.log(`   - Missing fields: ${parsedJSON.missingFields?.length || 0}`);
+    
+    return parsedJSON;
 
   } catch (error) {
-    console.error("❌ AI Mapping error:", error.message);
+    console.error("❌ Gemini Mapping Error:", error.message);
     return {
       error: error.message,
       mappedFields: [],
       missingFields: []
     };
   }
+}
+
+async function performChunkedMapping(formSchema, datasetConfig) {
+  console.log("🔄 Running Chunked AI Mapping...");
+
+  const chunks = chunkFields(formSchema.fields, 6); // Smaller chunks for reliability
+
+  let finalMapped = [];
+  let finalMissing = [];
+  let successCount = 0;
+  let failCount = 0;
+
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`\n📦 Processing Chunk ${i + 1}/${chunks.length} (${Object.keys(chunks[i]).length} fields)...`);
+
+    const partialSchema = { fields: chunks[i] };
+
+    try {
+      const result = await performAIMapping(partialSchema, datasetConfig);
+
+      if (!result.error && result.mappedFields) {
+        finalMapped.push(...(result.mappedFields || []));
+        finalMissing.push(...(result.missingFields || []));
+        successCount++;
+        console.log(`   ✅ Chunk ${i + 1} mapped: ${result.mappedFields.length} fields`);
+      } else {
+        console.error(`   ❌ Chunk ${i + 1} failed:`, result.error);
+        failCount++;
+      }
+    } catch (error) {
+      console.error(`   ❌ Chunk ${i + 1} exception:`, error.message);
+      failCount++;
+    }
+    
+    // Add delay between chunks to avoid rate limiting
+    if (i < chunks.length - 1) {
+      console.log(`   ⏳ Waiting 1 second before next chunk...`);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+  }
+
+  console.log(`\n📊 Chunked Mapping Summary:`);
+  console.log(`   ✅ Successful chunks: ${successCount}/${chunks.length}`);
+  console.log(`   ❌ Failed chunks: ${failCount}/${chunks.length}`);
+  console.log(`   📝 Total fields mapped: ${finalMapped.length}`);
+  console.log(`   ❓ Total missing fields: ${finalMissing.length}`);
+
+  return {
+    mappedFields: finalMapped,
+    missingFields: finalMissing,
+    chunkedProcessing: true,
+    totalChunks: chunks.length,
+    successfulChunks: successCount
+  };
 }
 
 // ========================================
@@ -280,16 +435,29 @@ app.post("/api/autofill/direct", async (req, res) => {
         // Save for future use
         fs.writeFileSync(formSchemaPath, JSON.stringify(formSchema, null, 2));
         console.log("✅ Form schema saved");
-      } finally {
-        await browser.close();
-      }
+      }finally {
+  if (page) {
+    console.log("🔌 Closing Playwright context only (user Chrome stays open)");
+    await page.context().close();    // ✔ Correct
+  }
+}
     }
-
     // 4. Run AI mapping
     console.log("🤖 Running AI mapping...");
-    const aiResult = await performAIMapping(formSchema, datasetConfig);
+    
+    // Check if form is too large and needs chunking
+    const fieldCount = Object.keys(formSchema.fields).length;
+    console.log(`📋 Total fields to map: ${fieldCount}`);
+    
+    let aiResult;
+    if (fieldCount > 10) {  // Changed from 15 to 10 for better reliability
+      console.log("⚠️ Large form detected, using chunked mapping...");
+      aiResult = await performChunkedMapping(formSchema, datasetConfig);
+    } else {
+      aiResult = await performAIMapping(formSchema, datasetConfig);
+    }
 
-    if (aiResult.error) {
+    if (aiResult.error && !aiResult.mappedFields?.length) {
       return res.status(500).json({
         success: false,
         error: aiResult.error
@@ -361,7 +529,16 @@ async function runAutoAIMapping(formSchema, datasetConfig) {
       };
     }
 
-    const llmResult = await performAIMapping(formSchema, datasetConfig);
+    const fieldCount = Object.keys(formSchema.fields || formSchema).length;
+    console.log(`📋 Total fields: ${fieldCount}`);
+    
+    let llmResult;
+    if (fieldCount > 10) {
+      console.log("🔄 Using chunked mapping for large form...");
+      llmResult = await performChunkedMapping(formSchema, datasetConfig);
+    } else {
+      llmResult = await performAIMapping(formSchema, datasetConfig);
+    }
     
     const mappingDir = path.join(__dirname, "ai-mappings");
     if (!fs.existsSync(mappingDir)) {
@@ -375,7 +552,8 @@ async function runAutoAIMapping(formSchema, datasetConfig) {
     const mappingResult = {
       timestamp: new Date().toISOString(),
       formUrl: formSchema.url || formSchema.startUrl,
-      formFieldCount: Object.keys(formSchema.fields || formSchema).length,
+      formFieldCount: fieldCount,
+      chunkedProcessing: llmResult.chunkedProcessing || false,
       datasetUsed: {
         type: datasetConfig.type,
         lastSaved: datasetConfig.lastSaved,
@@ -391,7 +569,7 @@ async function runAutoAIMapping(formSchema, datasetConfig) {
     console.log("=".repeat(60) + "\n");
 
     return {
-      success: !llmResult.error,
+      success: !llmResult.error || (llmResult.mappedFields && llmResult.mappedFields.length > 0),
       result: llmResult,
       savedTo: filename
     };
@@ -593,7 +771,18 @@ app.post("/scan-form", async (req, res) => {
     await browser.close();
 
     const datasetConfig = getLatestDatasetConfig();
-    const aiMappingResult = await runAutoAIMapping(result, datasetConfig);
+    
+    // Check field count and decide on chunking
+    const fieldCount = Object.keys(result.fields).length;
+    console.log(`📋 Form has ${fieldCount} fields`);
+    
+    let aiMappingResult;
+    if (fieldCount > 10) {
+      console.log("⚠️ Large form detected, will use chunked mapping");
+      aiMappingResult = await runAutoAIMapping(result, datasetConfig);
+    } else {
+      aiMappingResult = await runAutoAIMapping(result, datasetConfig);
+    }
 
     res.json({
       success: true,
@@ -670,8 +859,8 @@ app.get("/api/ai-mapping/latest", async (req, res) => {
 app.get("/", (req, res) => {
   res.json({
     message: "AI Autofill Backend is running!",
-    version: "5.0-DIRECT-AUTOFILL",
-    aiProvider: "Z.AI (Zhipu AI)",
+    version: "5.0-DIRECT-AUTOFILL-FIXED",
+    aiProvider: "Google Gemini",
     model: MODEL_NAME,
     endpoints: {
       "POST /api/autofill/direct": "Get autofill commands for URL",
@@ -687,8 +876,9 @@ const server = app.listen(PORT, () => {
   console.log(`\n${"=".repeat(60)}`);
   console.log(`🚀 AI Autofill Backend Server - Direct Autofill Mode`);
   console.log(`${"=".repeat(60)}`);
-  console.log(`📍 Running on: http://localhost:${PORT}`);
-  console.log(`📊 Version: 5.0-DIRECT-AUTOFILL`);
+  console.log(`🌐 Running on: http://localhost:${PORT}`);
+  console.log(`📊 Version: 5.0-DIRECT-AUTOFILL-FIXED`);
+  console.log(`🤖 AI Model: ${MODEL_NAME}`);
   console.log(`\n✨ New Feature: Direct Autofill API`);
   console.log(`   - Endpoint: POST /api/autofill/direct`);
   console.log(`   - Returns: Ready-to-use autofill commands`);

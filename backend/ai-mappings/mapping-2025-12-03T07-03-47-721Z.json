@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-12-03T07:03:47.721Z",
+  "url": "https://appi.fluxx.io/apply/registration",
+  "commands": [
+    {
+      "fieldId": "answer_0",
+      "selector": "#answer_0",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+      "confidence": 1
+    },
+    {
+      "fieldId": "answer_2",
+      "selector": "#answer_2",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "answer_0",
+        "label": "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Direct match from the 'Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?' column in the Excel sheet.",
+        "selector": "#answer_0"
+      },
+      {
+        "fieldId": "answer_1",
+        "label": "Does the organisation have a valid 12A or 10(23C), as applicable?",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Value missing in the excel sheet for 'Does the organisation have a valid 12A or 10(23C), as applicable?'",
+        "selector": "#answer_1"
+      },
+      {
+        "fieldId": "answer_2",
+        "label": "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Direct match from the 'Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)' column in the Excel sheet.",
+        "selector": "#answer_2"
+      },
+      {
+        "fieldId": "answer_3",
+        "label": "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Value missing in the excel sheet for 'Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)'",
+        "selector": "#answer_3"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Does the organisation have a valid 12A or 10(23C), as applicable?",
+        "reason": "Data missing in the provided dataset."
+      },
+      {
+        "label": "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+        "reason": "Data missing in the provided dataset."
+      }
+    ]
+  }
+}

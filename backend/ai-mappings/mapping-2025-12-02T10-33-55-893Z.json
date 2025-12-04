@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-12-02T10:33:55.896Z",
+  "url": "https://appi.fluxx.io/lois/1243477/edit",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "user_session[login]",
+        "label": "Username",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain username/login information",
+        "selector": "input[name='user_session[login]']"
+      },
+      {
+        "fieldId": "user_session[password]",
+        "label": "Password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Dataset does not contain password information",
+        "selector": "input[name='user_session[password]']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Username",
+        "reason": "Dataset does not contain username/login information"
+      },
+      {
+        "label": "Password",
+        "reason": "Dataset does not contain password information"
+      }
+    ]
+  }
+}
