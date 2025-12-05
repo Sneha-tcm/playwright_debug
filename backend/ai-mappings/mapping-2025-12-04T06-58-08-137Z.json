@@ -1,0 +1,274 @@
+{
+  "timestamp": "2025-12-04T06:58:08.137Z",
+  "url": "https://appi.fluxx.io/lois/1243871/edit",
+  "commands": [
+    {
+      "fieldId": "loi[organization_name]",
+      "selector": "#loi_organization_name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation Name (As per your registration document)*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[tax_id]",
+      "selector": "#loi_tax_id",
+      "value": "AAGCG8730N",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation PAN (as per your PAN card)*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[date_of_establishment]",
+      "selector": "#loi_date_of_establishment",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Date of Establishment (as per PAN card)*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[nature_of_establishment]",
+      "selector": "#loi_nature_of_establishment",
+      "value": "Not for Profit Company",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Nature of Establishment*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[specify_org_registered_under_which_act]",
+      "selector": "#loi_specify_org_registered_under_which_act",
+      "value": "Sec 8 of Companys act",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Registered under which Act?*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[address]",
+      "selector": "#loi_address",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address 1*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[city]",
+      "selector": "loi[city]",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "City*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "loi[org_geo_state_1]",
+      "selector": "loi[org_geo_state_1]",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State / Province*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[postal_code]",
+      "selector": "loi[postal_code]",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Pin Code*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[org_email]",
+      "selector": "loi[org_email]",
+      "value": "abc@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation E-mail",
+      "confidence": 1
+    },
+    {
+      "fieldId": "loi[mobile]",
+      "selector": "loi[mobile]",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "**Mobile Number*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[email]",
+      "selector": "loi[email]",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "**E-mail*",
+      "confidence": 0.95
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "loi[organization_name]",
+        "label": "Organisation Name (As per your registration document)*",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization name from dataset matches the form field label.",
+        "selector": "#loi_organization_name"
+      },
+      {
+        "fieldId": "loi[tax_id]",
+        "label": "Organisation PAN (as per your PAN card)*",
+        "mappedValue": "AAGCG8730N",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization PAN from dataset matches the form field label.",
+        "selector": "#loi_tax_id"
+      },
+      {
+        "fieldId": "loi[date_of_establishment]",
+        "label": "Date of Establishment (as per PAN card)*",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Date of establishment from dataset matches the form field label.",
+        "selector": "#loi_date_of_establishment"
+      },
+      {
+        "fieldId": "loi[nature_of_establishment]",
+        "label": "Nature of Establishment*",
+        "mappedValue": "Not for Profit Company",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "NPO type from dataset is closest match to 'Not for Profit Company'.",
+        "selector": "#loi_nature_of_establishment"
+      },
+      {
+        "fieldId": "loi[specify_org_registered_under_which_act]",
+        "label": "Registered under which Act?*",
+        "mappedValue": "Sec 8 of Companys act",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Registered under which Act from dataset matches the form field label.",
+        "selector": "#loi_specify_org_registered_under_which_act"
+      },
+      {
+        "fieldId": "loi[address]",
+        "label": "Address 1*",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Office location from dataset matches the form field label.",
+        "selector": "#loi_address"
+      },
+      {
+        "fieldId": "loi[street_address2]",
+        "label": "Address 2",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Address 2 is not available in the dataset.",
+        "selector": "loi[street_address2]"
+      },
+      {
+        "fieldId": "loi[city]",
+        "label": "City*",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Extracted city from the organization address.",
+        "selector": "loi[city]"
+      },
+      {
+        "fieldId": "loi[org_geo_state_1]",
+        "label": "State / Province*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization state is Tamil Nadu.",
+        "selector": "loi[org_geo_state_1]"
+      },
+      {
+        "fieldId": "loi[postal_code]",
+        "label": "Pin Code*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization pin code is 600018.",
+        "selector": "loi[postal_code]"
+      },
+      {
+        "fieldId": "loi[communication_address]",
+        "label": "Communication Address (if different from Registered Address)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "Communication address is not available in the dataset.",
+        "selector": "loi[communication_address]"
+      },
+      {
+        "fieldId": "loi[org_email]",
+        "label": "Organisation E-mail",
+        "mappedValue": "abc@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization email is abc@gmail.com.",
+        "selector": "loi[org_email]"
+      },
+      {
+        "fieldId": "loi[mobile]",
+        "label": "**Mobile Number*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched based on label similarity and data type. Extracted mobile number from the dataset.",
+        "selector": "loi[mobile]"
+      },
+      {
+        "fieldId": "loi[email]",
+        "label": "**E-mail*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched based on label similarity and data type. Extracted email from the dataset.",
+        "selector": "loi[email]"
+      },
+      {
+        "fieldId": "g-recaptcha-response",
+        "label": "G-Recaptcha-Response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Recaptcha response cannot be automatically filled.",
+        "selector": "g-recaptcha-response"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "G-Recaptcha-Response",
+        "reason": "Recaptcha response cannot be automatically filled."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 5,
+    "successfulChunks": 3
+  }
+}

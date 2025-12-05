@@ -1,0 +1,128 @@
+{
+  "timestamp": "2025-12-04T10:40:01.572Z",
+  "url": "https://appi.fluxx.io/lois/1243871/edit",
+  "commands": [
+    {
+      "fieldId": "loi[organization_name]",
+      "selector": "#loi_organization_name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation Name (As per your registration document)*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[tax_id]",
+      "selector": "#loi_tax_id",
+      "value": "AAGCG8730N",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organisation PAN (as per your PAN card)*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[date_of_establishment]",
+      "selector": "#loi_date_of_establishment",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Date of Establishment (as per PAN card)*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[nature_of_establishment]",
+      "selector": "#loi_nature_of_establishment",
+      "value": "Not for Profit Company",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Nature of Establishment*",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "loi[specify_org_registered_under_which_act]",
+      "selector": "#loi_specify_org_registered_under_which_act",
+      "value": "Sec 8 of Companys act",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Registered under which Act?*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "loi[address]",
+      "selector": "#loi_address",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address 1*",
+      "confidence": 0.95
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "loi[organization_name]",
+        "label": "Organisation Name (As per your registration document)*",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched organization name from registration document.",
+        "selector": "#loi_organization_name"
+      },
+      {
+        "fieldId": "loi[tax_id]",
+        "label": "Organisation PAN (as per your PAN card)*",
+        "mappedValue": "AAGCG8730N",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched organization PAN from PAN card.",
+        "selector": "#loi_tax_id"
+      },
+      {
+        "fieldId": "loi[date_of_establishment]",
+        "label": "Date of Establishment (as per PAN card)*",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched date of establishment from PAN card.",
+        "selector": "#loi_date_of_establishment"
+      },
+      {
+        "fieldId": "loi[nature_of_establishment]",
+        "label": "Nature of Establishment*",
+        "mappedValue": "Not for Profit Company",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Matched nature of establishment to 'Not for profit public benefit organisation'.",
+        "selector": "#loi_nature_of_establishment"
+      },
+      {
+        "fieldId": "loi[specify_org_registered_under_which_act]",
+        "label": "Registered under which Act?*",
+        "mappedValue": "Sec 8 of Companys act",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched act under which organization is registered.",
+        "selector": "#loi_specify_org_registered_under_which_act"
+      },
+      {
+        "fieldId": "loi[address]",
+        "label": "Address 1*",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched address from organization data.",
+        "selector": "#loi_address"
+      }
+    ],
+    "missingFields": [],
+    "chunkedProcessing": true,
+    "totalChunks": 5,
+    "successfulChunks": 1
+  }
+}

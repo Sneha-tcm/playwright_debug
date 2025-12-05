@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-12-04T11:52:40.312Z",
+  "url": "https://atalfoundation.ind.in/online-application/",
+  "commands": [
+    {
+      "fieldId": "input_213",
+      "selector": "#input_213",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Candidate Name*",
+      "confidence": 0.8
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "input_348",
+        "label": "Block Applying For*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found for block.",
+        "selector": "#input_348"
+      },
+      {
+        "fieldId": "input_356",
+        "label": "Block Applying For*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found for block.",
+        "selector": "#input_356"
+      },
+      {
+        "fieldId": "input_355",
+        "label": "Block Applying For*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found for block.",
+        "selector": "#input_355"
+      },
+      {
+        "fieldId": "input_213",
+        "label": "Candidate Name*",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Matched Founder's name to Candidate Name.",
+        "selector": "#input_213"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Block Applying For*",
+        "reason": "No matching data found for block."
+      },
+      {
+        "label": "Block Applying For*",
+        "reason": "No matching data found for block."
+      },
+      {
+        "label": "Block Applying For*",
+        "reason": "No matching data found for block."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 7,
+    "successfulChunks": 1
+  }
+}

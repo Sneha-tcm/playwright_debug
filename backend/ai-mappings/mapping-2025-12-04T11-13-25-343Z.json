@@ -1,0 +1,141 @@
+{
+  "timestamp": "2025-12-04T11:13:25.343Z",
+  "url": "https://github.com/sivasree-tcm/Playwright_chrome_debugport/settings",
+  "commands": [
+    {
+      "fieldId": "feedback",
+      "selector": "#feedback",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "Include my email address so I can be contacted",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "custom_scope_name",
+      "selector": "#custom_scope_name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "custom_scope_query",
+      "selector": "#custom_scope_query",
+      "value": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Query",
+      "confidence": 0.6
+    },
+    {
+      "fieldId": "login",
+      "selector": "#login",
+      "value": "abc@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Username or email address",
+      "confidence": 0.9
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "query-builder-test",
+        "label": "Search",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No relevant search terms found in the dataset.",
+        "selector": "#query-builder-test"
+      },
+      {
+        "fieldId": "feedback",
+        "label": "Include my email address so I can be contacted",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Mapping organization description to feedback field.",
+        "selector": "#feedback"
+      },
+      {
+        "fieldId": "include_email",
+        "label": "Include my email address so I can be contacted",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "Checkbox field cannot be directly mapped to a text value.",
+        "selector": "#include_email"
+      },
+      {
+        "fieldId": "custom_scope_name",
+        "label": "Name",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Mapping organization name to custom scope name.",
+        "selector": "#custom_scope_name"
+      },
+      {
+        "fieldId": "custom_scope_query",
+        "label": "Query",
+        "mappedValue": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent.",
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "Mapping organization goals to custom scope query.",
+        "selector": "#custom_scope_query"
+      },
+      {
+        "fieldId": "login",
+        "label": "Username or email address",
+        "mappedValue": "abc@gmail.com",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapping organization email to login field.",
+        "selector": "#login"
+      },
+      {
+        "fieldId": "password",
+        "label": "Password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No password information available in the dataset.",
+        "selector": "#password"
+      },
+      {
+        "fieldId": "required_field_bf66",
+        "label": "Password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No password information available in the dataset.",
+        "selector": "#required_field_bf66"
+      },
+      {
+        "fieldId": "q",
+        "label": "Find code, projects, and people on GitHub:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No relevant search terms found in the dataset.",
+        "selector": "#q"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Password",
+        "reason": "No password information available in the dataset."
+      },
+      {
+        "label": "Include my email address so I can be contacted",
+        "reason": "Checkbox field cannot be directly mapped to a text value."
+      }
+    ]
+  }
+}

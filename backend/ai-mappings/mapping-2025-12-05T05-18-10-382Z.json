@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-12-05T05:18:10.382Z",
+  "url": "https://appi.fluxx.io/apply/registration",
+  "commands": [
+    {
+      "fieldId": "answer_0",
+      "selector": "#answer_0",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "answer_2",
+      "selector": "#answer_2",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "answer_3",
+      "selector": "#answer_3",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+      "confidence": 0.9
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "answer_0",
+        "label": "Is the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "The organization is registered as a Section 8 Company, which is a type of Non Profit Organisation in India.",
+        "selector": "#answer_0"
+      },
+      {
+        "fieldId": "answer_1",
+        "label": "Does the organisation have a valid 12A or 10(23C), as applicable?",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "No explicit information about 12A or 10(23C) validity is available in the dataset.",
+        "selector": "#answer_1"
+      },
+      {
+        "fieldId": "answer_2",
+        "label": "Has the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered)",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "The organization has filed Income Tax returns for the last 3 years.",
+        "selector": "#answer_2"
+      },
+      {
+        "fieldId": "answer_3",
+        "label": "Does the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered)",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "The organization has audit reports for the last 3 years.",
+        "selector": "#answer_3"
+      },
+      {
+        "fieldId": "g-recaptcha-response",
+        "label": "G-Recaptcha-Response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Recaptcha response cannot be automatically filled.",
+        "selector": "#g-recaptcha-response"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Does the organisation have a valid 12A or 10(23C), as applicable?",
+        "reason": "No explicit information about 12A or 10(23C) validity is available in the dataset."
+      }
+    ]
+  }
+}

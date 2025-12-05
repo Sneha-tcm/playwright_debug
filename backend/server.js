@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const fetch = require('node-fetch');
@@ -25,7 +26,7 @@ console.log("Initializing server...");
 // ========================================
 // AI MAPPING CONFIGURATION - FIXED
 // ========================================
-const GEMINI_API_KEY = "AIzaSyBxXhphs_azmK0TbZyigbVsOzIRwZJ1-qI";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 // FIXED: Use correct model name
 const MODEL_NAME = "gemini-2.0-flash-001";
