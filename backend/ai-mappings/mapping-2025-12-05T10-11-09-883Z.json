@@ -1,0 +1,279 @@
+{
+  "timestamp": "2025-12-05T10:11:09.883Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "text-4",
+      "selector": "#text-4",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please introduce your organization in two sentences, emphasizing its mission, key activities, and the unique aspects that set it apart. *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "text-5",
+      "selector": "#text-5",
+      "value": "ChampionWoman",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of the project *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "text-19",
+      "selector": "#text-19",
+      "value": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please provide a clear description of the project's primary objective (500 words max) *",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "radio-1",
+      "selector": "[name='radio-1']",
+      "value": "No",
+      "type": "text",
+      "fieldType": "radio",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.5
+    },
+    {
+      "fieldId": "text-10",
+      "selector": "#text-10",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please describe how the local community will be involved in the project. How will you incorporate the perspectives of project stakeholders, especially women, Indigenous Peoples, and other historically marginalized communities, into the design and delivery of your project? (500 words max) *",
+      "confidence": 0.6
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "text-4",
+        "label": "Please introduce your organization in two sentences, emphasizing its mission, key activities, and the unique aspects that set it apart. *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched to 'Brief description of the organization/agency including Goals and Objectives.' from dataset.",
+        "selector": "#text-4"
+      },
+      {
+        "fieldId": "text-5",
+        "label": "Name of the project *",
+        "mappedValue": "ChampionWoman",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Most projects are related to ChampionWoman life leadership workshops.",
+        "selector": "#text-5"
+      },
+      {
+        "fieldId": "url-3",
+        "label": "Website(s) for the project (please include any relevant links)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website information found in the dataset.",
+        "selector": "#url-3"
+      },
+      {
+        "fieldId": "checkbox-9[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct mapping for land restoration activities found.",
+        "selector": "[name='checkbox-9[]']"
+      },
+      {
+        "fieldId": "text-19",
+        "label": "Please provide a clear description of the project's primary objective (500 words max) *",
+        "mappedValue": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Description of ChampionWoman project objective.",
+        "selector": "#text-19"
+      },
+      {
+        "fieldId": "checkbox-19[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct mapping for land restoration activities found.",
+        "selector": "[name='checkbox-19[]']"
+      },
+      {
+        "fieldId": "text-8",
+        "label": "Please provide a clear description of the project's secondary objective (300 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No project objective information found in the dataset.",
+        "selector": "#text-8"
+      },
+      {
+        "fieldId": "checkbox-11[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about project benefits found in the dataset.",
+        "selector": "[name='checkbox-11[]']"
+      },
+      {
+        "fieldId": "text-9",
+        "label": "Please describe the environmental benefits of your project in detail (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about project benefits found in the dataset.",
+        "selector": "#text-9"
+      },
+      {
+        "fieldId": "radio-1",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "Assuming the project is ongoing and not completed.",
+        "selector": "[name='radio-1']"
+      },
+      {
+        "fieldId": "checkbox-12[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about community involvement found in the dataset.",
+        "selector": "[name='checkbox-12[]']"
+      },
+      {
+        "fieldId": "textarea-7",
+        "label": "How many community members benefit directly from your project? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about community members benefiting from the project found in the dataset.",
+        "selector": "#textarea-7"
+      },
+      {
+        "fieldId": "textarea-8",
+        "label": "How many community members benefit indirectly from your project? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct mapping available in the dataset.",
+        "selector": "#textarea-8"
+      },
+      {
+        "fieldId": "text-10",
+        "label": "Please describe how the local community will be involved in the project. How will you incorporate the perspectives of project stakeholders, especially women, Indigenous Peoples, and other historically marginalized communities, into the design and delivery of your project? (500 words max) *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "Mapping to organization description as a proxy for community involvement.",
+        "selector": "#text-10"
+      },
+      {
+        "fieldId": "textarea-9",
+        "label": "Please share in detail an example of one of the individuals or families in the community whose life has been transformed by the project. *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No specific individual transformation story available in the dataset.",
+        "selector": "#textarea-9"
+      },
+      {
+        "fieldId": "date-1",
+        "label": "Start Date of the project that the grant will be contributing towards *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No project start date available in the dataset.",
+        "selector": "#date-1"
+      },
+      {
+        "fieldId": "date-2",
+        "label": "End Date of the project that the grant will be contributing towards *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No project end date available in the dataset.",
+        "selector": "#date-2"
+      },
+      {
+        "fieldId": "textarea-12",
+        "label": "Project Location Coordinates Latitude *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No project location coordinates available in the dataset.",
+        "selector": "#textarea-12"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Website(s) for the project (please include any relevant links)",
+        "reason": "No website information found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No direct mapping for land restoration activities found."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No direct mapping for land restoration activities found."
+      },
+      {
+        "label": "Please provide a clear description of the project's secondary objective (300 words max) *",
+        "reason": "No project objective information found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No information about project benefits found in the dataset."
+      },
+      {
+        "label": "Please describe the environmental benefits of your project in detail (500 words max) *",
+        "reason": "No information about project benefits found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No information about community involvement found in the dataset."
+      },
+      {
+        "label": "How many community members benefit directly from your project? *",
+        "reason": "No information about community members benefiting from the project found in the dataset."
+      },
+      {
+        "label": "How many community members benefit indirectly from your project? *",
+        "reason": "No data available on indirect beneficiaries."
+      },
+      {
+        "label": "Please share in detail an example of one of the individuals or families in the community whose life has been transformed by the project. *",
+        "reason": "No specific individual transformation story available."
+      },
+      {
+        "label": "Start Date of the project that the grant will be contributing towards *",
+        "reason": "No project start date available."
+      },
+      {
+        "label": "End Date of the project that the grant will be contributing towards *",
+        "reason": "No project end date available."
+      },
+      {
+        "label": "Project Location Coordinates Latitude *",
+        "reason": "No project location coordinates available."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 3
+  }
+}

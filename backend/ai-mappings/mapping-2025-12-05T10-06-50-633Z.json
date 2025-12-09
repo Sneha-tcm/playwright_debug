@@ -1,0 +1,687 @@
+{
+  "timestamp": "2025-12-05T10:06:50.633Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "checkbox-4[]",
+      "selector": "#checkbox-4\\[\\]",
+      "value": "10+ years",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "10+ years",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "checkbox-5[]",
+      "selector": "#checkbox-5\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "checkbox-8[]",
+      "selector": "#checkbox-8\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "text-4",
+      "selector": "#text-4",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please introduce your organization in two sentences, emphasizing its mission, key activities, and the unique aspects that set it apart. *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "text-5",
+      "selector": "#text-5",
+      "value": "ChampionWoman Life Leadership Workshops",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of the project *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "text-19",
+      "selector": "#text-19",
+      "value": "ChampionWoman strives to impact women and girls to become career intentional and be financially independent. This is done by conducting ChampionWoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please provide a clear description of the project's primary objective (500 words max) *",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "text-10",
+      "selector": "#text-10",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please describe how the local community will be involved in the project. How will you incorporate the perspectives of project stakeholders, especially women, Indigenous Peoples, and other historically marginalized communities, into the design and delivery of your project? (500 words max) *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "date-1",
+      "selector": "#date-1",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Start Date of the project that the grant will be contributing towards *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "text-12",
+      "selector": "[aria-label=\"Please provide a description of the landscape (e.g. its land use history, geological features, land ownership or tenure arrangements, habitat connectivity, relevant governance or regulatory frameworks). (250 words max) *\"]",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please provide a description of the landscape (e.g. its land use history, geological features, land ownership or tenure arrangements, habitat connectivity, relevant governance or regulatory frameworks). (250 words max) *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "text-15",
+      "selector": "[aria-label=\"What experience does the team or organization have with similar projects? Are there any relevant qualifications that strengthen the project's feasibility? (500 words max) *\"]",
+      "value": "Global Adjustments Foundation has conducted numerous life coaching workshops since 2015, reaching various institutions, organizations, colleges, schools and corporate. The organization has experience working with students, workforce, entrepreneurs, and members of associations. The workshops cover topics such as self-esteem building, communication, emotional wellbeing, resilience, and gender smart relations. The organization has worked with various partners such as MMA, BYST, and TN Nurses Council.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "What experience does the team or organization have with similar projects? Are there any relevant qualifications that strengthen the project's feasibility? (500 words max) *",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "text-17",
+      "selector": "[aria-label=\"Please identify the intended beneficiaries of this project, explain how they will benefit, and describe your previous experience working with them. (250 words maximum) *\"]",
+      "value": "The intended beneficiaries of Global Adjustments Foundation's projects include women, youth, students, workforce, entrepreneurs, and members of associations. The organization has previous experience working with these groups through life coaching workshops and training programs. The beneficiaries will benefit from improved self-esteem, communication skills, emotional wellbeing, resilience, and gender smart relations.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please identify the intended beneficiaries of this project, explain how they will benefit, and describe your previous experience working with them. (250 words maximum) *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "upload-2[]",
+      "selector": "[name='upload-2[]']",
+      "value": "The organization has conducted numerous life coaching workshops and events from 2015 to 2025, reaching various institutions, schools, colleges, and corporate entities. These events cover topics such as self-esteem, communication, gender sensitivity, mindfulness, and career guidance. The organization has also provided financial support and resources to communities in need, including COVID-19 relief efforts.",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Please provide maps and photos of your project's activities. *",
+      "confidence": 0.75
+    },
+    {
+      "fieldId": "upload-8[]",
+      "selector": "[name='upload-8[]']",
+      "value": "Organization name: Global Adjustments Foundation, PAN number: AAGCG8730N, Date of Establishment: 23-03-2016, Registered under Sec 8 of Companys act, Registration number of 12A / 10(23C): AAGCG8730N23ch01 - valid - 2027-28, Registration number of 80G: AAGCG8730N23ch02 - valid - 2027-28, Registration authority: Comapnys ACT",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Please provide your organization's official registration documents. *",
+      "confidence": 0.9
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "date-4",
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct match for UNCCD application date in the provided data.",
+        "selector": "#date-4"
+      },
+      {
+        "fieldId": "checkbox-3[]",
+        "label": "50+ personnel",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Personnel number is available, but not in the required format. Unable to determine if it's 50+.",
+        "selector": "#checkbox-3\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-4[]",
+        "label": "10+ years",
+        "mappedValue": "10+ years",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "The organization was established in 2016, so it has been operating for more than 10 years.",
+        "selector": "#checkbox-4\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-5[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Assuming 'No' to having UNCCD accreditation based on lack of information about it.",
+        "selector": "#checkbox-5\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-7[]",
+        "label": "Greater than USD 1 million",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No financial information available to determine the organization's budget size.",
+        "selector": "#checkbox-7\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-8[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Assuming 'No' to having other sources of funding based on lack of information about it.",
+        "selector": "#checkbox-8\\[\\]"
+      },
+      {
+        "fieldId": "text-4",
+        "label": "Please introduce your organization in two sentences, emphasizing its mission, key activities, and the unique aspects that set it apart. *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched to 'Brief description of the organization/agency including Goals and Objectives.' from dataset.",
+        "selector": "#text-4"
+      },
+      {
+        "fieldId": "text-5",
+        "label": "Name of the project *",
+        "mappedValue": "ChampionWoman Life Leadership Workshops",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Based on the organization's activities and workshops.",
+        "selector": "#text-5"
+      },
+      {
+        "fieldId": "url-3",
+        "label": "Website(s) for the project (please include any relevant links)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website information found in the dataset.",
+        "selector": "#url-3"
+      },
+      {
+        "fieldId": "checkbox-9[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "No direct match for the project activities in the dataset.",
+        "selector": "[name='checkbox-9[]']"
+      },
+      {
+        "fieldId": "text-19",
+        "label": "Please provide a clear description of the project's primary objective (500 words max) *",
+        "mappedValue": "ChampionWoman strives to impact women and girls to become career intentional and be financially independent. This is done by conducting ChampionWoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Based on the organization's description and activities.",
+        "selector": "#text-19"
+      },
+      {
+        "fieldId": "checkbox-19[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "No direct match for the project activities in the dataset.",
+        "selector": "[name='checkbox-19[]']"
+      },
+      {
+        "fieldId": "textarea-8",
+        "label": "How many community members benefit indirectly from your project? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "Could not find a direct match for the number of community members benefiting indirectly. Requires manual input.",
+        "selector": "#textarea-8"
+      },
+      {
+        "fieldId": "text-10",
+        "label": "Please describe how the local community will be involved in the project. How will you incorporate the perspectives of project stakeholders, especially women, Indigenous Peoples, and other historically marginalized communities, into the design and delivery of your project? (500 words max) *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Organization description provides insight into community involvement and focus on women.",
+        "selector": "#text-10"
+      },
+      {
+        "fieldId": "textarea-9",
+        "label": "Please share in detail an example of one of the individuals or families in the community whose life has been transformed by the project. *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No specific individual or family transformation story found. Requires manual input.",
+        "selector": "#textarea-9"
+      },
+      {
+        "fieldId": "date-1",
+        "label": "Start Date of the project that the grant will be contributing towards *",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Using the organization's establishment date as a proxy for project start date.",
+        "selector": "#date-1"
+      },
+      {
+        "fieldId": "date-2",
+        "label": "End Date of the project that the grant will be contributing towards *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "Could not find a specific project end date. Requires manual input or estimation.",
+        "selector": "#date-2"
+      },
+      {
+        "fieldId": "textarea-12",
+        "label": "Project Location Coordinates Latitude *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.2,
+        "reasoning": "No latitude coordinates found in the dataset. Requires manual input.",
+        "selector": "#textarea-12"
+      },
+      {
+        "fieldId": "textarea-11",
+        "label": "Project Location Coordinates Longitude *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No longitude data found in the dataset.",
+        "selector": "#textarea-11"
+      },
+      {
+        "fieldId": "number-4",
+        "label": "What is the estimated total area of land (in hectares) that your overall project aims to restore? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No land restoration area data found in the dataset.",
+        "selector": "#number-4"
+      },
+      {
+        "fieldId": "number-5",
+        "label": "What is the estimated total area of land (in hectares) that this grant would support in restoring? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No grant-supported land restoration area data found in the dataset.",
+        "selector": "#number-5"
+      },
+      {
+        "fieldId": "checkbox-13[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about land degradation types found in the dataset.",
+        "selector": "[name='checkbox-13[]']"
+      },
+      {
+        "fieldId": "textarea-1",
+        "label": "Please describe the current conditions of the land, including any degradation or pollution issues (250 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No description of land conditions or degradation issues found in the dataset.",
+        "selector": "#textarea-1"
+      },
+      {
+        "fieldId": "select-1[]",
+        "label": "Please name the type(s) of ecosystem(s) your project covers *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No ecosystem type data found in the dataset.",
+        "selector": "[name='select-1[]']"
+      },
+      {
+        "fieldId": "text-18",
+        "label": "Please describe the ecosystem types your project covers in more detail *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": null
+      },
+      {
+        "fieldId": "text-12",
+        "label": "Please provide a description of the landscape (e.g. its land use history, geological features, land ownership or tenure arrangements, habitat connectivity, relevant governance or regulatory frameworks). (250 words max) *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Mapping to organization description.",
+        "selector": null
+      },
+      {
+        "fieldId": "checkbox-14[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": null
+      },
+      {
+        "fieldId": "textarea-2",
+        "label": "Please describe the specific restoration techniques used in your project (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": null
+      },
+      {
+        "fieldId": "textarea-3",
+        "label": "What is the specific budget for the project that will be funded by this grant? (in USD) Please provide a detailed description of the existing budget showing how much money is planned for each activity (not including the Grant money). This question should be answered about the specific project that this grant will support. *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": null
+      },
+      {
+        "fieldId": "textarea-4",
+        "label": "How will the grant funds be used specifically? (in USD) Please describe how you intend to use the maximum Grant amount of USD 17,000, outlining the allocation for each activity along with its anticipated outcomes and impact. (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": null
+      },
+      {
+        "fieldId": "textarea-13",
+        "label": "What is the amount of other funding you receive for this project? (USD) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct match for project funding amount in the provided data.",
+        "selector": "#textarea-13"
+      },
+      {
+        "fieldId": "textarea-5",
+        "label": "Please describe the type of technology or equipment your organization will use to support the project in more detail (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No specific information about technology or equipment used in projects.",
+        "selector": "#textarea-5"
+      },
+      {
+        "fieldId": "textarea-6",
+        "label": "What plans are in place for maintaining the land post-restoration? (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about land maintenance plans.",
+        "selector": "#textarea-6"
+      },
+      {
+        "fieldId": "text-13",
+        "label": "Describe your monitoring and evaluation plan. How will the success of the project be measured? What are the key performance indicators? How will you track progress throughout the project? How will you evaluate your work at the end of the project? (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about monitoring and evaluation plans.",
+        "selector": "#text-13"
+      },
+      {
+        "fieldId": "text-14",
+        "label": "Please describe the potential risks and challenges that could impact the project and how they will be mitigated (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.2,
+        "reasoning": "No specific risk/challenges data found, but organization description might be relevant.",
+        "selector": null
+      },
+      {
+        "fieldId": "text-15",
+        "label": "What experience does the team or organization have with similar projects? Are there any relevant qualifications that strengthen the project's feasibility? (500 words max) *",
+        "mappedValue": "Global Adjustments Foundation has conducted numerous life coaching workshops since 2015, reaching various institutions, organizations, colleges, schools and corporate. The organization has experience working with students, workforce, entrepreneurs, and members of associations. The workshops cover topics such as self-esteem building, communication, emotional wellbeing, resilience, and gender smart relations. The organization has worked with various partners such as MMA, BYST, and TN Nurses Council.",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Mapped to organization's workshop experience and target groups.",
+        "selector": null
+      },
+      {
+        "fieldId": "text-16",
+        "label": "Please list any proposed partners of this project, including the organization name and website, your past experience working with that partner, and what role and responsibilities the partner organization will have in your project. (250 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "No specific partner information found, but the organization has collaborated with MMA, BYST, and TN Nurses Council.",
+        "selector": null
+      },
+      {
+        "fieldId": "checkbox-17[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Checkbox field cannot be directly mapped.",
+        "selector": null
+      },
+      {
+        "fieldId": "checkbox-18[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Checkbox field cannot be directly mapped.",
+        "selector": null
+      },
+      {
+        "fieldId": "text-17",
+        "label": "Please identify the intended beneficiaries of this project, explain how they will benefit, and describe your previous experience working with them. (250 words maximum) *",
+        "mappedValue": "The intended beneficiaries of Global Adjustments Foundation's projects include women, youth, students, workforce, entrepreneurs, and members of associations. The organization has previous experience working with these groups through life coaching workshops and training programs. The beneficiaries will benefit from improved self-esteem, communication skills, emotional wellbeing, resilience, and gender smart relations.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to organization's target groups and workshop topics.",
+        "selector": null
+      },
+      {
+        "fieldId": "upload-2[]",
+        "label": "Please provide maps and photos of your project's activities. *",
+        "mappedValue": "The organization has conducted numerous life coaching workshops and events from 2015 to 2025, reaching various institutions, schools, colleges, and corporate entities. These events cover topics such as self-esteem, communication, gender sensitivity, mindfulness, and career guidance. The organization has also provided financial support and resources to communities in need, including COVID-19 relief efforts.",
+        "valueType": "document",
+        "confidence": 0.75,
+        "reasoning": "The dataset contains detailed information about the organization's activities, including workshops and events, which can be considered as project activities.",
+        "selector": "[name='upload-2[]']"
+      },
+      {
+        "fieldId": "upload-8[]",
+        "label": "Please provide your organization's official registration documents. *",
+        "mappedValue": "Organization name: Global Adjustments Foundation, PAN number: AAGCG8730N, Date of Establishment: 23-03-2016, Registered under Sec 8 of Companys act, Registration number of 12A / 10(23C): AAGCG8730N23ch01 - valid - 2027-28, Registration number of 80G: AAGCG8730N23ch02 - valid - 2027-28, Registration authority: Comapnys ACT",
+        "valueType": "document",
+        "confidence": 0.9,
+        "reasoning": "The dataset contains organization profile information including registration details, PAN number, and date of establishment, which are key elements of registration documents.",
+        "selector": "[name='upload-8[]']"
+      },
+      {
+        "fieldId": "upload-4[]",
+        "label": "Please provide a detailed table of the projects overall budget. *",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0.1,
+        "reasoning": "The dataset does not contain a detailed table of the projects overall budget.",
+        "selector": "[name='upload-4[]']"
+      },
+      {
+        "fieldId": "upload-5[]",
+        "label": "Please provide a detailed breakdown of how you will use the grant. *",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0.1,
+        "reasoning": "The dataset does not contain a detailed breakdown of how the grant will be used.",
+        "selector": "[name='upload-5[]']"
+      },
+      {
+        "fieldId": "upload-3[]",
+        "label": "Please provide a letter of request. *",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0.1,
+        "reasoning": "The dataset does not contain a letter of request.",
+        "selector": "[name='upload-3[]']"
+      },
+      {
+        "fieldId": "upload-1[]",
+        "label": "Please provide your UNCCD accreditation letter (if available)",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0.1,
+        "reasoning": "The dataset does not contain a UNCCD accreditation letter.",
+        "selector": "[name='upload-1[]']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "reason": "No direct match for UNCCD application date in the provided data."
+      },
+      {
+        "label": "50+ personnel",
+        "reason": "Personnel number is available, but not in the required format. Unable to determine if it's 50+."
+      },
+      {
+        "label": "Greater than USD 1 million",
+        "reason": "No financial information available to determine the organization's budget size."
+      },
+      {
+        "label": "Website(s) for the project (please include any relevant links)",
+        "reason": "No website information found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No specific project activities found to match the checkbox options."
+      },
+      {
+        "label": "How many community members benefit indirectly from your project? *",
+        "reason": "No direct data available on the number of indirectly benefiting community members."
+      },
+      {
+        "label": "Please share in detail an example of one of the individuals or families in the community whose life has been transformed by the project. *",
+        "reason": "No specific individual or family transformation story found in the dataset."
+      },
+      {
+        "label": "End Date of the project that the grant will be contributing towards *",
+        "reason": "No specific project end date found in the dataset."
+      },
+      {
+        "label": "Project Location Coordinates Latitude *",
+        "reason": "No latitude coordinates found in the dataset."
+      },
+      {
+        "label": "Project Location Coordinates Longitude *",
+        "reason": "No longitude data found in the dataset."
+      },
+      {
+        "label": "What is the estimated total area of land (in hectares) that your overall project aims to restore? *",
+        "reason": "No land restoration area data found in the dataset."
+      },
+      {
+        "label": "What is the estimated total area of land (in hectares) that this grant would support in restoring? *",
+        "reason": "No grant-supported land restoration area data found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No information about land degradation types found in the dataset."
+      },
+      {
+        "label": "Please describe the current conditions of the land, including any degradation or pollution issues (250 words max) *",
+        "reason": "No description of land conditions or degradation issues found in the dataset."
+      },
+      {
+        "label": "Please name the type(s) of ecosystem(s) your project covers *",
+        "reason": "No ecosystem type data found in the dataset."
+      },
+      {
+        "label": "Please describe the ecosystem types your project covers in more detail *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "Please describe the specific restoration techniques used in your project (500 words max) *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "What is the specific budget for the project that will be funded by this grant? (in USD) Please provide a detailed description of the existing budget showing how much money is planned for each activity (not including the Grant money). This question should be answered about the specific project that this grant will support. *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "How will the grant funds be used specifically? (in USD) Please describe how you intend to use the maximum Grant amount of USD 17,000, outlining the allocation for each activity along with its anticipated outcomes and impact. (500 words max) *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "What is the amount of other funding you receive for this project? (USD) *",
+        "reason": "No direct match for project funding amount in the provided data."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No data available to determine if 'Other' should be checked."
+      },
+      {
+        "label": "Please describe the type of technology or equipment your organization will use to support the project in more detail (500 words max) *",
+        "reason": "No specific information about technology or equipment used in projects."
+      },
+      {
+        "label": "What plans are in place for maintaining the land post-restoration? (500 words max) *",
+        "reason": "No information about land maintenance plans."
+      },
+      {
+        "label": "Describe your monitoring and evaluation plan. How will the success of the project be measured? What are the key performance indicators? How will you track progress throughout the project? How will you evaluate your work at the end of the project? (500 words max) *",
+        "reason": "No information about monitoring and evaluation plans."
+      },
+      {
+        "label": "Political risks (Changes in policy/regulations, political instability)",
+        "reason": "No information about political risks."
+      },
+      {
+        "label": "Please describe the potential risks and challenges that could impact the project and how they will be mitigated (500 words max) *",
+        "reason": "No specific data found on project risks and mitigation strategies."
+      },
+      {
+        "label": "Please list any proposed partners of this project, including the organization name and website, your past experience working with that partner, and what role and responsibilities the partner organization will have in your project. (250 words max) *",
+        "reason": "No specific data found on proposed partners, their websites, past experience, roles, and responsibilities."
+      },
+      {
+        "label": "Please provide a detailed table of the projects overall budget. *",
+        "reason": "No budget information found in the dataset."
+      },
+      {
+        "label": "Please provide a detailed breakdown of how you will use the grant. *",
+        "reason": "No grant usage breakdown found in the dataset."
+      },
+      {
+        "label": "Please provide a letter of request. *",
+        "reason": "No letter of request found in the dataset."
+      },
+      {
+        "label": "Please provide your UNCCD accreditation letter (if available)",
+        "reason": "No UNCCD accreditation letter found in the dataset."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 8
+  }
+}

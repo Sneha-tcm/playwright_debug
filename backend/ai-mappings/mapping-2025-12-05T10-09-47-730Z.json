@@ -1,0 +1,375 @@
+{
+  "timestamp": "2025-12-05T10:09:47.730Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "text-1",
+      "selector": "#text-1",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of Organization *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-street_address",
+      "selector": "#address-1-street_address",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Street Address *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-city",
+      "selector": "#address-1-city",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "City *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-state",
+      "selector": "#address-1-state",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "State/Province",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-zip",
+      "selector": "#address-1-zip",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "ZIP / Postal Code",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-country",
+      "selector": "#address-1-country",
+      "value": "India",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "checkbox-5[]",
+      "selector": "#checkbox-5\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.5
+    },
+    {
+      "fieldId": "text-10",
+      "selector": "#text-10",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please describe how the local community will be involved in the project. How will you incorporate the perspectives of project stakeholders, especially women, Indigenous Peoples, and other historically marginalized communities, into the design and delivery of your project? (500 words max) *",
+      "confidence": 0.7
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "text-1",
+        "label": "Name of Organization *",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched organization name from profile data.",
+        "selector": "#text-1"
+      },
+      {
+        "fieldId": "address-1-street_address",
+        "label": "Street Address *",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched street address from organization profile.",
+        "selector": "#address-1-street_address"
+      },
+      {
+        "fieldId": "address-1-city",
+        "label": "City *",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Extracted city from the address.",
+        "selector": "#address-1-city"
+      },
+      {
+        "fieldId": "address-1-state",
+        "label": "State/Province",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched state from organization profile.",
+        "selector": "#address-1-state"
+      },
+      {
+        "fieldId": "address-1-zip",
+        "label": "ZIP / Postal Code",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched postal code from organization profile.",
+        "selector": "#address-1-zip"
+      },
+      {
+        "fieldId": "address-1-country",
+        "label": "Country *",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Assuming the organization is based in India based on address and other registration details.",
+        "selector": "#address-1-country"
+      },
+      {
+        "fieldId": "date-4",
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct match for UNCCD application date in the provided data.",
+        "selector": "#date-4"
+      },
+      {
+        "fieldId": "checkbox-3[]",
+        "label": "50+ personnel",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Personnel number is available, but not mapped to checkbox.",
+        "selector": "#checkbox-3\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-4[]",
+        "label": "10+ years",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Years of operation cannot be reliably determined from the provided data to map to the checkbox.",
+        "selector": "#checkbox-4\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-5[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "Assuming the question relates to having a valid 12A or 10(23C), which is null in the data, selecting 'No'.",
+        "selector": "#checkbox-5\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-7[]",
+        "label": "Greater than USD 1 million",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No financial data available to determine the organization's budget range.",
+        "selector": "#checkbox-7\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-8[]",
+        "label": "No",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information available to determine if the organization has any specific affiliations.",
+        "selector": "#checkbox-8\\[\\]"
+      },
+      {
+        "fieldId": "text-8",
+        "label": "Please provide a clear description of the project's secondary objective (300 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": "#text-8"
+      },
+      {
+        "fieldId": "checkbox-11[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": "[name='checkbox-11[]']"
+      },
+      {
+        "fieldId": "text-9",
+        "label": "Please describe the environmental benefits of your project in detail (500 words max) *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": "#text-9"
+      },
+      {
+        "fieldId": "radio-1",
+        "label": "No",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": "[name='radio-1']"
+      },
+      {
+        "fieldId": "checkbox-12[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": "[name='checkbox-12[]']"
+      },
+      {
+        "fieldId": "textarea-7",
+        "label": "How many community members benefit directly from your project? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found in the dataset.",
+        "selector": "#textarea-7"
+      },
+      {
+        "fieldId": "textarea-8",
+        "label": "How many community members benefit indirectly from your project? *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "Could not find the exact number of indirect beneficiaries. The data contains the number of participants in various events, but not indirect beneficiaries.",
+        "selector": "#textarea-8"
+      },
+      {
+        "fieldId": "text-10",
+        "label": "Please describe how the local community will be involved in the project. How will you incorporate the perspectives of project stakeholders, especially women, Indigenous Peoples, and other historically marginalized communities, into the design and delivery of your project? (500 words max) *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Mapped to the organization's description, which includes goals related to women's empowerment and community impact.",
+        "selector": "#text-10"
+      },
+      {
+        "fieldId": "textarea-9",
+        "label": "Please share in detail an example of one of the individuals or families in the community whose life has been transformed by the project. *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.4,
+        "reasoning": "No specific individual or family transformation story found in the provided data. The data focuses on aggregate event participation.",
+        "selector": "#textarea-9"
+      },
+      {
+        "fieldId": "date-1",
+        "label": "Start Date of the project that the grant will be contributing towards *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "Could not find the exact start date of the project. The data contains dates of various events, but not a specific project start date.",
+        "selector": "#date-1"
+      },
+      {
+        "fieldId": "date-2",
+        "label": "End Date of the project that the grant will be contributing towards *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.3,
+        "reasoning": "Could not find the exact end date of the project. The data contains dates of various events, but not a specific project end date.",
+        "selector": "#date-2"
+      },
+      {
+        "fieldId": "textarea-12",
+        "label": "Project Location Coordinates Latitude *",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.2,
+        "reasoning": "No project location coordinates found in the provided data.",
+        "selector": "#textarea-12"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "reason": "No direct match for UNCCD application date in the provided data."
+      },
+      {
+        "label": "50+ personnel",
+        "reason": "Personnel number is available, but not mapped to checkbox."
+      },
+      {
+        "label": "10+ years",
+        "reason": "Years of operation cannot be reliably determined from the provided data to map to the checkbox."
+      },
+      {
+        "label": "Greater than USD 1 million",
+        "reason": "No financial data available to determine the organization's budget range."
+      },
+      {
+        "label": "No",
+        "reason": "No information available to determine if the organization has any specific affiliations."
+      },
+      {
+        "label": "Please provide a clear description of the project's secondary objective (300 words max) *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "Please describe the environmental benefits of your project in detail (500 words max) *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "No",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "How many community members benefit directly from your project? *",
+        "reason": "No matching data found in the dataset."
+      },
+      {
+        "label": "How many community members benefit indirectly from your project? *",
+        "reason": "Could not find the exact number of indirect beneficiaries. The data contains the number of participants in various events, but not indirect beneficiaries."
+      },
+      {
+        "label": "Please share in detail an example of one of the individuals or families in the community whose life has been transformed by the project. *",
+        "reason": "No specific individual or family transformation story found in the provided data. The data focuses on aggregate event participation."
+      },
+      {
+        "label": "Start Date of the project that the grant will be contributing towards *",
+        "reason": "Could not find the exact start date of the project. The data contains dates of various events, but not a specific project start date."
+      },
+      {
+        "label": "End Date of the project that the grant will be contributing towards *",
+        "reason": "Could not find the exact end date of the project. The data contains dates of various events, but not a specific project end date."
+      },
+      {
+        "label": "Project Location Coordinates Latitude *",
+        "reason": "No project location coordinates found in the provided data."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-12-05T10:01:04.892Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [],
+    "missingFields": [],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 0
+  }
+}

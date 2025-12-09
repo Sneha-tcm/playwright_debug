@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-12-08T06:57:37.336Z",
+  "url": "https://www.tickingminds.com/contact-us/",
+  "commands": [
+    {
+      "fieldId": "your-name",
+      "selector": "#your-name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Your Name (Required)",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "your-email",
+      "selector": "#your-email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Your Email (Required)",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "your-phone",
+      "selector": "#your-phone",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "tel",
+      "action": "fill",
+      "label": "Your Phone Number (Required)",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "services[]",
+      "selector": "input[name='services[]']",
+      "value": "Champion Woman",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "Services",
+      "confidence": "0.8"
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Organization name extracted from dataset Sheet1 row 2.",
+        "selector": "#your-name"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Email extracted from dataset Sheet1 row 2.",
+        "selector": "#your-email"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Phone number extracted from dataset Sheet1 row 2.",
+        "selector": "#your-phone"
+      },
+      {
+        "fieldId": "services[]",
+        "label": "Services",
+        "mappedValue": "Champion Woman",
+        "valueType": "text",
+        "confidence": "0.8",
+        "reasoning": "Selected the most relevant project \"Champion Woman\" from dataset.",
+        "selector": "input[name='services[]']"
+      },
+      {
+        "fieldId": "your-message",
+        "label": "Your Message",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No message data available in dataset.",
+        "selector": "#your-message"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Your Message",
+        "reason": "No data available in dataset."
+      }
+    ]
+  }
+}

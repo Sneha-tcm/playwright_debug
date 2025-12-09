@@ -1,0 +1,117 @@
+{
+  "timestamp": "2025-12-05T09:53:56.268Z",
+  "url": "https://atalfoundation.ind.in/online-application/",
+  "commands": [
+    {
+      "fieldId": "input_323",
+      "selector": "#input_323",
+      "value": "TAMIL NADU",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_367",
+      "selector": "#input_367",
+      "value": "TAMIL NADU",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_366",
+      "selector": "#input_366",
+      "value": "TAMIL NADU",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_349",
+      "selector": "#input_349",
+      "value": "CHENNAI",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "District Applying For*",
+      "confidence": 0.9
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "input_3",
+        "label": "Post*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found for Post.",
+        "selector": "#input_3"
+      },
+      {
+        "fieldId": "input_323",
+        "label": "State Applying For*",
+        "mappedValue": "TAMIL NADU",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization State matched from dataset.",
+        "selector": "#input_323"
+      },
+      {
+        "fieldId": "input_367",
+        "label": "State Applying For*",
+        "mappedValue": "TAMIL NADU",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization State matched from dataset.",
+        "selector": "#input_367"
+      },
+      {
+        "fieldId": "input_366",
+        "label": "State Applying For*",
+        "mappedValue": "TAMIL NADU",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization State matched from dataset.",
+        "selector": "#input_366"
+      },
+      {
+        "fieldId": "input_350",
+        "label": "Division Applying For*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No matching data found for Division.",
+        "selector": "#input_350"
+      },
+      {
+        "fieldId": "input_349",
+        "label": "District Applying For*",
+        "mappedValue": "CHENNAI",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Organization address contains Chennai.",
+        "selector": "#input_349"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Post*",
+        "reason": "No matching data found for Post."
+      },
+      {
+        "label": "Division Applying For*",
+        "reason": "No matching data found for Division."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 7,
+    "successfulChunks": 1
+  }
+}

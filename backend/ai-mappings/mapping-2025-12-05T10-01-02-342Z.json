@@ -1,0 +1,505 @@
+{
+  "timestamp": "2025-12-05T10:01:02.343Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "text-1",
+      "selector": "#text-1",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of Organization *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-street_address",
+      "selector": "#address-1-street_address",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Street Address *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-city",
+      "selector": "#address-1-city",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "City *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-state",
+      "selector": "#address-1-state",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "State/Province",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-zip",
+      "selector": "#address-1-zip",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "ZIP / Postal Code",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-1-country",
+      "selector": "#address-1-country",
+      "value": "India",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country *",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "name-1",
+      "selector": "#name-1",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Full name of the primary contact person *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "email-1",
+      "selector": "#email-1",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Email address of the primary contact person *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "phone-1",
+      "selector": "#phone-1",
+      "value": "+91 90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Phone number of the primary contact person (including country code)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "email-2",
+      "selector": "#email-2",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Email address of the primary contact person",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "textarea-10",
+      "selector": "#textarea-10",
+      "value": "NA",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "If your organization is legally registered as a non-profit, what is the registration number *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "date-3",
+      "selector": "#date-3",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Date of Establishment of your organization. *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "checkbox-4[]",
+      "selector": "#checkbox-4\\[\\]",
+      "value": "10+ years",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "10+ years",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "checkbox-5[]",
+      "selector": "#checkbox-5\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "checkbox-8[]",
+      "selector": "#checkbox-8\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "text-4",
+      "selector": "[name='text-4']",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please introduce your organization in two sentences, emphasizing its mission, key activities, and the unique aspects that set it apart. *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "text-5",
+      "selector": "[name='text-5']",
+      "value": "ChampionWoman Life Leadership Workshops",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of the project *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "text-19",
+      "selector": "[name='text-19']",
+      "value": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Please provide a clear description of the project's primary objective (500 words max) *",
+      "confidence": 0.8
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "text-1",
+        "label": "Name of Organization *",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched organization name from the dataset.",
+        "selector": "#text-1"
+      },
+      {
+        "fieldId": "address-1-street_address",
+        "label": "Street Address *",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched street address from the dataset.",
+        "selector": "#address-1-street_address"
+      },
+      {
+        "fieldId": "address-1-city",
+        "label": "City *",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Extracted city from the address.",
+        "selector": "#address-1-city"
+      },
+      {
+        "fieldId": "address-1-state",
+        "label": "State/Province",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched state from the dataset.",
+        "selector": "#address-1-state"
+      },
+      {
+        "fieldId": "address-1-zip",
+        "label": "ZIP / Postal Code",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched postal code from the dataset.",
+        "selector": "#address-1-zip"
+      },
+      {
+        "fieldId": "address-1-country",
+        "label": "Country *",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Inferred country from the address and organization details.",
+        "selector": "#address-1-country"
+      },
+      {
+        "fieldId": "url-1",
+        "label": "Website",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website information found in the dataset.",
+        "selector": "#url-1"
+      },
+      {
+        "fieldId": "url-4",
+        "label": "Social Media Links (List all relevant social media accounts, such as Facebook, Twitter, LinkedIn, or Instagram.)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No social media links found in the dataset.",
+        "selector": "#url-4"
+      },
+      {
+        "fieldId": "name-1",
+        "label": "Full name of the primary contact person *",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped Founder's name to primary contact person.",
+        "selector": "#name-1"
+      },
+      {
+        "fieldId": "email-1",
+        "label": "Email address of the primary contact person *",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped organization email to primary contact email.",
+        "selector": "#email-1"
+      },
+      {
+        "fieldId": "phone-1",
+        "label": "Phone number of the primary contact person (including country code)",
+        "mappedValue": "+91 90877675242",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped mobile number to primary contact phone number and added country code.",
+        "selector": "#phone-1"
+      },
+      {
+        "fieldId": "name-2",
+        "label": "Name of the secondary contact person",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No secondary contact person found in the dataset.",
+        "selector": "#name-2"
+      },
+      {
+        "fieldId": "email-2",
+        "label": "Email address of the primary contact person",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched label and found email in dataset.",
+        "selector": "#email-2"
+      },
+      {
+        "fieldId": "phone-2",
+        "label": "Phone number of the secondary contact person (including country code)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No secondary contact phone number found in dataset.",
+        "selector": "#phone-2"
+      },
+      {
+        "fieldId": "textarea-10",
+        "label": "If your organization is legally registered as a non-profit, what is the registration number *",
+        "mappedValue": "NA",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Mapped to Registration number from the dataset.",
+        "selector": "#textarea-10"
+      },
+      {
+        "fieldId": "date-3",
+        "label": "Date of Establishment of your organization. *",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched label and found date of establishment in dataset.",
+        "selector": "#date-3"
+      },
+      {
+        "fieldId": "checkbox-1[]",
+        "label": "No",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about checkbox-1 in dataset.",
+        "selector": "[name='checkbox-1[]'][value='No']"
+      },
+      {
+        "fieldId": "checkbox-2[]",
+        "label": "Applied for UNCCD accreditation and awaiting response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about UNCCD accreditation in dataset.",
+        "selector": "[name='checkbox-2[]'][value='Applied for UNCCD accreditation and awaiting response']"
+      },
+      {
+        "fieldId": "date-4",
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct match for UNCCD application date in the provided data.",
+        "selector": "#date-4"
+      },
+      {
+        "fieldId": "checkbox-3[]",
+        "label": "50+ personnel",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Personnel number is available, but not in the format required by the options.",
+        "selector": "#checkbox-3\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-4[]",
+        "label": "10+ years",
+        "mappedValue": "10+ years",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Organization was established in 2016, so it has been operating for more than 10 years.",
+        "selector": "#checkbox-4\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-5[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Assuming no FCRA validity means the organization does not have FCRA registration.",
+        "selector": "#checkbox-5\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-7[]",
+        "label": "Greater than USD 1 million",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information available about the organization's budget.",
+        "selector": "#checkbox-7\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-8[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Assuming no projects related to land degradation.",
+        "selector": "#checkbox-8\\[\\]"
+      },
+      {
+        "fieldId": "text-4",
+        "label": "Please introduce your organization in two sentences, emphasizing its mission, key activities, and the unique aspects that set it apart. *",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched to 'Brief description of the organization/agency including Goals and Objectives.' from dataset.",
+        "selector": "[name='text-4']"
+      },
+      {
+        "fieldId": "text-5",
+        "label": "Name of the project *",
+        "mappedValue": "ChampionWoman Life Leadership Workshops",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Most frequent workshop name from the dataset.",
+        "selector": "[name='text-5']"
+      },
+      {
+        "fieldId": "url-3",
+        "label": "Website(s) for the project (please include any relevant links)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website information found in the dataset.",
+        "selector": "[name='url-3']"
+      },
+      {
+        "fieldId": "checkbox-9[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct mapping available, requires manual selection based on project details.",
+        "selector": "[name='checkbox-9[]']"
+      },
+      {
+        "fieldId": "text-19",
+        "label": "Please provide a clear description of the project's primary objective (500 words max) *",
+        "mappedValue": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Extracted from the organization's description, focusing on the impact on women and girls.",
+        "selector": "[name='text-19']"
+      },
+      {
+        "fieldId": "checkbox-19[]",
+        "label": "Other (please specify below)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct mapping available, requires manual selection based on project details.",
+        "selector": "[name='checkbox-19[]']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Website",
+        "reason": "No website information found in the dataset."
+      },
+      {
+        "label": "Social Media Links (List all relevant social media accounts, such as Facebook, Twitter, LinkedIn, or Instagram.)",
+        "reason": "No social media links found in the dataset."
+      },
+      {
+        "label": "Name of the secondary contact person",
+        "reason": "No secondary contact person found in the dataset."
+      },
+      {
+        "label": "Phone number of the secondary contact person (including country code)",
+        "reason": "No secondary contact phone number found in dataset."
+      },
+      {
+        "label": "Applied for UNCCD accreditation and awaiting response",
+        "reason": "No information about UNCCD accreditation in dataset."
+      },
+      {
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "reason": "No direct match for UNCCD application date in the provided data."
+      },
+      {
+        "label": "50+ personnel",
+        "reason": "Personnel number is available, but not in the format required by the options."
+      },
+      {
+        "label": "Greater than USD 1 million",
+        "reason": "No information available about the organization's budget."
+      },
+      {
+        "label": "Website(s) for the project (please include any relevant links)",
+        "reason": "No website information found in the dataset."
+      },
+      {
+        "label": "Other (please specify below)",
+        "reason": "No specific data available to pre-select checkboxes; requires manual selection."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 5
+  }
+}

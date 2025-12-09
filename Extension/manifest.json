@@ -23,7 +23,8 @@
     "storage",
     "identity",
     "contextMenus",
-    "notifications"
+    "notifications",
+    "nativeMessaging"
   ],
 
   "host_permissions": [
@@ -32,7 +33,7 @@
   ],
 
   "oauth2": {
-    "client_id": "34886981519-nulbqqf8k4jb71a889vpva6j3eb61906.apps.googleusercontent.com",
+    "client_id": "683128185472-l9him8sjbo77df2mvuvelpu90p02c4qi.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/drive.readonly"
     ]

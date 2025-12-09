@@ -1,0 +1,105 @@
+{
+  "timestamp": "2025-12-05T10:01:10.932Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "checkbox-5[]",
+      "selector": "[name='checkbox-5[]']",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.5
+    },
+    {
+      "fieldId": "checkbox-8[]",
+      "selector": "[name='checkbox-8[]']",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.5
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "date-4",
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct match found in the dataset.",
+        "selector": "#date-4"
+      },
+      {
+        "fieldId": "checkbox-3[]",
+        "label": "50+ personnel",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about personnel count found in the dataset.",
+        "selector": "[name='checkbox-3[]']"
+      },
+      {
+        "fieldId": "checkbox-4[]",
+        "label": "10+ years",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about years of operation found in the dataset.",
+        "selector": "[name='checkbox-4[]']"
+      },
+      {
+        "fieldId": "checkbox-5[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "Assuming 'No' to having UNCCD accreditation since no application date was provided.",
+        "selector": "[name='checkbox-5[]']"
+      },
+      {
+        "fieldId": "checkbox-7[]",
+        "label": "Greater than USD 1 million",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No financial information available in the dataset to determine the organization's budget.",
+        "selector": "[name='checkbox-7[]']"
+      },
+      {
+        "fieldId": "checkbox-8[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "Assuming 'No' to having projects in affected countries since no project details were provided.",
+        "selector": "[name='checkbox-8[]']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "reason": "No application date found in the dataset."
+      },
+      {
+        "label": "50+ personnel",
+        "reason": "No information about personnel count found in the dataset."
+      },
+      {
+        "label": "10+ years",
+        "reason": "No information about years of operation found in the dataset."
+      },
+      {
+        "label": "Greater than USD 1 million",
+        "reason": "No financial information available in the dataset to determine the organization's budget."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 1
+  }
+}

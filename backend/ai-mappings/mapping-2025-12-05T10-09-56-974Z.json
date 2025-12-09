@@ -1,0 +1,309 @@
+{
+  "timestamp": "2025-12-05T10:09:56.974Z",
+  "url": "https://grih.info/grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "name-1",
+      "selector": "#name-1",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Full name of the primary contact person *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "email-1",
+      "selector": "#email-1",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Email address of the primary contact person *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "phone-1",
+      "selector": "#phone-1",
+      "value": "+9190877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Phone number of the primary contact person (including country code)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "email-2",
+      "selector": "#email-2",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Email address of the primary contact person",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "phone-2",
+      "selector": "#phone-2",
+      "value": "+91 90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Phone number of the secondary contact person (including country code)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "textarea-10",
+      "selector": "#textarea-10",
+      "value": "NA",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "If your organization is legally registered as a non-profit, what is the registration number *",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "date-3",
+      "selector": "#date-3",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Date of Establishment of your organization. *",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "checkbox-4[]",
+      "selector": "#checkbox-4\\[\\]",
+      "value": "10+ years",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "10+ years",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "checkbox-5[]",
+      "selector": "#checkbox-5\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "checkbox-8[]",
+      "selector": "#checkbox-8\\[\\]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "No",
+      "confidence": 0.5
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "url-1",
+        "label": "Website",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website information found in the dataset.",
+        "selector": "#url-1"
+      },
+      {
+        "fieldId": "url-4",
+        "label": "Social Media Links (List all relevant social media accounts, such as Facebook, Twitter, LinkedIn, or Instagram.)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No social media links found in the dataset.",
+        "selector": "#url-4"
+      },
+      {
+        "fieldId": "name-1",
+        "label": "Full name of the primary contact person *",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped Founder's name to primary contact person.",
+        "selector": "#name-1"
+      },
+      {
+        "fieldId": "email-1",
+        "label": "Email address of the primary contact person *",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped organization email to primary contact email.",
+        "selector": "#email-1"
+      },
+      {
+        "fieldId": "phone-1",
+        "label": "Phone number of the primary contact person (including country code)",
+        "mappedValue": "+9190877675242",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped mobile number to primary contact phone number and added country code.",
+        "selector": "#phone-1"
+      },
+      {
+        "fieldId": "name-2",
+        "label": "Name of the secondary contact person",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No secondary contact person found in the dataset.",
+        "selector": "#name-2"
+      },
+      {
+        "fieldId": "email-2",
+        "label": "Email address of the primary contact person",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched based on label similarity and data type.",
+        "selector": "#email-2"
+      },
+      {
+        "fieldId": "phone-2",
+        "label": "Phone number of the secondary contact person (including country code)",
+        "mappedValue": "+91 90877675242",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched based on label similarity and formatting to include country code.",
+        "selector": "#phone-2"
+      },
+      {
+        "fieldId": "checkbox-1[]",
+        "label": "No",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "No information available about UNCCD accreditation.",
+        "selector": "#checkbox-1\\[\\]"
+      },
+      {
+        "fieldId": "textarea-10",
+        "label": "If your organization is legally registered as a non-profit, what is the registration number *",
+        "mappedValue": "NA",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Registration number is 'NA' in the dataset.",
+        "selector": "#textarea-10"
+      },
+      {
+        "fieldId": "date-3",
+        "label": "Date of Establishment of your organization. *",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched based on label similarity and date format.",
+        "selector": "#date-3"
+      },
+      {
+        "fieldId": "checkbox-2[]",
+        "label": "Applied for UNCCD accreditation and awaiting response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.6,
+        "reasoning": "No information available about UNCCD accreditation.",
+        "selector": "#checkbox-2\\[\\]"
+      },
+      {
+        "fieldId": "date-4",
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct match for UNCCD application date in the provided data.",
+        "selector": "#date-4"
+      },
+      {
+        "fieldId": "checkbox-3[]",
+        "label": "50+ personnel",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about the number of personnel in the organization.",
+        "selector": "#checkbox-3\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-4[]",
+        "label": "10+ years",
+        "mappedValue": "10+ years",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "The organization was established in 2016, which is less than 10 years ago. However, the question is about experience, not just establishment date. Assuming experience is related to establishment date, but allowing for some interpretation.",
+        "selector": "#checkbox-4\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-5[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "Assuming the question refers to FCRA registration, the dataset indicates 'NA' for FCRA Validity, implying 'No'.",
+        "selector": "#checkbox-5\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-7[]",
+        "label": "Greater than USD 1 million",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No financial information available in the provided data to determine the organization's budget.",
+        "selector": "#checkbox-7\\[\\]"
+      },
+      {
+        "fieldId": "checkbox-8[]",
+        "label": "No",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "Assuming the question refers to whether the organization is registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India, the dataset indicates 'yes'. Therefore, the answer is no.",
+        "selector": "#checkbox-8\\[\\]"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Website",
+        "reason": "No website information found in the dataset."
+      },
+      {
+        "label": "Social Media Links (List all relevant social media accounts, such as Facebook, Twitter, LinkedIn, or Instagram.)",
+        "reason": "No social media links found in the dataset."
+      },
+      {
+        "label": "Name of the secondary contact person",
+        "reason": "No secondary contact person found in the dataset."
+      },
+      {
+        "label": "No",
+        "reason": "No information available about UNCCD accreditation."
+      },
+      {
+        "label": "Applied for UNCCD accreditation and awaiting response",
+        "reason": "No information available about UNCCD accreditation."
+      },
+      {
+        "label": "If you recently applied for UNCCD accreditation, please indicate the date of the application.",
+        "reason": "No direct match for UNCCD application date in the provided data."
+      },
+      {
+        "label": "50+ personnel",
+        "reason": "No information about the number of personnel in the organization."
+      },
+      {
+        "label": "Greater than USD 1 million",
+        "reason": "No financial information available in the provided data to determine the organization's budget."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 3
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-12-08T04:51:46.593Z",
+  "url": "https://www.zoho.com/forms/signup.html",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [],
+    "missingFields": [],
+    "chunkedProcessing": true,
+    "totalChunks": 3,
+    "successfulChunks": 0
+  }
+}

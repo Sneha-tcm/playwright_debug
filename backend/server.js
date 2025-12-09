@@ -26,13 +26,12 @@ console.log("Initializing server...");
 // ========================================
 // AI MAPPING CONFIGURATION - FIXED
 // ========================================
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 // FIXED: Use correct model name
-const MODEL_NAME = "gemini-2.0-flash-001";
+const MODEL_NAME = "ministral-3:14b";
 
 // FIXED: Use v1 endpoint for stable models
-const API_ENDPOINT = `https://generativelanguage.googleapis.com/v1/models/${MODEL_NAME}:generateContent?key=${GEMINI_API_KEY}`;
+const API_ENDPOINT = "https://ollama.com/api/generate";
 
 const AI_MAPPING_PROMPT = `You are an AI Field-Mapping Engine. Generate ONLY valid JSON with no additional text.
 
@@ -115,9 +114,9 @@ function chunkFields(fields, size = 10) {
 
 // ========================================
 // AI MAPPING FUNCTION - FIXED
-// ========================================
+//==========================================
 async function performAIMapping(formSchema, datasetConfig) {
-  console.log("\n🤖 Starting AI Mapping with GEMINI...");
+  console.log("\n🤖 Starting AI Mapping with Ollama Cloud...");
 
   try {
     const promptText = `${AI_MAPPING_PROMPT}
@@ -128,168 +127,54 @@ ${JSON.stringify(formSchema.fields || formSchema, null, 2)}
 DATASET:
 ${JSON.stringify(datasetConfig, null, 2)}
 
-IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }. Do not include any explanatory text before or after the JSON.`;
+IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }.`;
 
-    console.log("📤 Sending request to Gemini...");
-    console.log("🔧 Using model:", MODEL_NAME);
-    console.log("📏 Prompt length:", promptText.length, "characters");
+    console.log("📤 Sending request to Ollama Cloud...");
+    console.log("📏 Prompt length:", promptText.length);
 
-    const response = await fetch(API_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        contents: [
-          {
-            role: "user",
-            parts: [{ text: promptText }]
-          }
-        ],
-        generationConfig: {
+    const response = await fetch(API_ENDPOINT,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.OLLAMA_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: MODEL_NAME, 
+          messages: [
+            { role: "user", content: promptText }
+          ],
           temperature: 0.1,
-          maxOutputTokens: 16384,
-          topP: 0.95,
-          topK: 40
-        }
-      })
-    });
+          max_tokens: 4096
+        }),
+      }
+    )
 
     if (!response.ok) {
       const errorText = await response.text();
       console.error("❌ API Error Response:", errorText);
-      
-      // Check if it's a quota/billing error
-      if (errorText.includes("quota") || errorText.includes("billing")) {
-        throw new Error("Gemini API quota exceeded or billing issue. Please check your API key and quota.");
-      }
-      
-      throw new Error(`Gemini API Error (${response.status}): ${errorText}`);
+      throw new Error(`Ollama Cloud Error (${response.status}): ${errorText}`);
     }
 
     const data = await response.json();
 
-    // Check for errors in response
-    if (data.error) {
-      throw new Error(`Gemini API Error: ${data.error.message}`);
-    }
+    const textOutput = data?.choices?.[0]?.message?.content;
+    if (!textOutput) throw new Error("Ollama Cloud returned no content.");
 
-    console.log("📋 Gemini Response Status:", response.status);
+    let cleanText = textOutput.replace(/```json|```/g, "").trim();
 
-    const textOutput = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    const first = cleanText.indexOf("{");
+    const last = cleanText.lastIndexOf("}");
+    cleanText = cleanText.substring(first, last + 1);
 
-    if (!textOutput) {
-      console.error("Full response:", JSON.stringify(data, null, 2));
-      throw new Error("Gemini returned no output");
-    }
+    return JSON.parse(cleanText);
 
-    console.log("📝 Raw Gemini output length:", textOutput.length);
-    
-    // Log first 200 characters to see what we got
-    console.log("📄 Response preview:", textOutput.substring(0, 200));
-
-    // Clean the response more thoroughly
-    let cleanText = textOutput
-      .replace(/```json/gi, "")
-      .replace(/```/g, "")
-      .trim();
-    
-    // Remove any text before the first { and after the last }
-    const firstBrace = cleanText.indexOf('{');
-    const lastBrace = cleanText.lastIndexOf('}');
-    
-    if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
-      cleanText = cleanText.substring(firstBrace, lastBrace + 1);
-      console.log("✂️ Extracted JSON portion");
-    }
-
-    // Try to parse JSON
-    let parsedJSON;
-    try {
-      parsedJSON = JSON.parse(cleanText);
-    } catch (parseError) {
-      console.error("❌ JSON Parse Error:", parseError.message);
-      console.log("🔍 Attempting to fix JSON...");
-      
-      // Check if JSON is truncated
-      const openBraces = (cleanText.match(/\{/g) || []).length;
-      const closeBraces = (cleanText.match(/\}/g) || []).length;
-      const openBrackets = (cleanText.match(/\[/g) || []).length;
-      const closeBrackets = (cleanText.match(/\]/g) || []).length;
-      
-      console.log(`📊 JSON Structure: { ${openBraces}/${closeBraces} } [ ${openBrackets}/${closeBrackets} ]`);
-      
-      let fixedText = cleanText;
-      
-      // If truncated, try to close it properly
-      if (openBraces > closeBraces || openBrackets > closeBrackets) {
-        console.log("⚠️ JSON appears truncated, attempting to close...");
-        
-        // Remove incomplete last item
-        fixedText = fixedText.replace(/,?\s*\{[^}]*$/g, ''); // Remove incomplete object
-        fixedText = fixedText.replace(/,?\s*"[^"]*$/g, '');   // Remove incomplete string
-        
-        // Close arrays and objects
-        for (let i = 0; i < (openBrackets - closeBrackets); i++) {
-          fixedText += ']';
-        }
-        for (let i = 0; i < (openBraces - closeBraces); i++) {
-          fixedText += '}';
-        }
-        
-        console.log("🔧 Added closing brackets/braces");
-      }
-      
-      // Try to extract JSON from the response
-      const jsonMatch = fixedText.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        try {
-          // Try common fixes
-          let cleanedText = jsonMatch[0]
-            .replace(/,(\s*[}\]])/g, '$1')  // Remove trailing commas
-            .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
-            .replace(/\r\n/g, ' ')           // Replace CRLF with space
-            .replace(/\n/g, ' ')             // Replace newlines with space
-            .replace(/\r/g, '')              // Remove carriage returns
-            .replace(/\t/g, ' ')             // Replace tabs with spaces
-            .replace(/\s+/g, ' ');           // Collapse multiple spaces
-          
-          parsedJSON = JSON.parse(cleanedText);
-          console.log("✅ JSON fixed successfully!");
-        } catch (fixError) {
-          console.error("❌ Could not fix JSON:", fixError.message);
-          
-          // Show context around error
-          const errorPos = parseInt(fixError.message.match(/\d+/)?.[0]) || 0;
-          const contextStart = Math.max(0, errorPos - 200);
-          const contextEnd = Math.min(cleanText.length, errorPos + 200);
-          console.log("📄 Context around error:");
-          console.log(cleanText.substring(contextStart, contextEnd));
-          
-          throw new Error(`Invalid JSON from Gemini: ${parseError.message}`);
-        }
-      } else {
-        console.log("📄 Response text (first 500 chars):", cleanText.substring(0, 500));
-        console.log("📄 Response text (last 500 chars):", cleanText.substring(cleanText.length - 500));
-        throw new Error(`No valid JSON found in response: ${parseError.message}`);
-      }
-    }
-
-    console.log("✅ Gemini Mapping Completed");
-    console.log(`   - Mapped fields: ${parsedJSON.mappedFields?.length || 0}`);
-    console.log(`   - Missing fields: ${parsedJSON.missingFields?.length || 0}`);
-    
-    return parsedJSON;
-
-  } catch (error) {
-    console.error("❌ Gemini Mapping Error:", error.message);
-    return {
-      error: error.message,
-      mappedFields: [],
-      missingFields: []
-    };
+  } catch (err) {
+    console.error("❌ Ollama Cloud Mapping Error:", err.message);
+    return { error: err.message, mappedFields: [], missingFields: [] };
   }
 }
+
 
 async function performChunkedMapping(formSchema, datasetConfig) {
   console.log("🔄 Running Chunked AI Mapping...");
@@ -348,6 +233,7 @@ async function performChunkedMapping(formSchema, datasetConfig) {
 // ========================================
 // TRANSFORM TO AUTOFILL COMMANDS
 // ========================================
+
 function transformToAutofillCommands(mappedFields, formFields) {
   return mappedFields
     .filter(field => field.mappedValue !== null)
@@ -369,7 +255,7 @@ function transformToAutofillCommands(mappedFields, formFields) {
 
       return {
         fieldId: field.fieldId,
-        selector: selector || `[id="${field.fieldId}"]`,
+        selector: selector || [id="${field.fieldId}"],
         value: field.mappedValue,
         type: field.valueType || "text",
         fieldType: originalField?.type || "text",
@@ -379,7 +265,6 @@ function transformToAutofillCommands(mappedFields, formFields) {
       };
     });
 }
-
 // ========================================
 // DIRECT AUTOFILL ENDPOINT
 // ========================================

@@ -1,0 +1,123 @@
+{
+  "timestamp": "2025-12-05T11:10:07.000Z",
+  "url": "https://www.zoho.com/forms/signup.html",
+  "commands": [
+    {
+      "fieldId": "r_account.account_name",
+      "selector": "#r_account\\.account_name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "R Account.Account Name",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "email",
+      "selector": "#email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "country_code",
+      "selector": "#country_code",
+      "value": "India (+91)",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country Code",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "rmobile",
+      "selector": "#rmobile",
+      "value": "9087767524",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Rmobile",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "r_address/1.phone",
+      "selector": "#r_address\\/1\\.phone",
+      "value": "9087767524",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "R Address/1.Phone",
+      "confidence": 0.95
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "r_account.account_name",
+        "label": "R Account.Account Name",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched organization name from dataset.",
+        "selector": "#r_account\\.account_name"
+      },
+      {
+        "fieldId": "email",
+        "label": "Email",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched email address from dataset.",
+        "selector": "#email"
+      },
+      {
+        "fieldId": "password",
+        "label": "Password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No password information available in the dataset.",
+        "selector": "#password"
+      },
+      {
+        "fieldId": "country_code",
+        "label": "Country Code",
+        "mappedValue": "India (+91)",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Assuming India as the country based on address and phone number.",
+        "selector": "#country_code"
+      },
+      {
+        "fieldId": "rmobile",
+        "label": "Rmobile",
+        "mappedValue": "9087767524",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched mobile number from dataset.",
+        "selector": "#rmobile"
+      },
+      {
+        "fieldId": "r_address/1.phone",
+        "label": "R Address/1.Phone",
+        "mappedValue": "9087767524",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched phone number from dataset.",
+        "selector": "#r_address\\/1\\.phone"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Password",
+        "reason": "No password information available in the dataset."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 3,
+    "successfulChunks": 1
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "timestamp": "2025-12-05T11:10:05.933Z",
+  "url": "https://www.zoho.com/forms/signup.html",
+  "commands": [
+    {
+      "fieldId": "r_account.account_name",
+      "selector": "#r_account\\.account_name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "R Account.Account Name",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "email",
+      "selector": "#email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "country_code",
+      "selector": "#country_code",
+      "value": "India (+91)",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country Code",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "rmobile",
+      "selector": "#rmobile",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Rmobile",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "country",
+      "selector": "select[aria-label='Country']",
+      "value": "India",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "country_state",
+      "selector": "select[aria-label='Country State']",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country State",
+      "confidence": 0.8
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "r_account.account_name",
+        "label": "R Account.Account Name",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched based on organization name.",
+        "selector": "#r_account\\.account_name"
+      },
+      {
+        "fieldId": "email",
+        "label": "Email",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched based on email address.",
+        "selector": "#email"
+      },
+      {
+        "fieldId": "password",
+        "label": "Password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No password available in the dataset.",
+        "selector": "#password"
+      },
+      {
+        "fieldId": "country_code",
+        "label": "Country Code",
+        "mappedValue": "India (+91)",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Assuming India as the country based on mobile number.",
+        "selector": "#country_code"
+      },
+      {
+        "fieldId": "rmobile",
+        "label": "Rmobile",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched based on mobile number.",
+        "selector": "#rmobile"
+      },
+      {
+        "fieldId": "r_address/1.phone",
+        "label": "R Address/1.Phone",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.5,
+        "reasoning": "No specific address phone number found, using organization mobile.",
+        "selector": "#r_address\\/1\\.phone"
+      },
+      {
+        "fieldId": "country",
+        "label": "Country",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Organization is located in India.",
+        "selector": "select[aria-label='Country']"
+      },
+      {
+        "fieldId": "country_state",
+        "label": "Country State",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Organization is located in Tamil Nadu.",
+        "selector": "select[aria-label='Country State']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Password",
+        "reason": "No password available in the dataset."
+      },
+      {
+        "label": "R Address/1.Phone",
+        "reason": "No specific address phone number found."
+      },
+      {
+        "label": "Enter the word seen in the below image *",
+        "reason": "Captcha field cannot be automatically filled."
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho’s products, services, and events from Zoho and its regional partners.",
+        "reason": "No information about newsletter preference in dataset."
+      },
+      {
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "reason": "No information about terms of service agreement in dataset."
+      },
+      {
+        "label": "Otp",
+        "reason": "OTP field cannot be automatically filled."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 3,
+    "successfulChunks": 2
+  }
+}

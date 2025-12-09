@@ -1,0 +1,493 @@
+{
+  "timestamp": "2025-12-08T06:59:05.216Z",
+  "url": "https://atalfoundation.ind.in/online-application/",
+  "commands": [
+    {
+      "fieldId": "input_323",
+      "selector": "#input_323",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_367",
+      "selector": "#input_367",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_366",
+      "selector": "#input_366",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_17",
+      "selector": "#input_17",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_18",
+      "selector": "#input_18",
+      "value": "Female",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Gender*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_226",
+      "selector": "#input_226",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Mobile*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_218",
+      "selector": "#input_218",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence House No./ Street*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_219",
+      "selector": "#input_219",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence City/Town/Village*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_220",
+      "selector": "#input_220",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence Pincode*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_210",
+      "selector": "#input_210",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Correspondence State*",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_62",
+      "selector": "#input_62",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Board/University*",
+      "confidence": "0.9"
+    },
+    {
+      "fieldId": "input_65",
+      "selector": "#input_65",
+      "value": "2016",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Passing year*",
+      "confidence": "0.9"
+    },
+    {
+      "fieldId": "input_153",
+      "selector": "#input_153",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name Of Organization",
+      "confidence": "0.95"
+    },
+    {
+      "fieldId": "input_155",
+      "selector": "#input_155",
+      "value": "Founder",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Designation",
+      "confidence": "0.8"
+    },
+    {
+      "fieldId": "input_159",
+      "selector": "#input_159",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "From",
+      "confidence": "1.0"
+    },
+    {
+      "fieldId": "input_161",
+      "selector": "#input_161",
+      "value": "Present",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "To",
+      "confidence": "0.8"
+    },
+    {
+      "fieldId": "input_368",
+      "selector": "#input_368",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Phone",
+      "confidence": "1.0"
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "input_323",
+        "label": "State Applying For*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "State found in dataset",
+        "selector": "#input_323"
+      },
+      {
+        "fieldId": "input_367",
+        "label": "State Applying For*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "State found in dataset",
+        "selector": "#input_367"
+      },
+      {
+        "fieldId": "input_366",
+        "label": "State Applying For*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "State found in dataset",
+        "selector": "#input_366"
+      },
+      {
+        "fieldId": "input_214",
+        "label": "Middle Name",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No middle name data available in dataset",
+        "selector": "#input_214"
+      },
+      {
+        "fieldId": "input_215",
+        "label": "Last Name",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No last name data available in dataset",
+        "selector": "#input_215"
+      },
+      {
+        "fieldId": "input_216",
+        "label": "Mother's Name*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No mother's name data available in dataset",
+        "selector": "#input_216"
+      },
+      {
+        "fieldId": "input_217",
+        "label": "Father's/Husband's Name*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No father's/husband's name data available in dataset",
+        "selector": "#input_217"
+      },
+      {
+        "fieldId": "input_16",
+        "label": "Date Of Birth*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No date of birth data available in dataset",
+        "selector": "#input_16"
+      },
+      {
+        "fieldId": "input_17",
+        "label": "Email*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Email found in organization data",
+        "selector": "#input_17"
+      },
+      {
+        "fieldId": "input_18",
+        "label": "Gender*",
+        "mappedValue": "Female",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Gender field present in dataset",
+        "selector": "#input_18"
+      },
+      {
+        "fieldId": "input_226",
+        "label": "Mobile*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Mobile number present in dataset",
+        "selector": "#input_226"
+      },
+      {
+        "fieldId": "input_218",
+        "label": "Correspondence House No./ Street*",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Address present in dataset",
+        "selector": "#input_218"
+      },
+      {
+        "fieldId": "input_219",
+        "label": "Correspondence City/Town/Village*",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "City extracted from address",
+        "selector": "#input_219"
+      },
+      {
+        "fieldId": "input_220",
+        "label": "Correspondence Pincode*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Pincode present in dataset",
+        "selector": "#input_220"
+      },
+      {
+        "fieldId": "input_210",
+        "label": "Correspondence State*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "State present in dataset",
+        "selector": "#input_210"
+      },
+      {
+        "fieldId": "input_62",
+        "label": "Board/University*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": "0.9",
+        "reasoning": "State name matches board/university field",
+        "selector": "#input_62"
+      },
+      {
+        "fieldId": "input_63",
+        "label": "Course Type*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.2",
+        "reasoning": "No course type in dataset",
+        "selector": "#input_63"
+      },
+      {
+        "fieldId": "input_65",
+        "label": "Passing year*",
+        "mappedValue": "2016",
+        "valueType": "text",
+        "confidence": "0.9",
+        "reasoning": "Extracted year from establishment date",
+        "selector": "#input_65"
+      },
+      {
+        "fieldId": "input_231",
+        "label": "Percentage (%)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.2",
+        "reasoning": "No percentage data available",
+        "selector": "#input_231"
+      },
+      {
+        "fieldId": "input_153",
+        "label": "Name Of Organization",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": "0.95",
+        "reasoning": "Direct match from dataset",
+        "selector": "#input_153"
+      },
+      {
+        "fieldId": "input_155",
+        "label": "Designation",
+        "mappedValue": "Founder",
+        "valueType": "text",
+        "confidence": "0.8",
+        "reasoning": "Designation inferred from founder name",
+        "selector": "#input_155"
+      },
+      {
+        "fieldId": "input_159",
+        "label": "From",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Date of Establishment (as per PAN card) matches the 'From' field",
+        "selector": "#input_159"
+      },
+      {
+        "fieldId": "input_161",
+        "label": "To",
+        "mappedValue": "Present",
+        "valueType": "text",
+        "confidence": "0.8",
+        "reasoning": "No explicit end date in dataset; using 'Present' as placeholder",
+        "selector": "#input_161"
+      },
+      {
+        "fieldId": "input_164",
+        "label": "Salary (Monthly)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "Salary information not available in dataset",
+        "selector": "#input_164"
+      },
+      {
+        "fieldId": "input_166",
+        "label": "Please mention briefly - your job profile OR the work that you did at this position.(minimum 100 words)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No job profile information in dataset",
+        "selector": "#input_166"
+      },
+      {
+        "fieldId": "input_7",
+        "label": "Please upload a scanned copy of your passport size photograph*",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": "0.0",
+        "reasoning": "No document provided in dataset",
+        "selector": "#input_7"
+      },
+      {
+        "fieldId": "input_322.1",
+        "label": "Tick the box to state that you have carefully read and agree to terms and conditions of applying for this position.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": "0.0",
+        "reasoning": "No checkbox status in dataset",
+        "selector": "#input_322\\.1"
+      },
+      {
+        "fieldId": "input_368",
+        "label": "Phone",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": "1.0",
+        "reasoning": "Exact match from dataset",
+        "selector": "#input_368"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Post*",
+        "reason": "No matching field in dataset"
+      },
+      {
+        "label": "Division Applying For*",
+        "reason": "No matching field in dataset"
+      },
+      {
+        "label": "District Applying For*",
+        "reason": "No matching field in dataset"
+      },
+      {
+        "label": "Middle Name",
+        "reason": "No data available in dataset"
+      },
+      {
+        "label": "Last Name",
+        "reason": "No data available in dataset"
+      },
+      {
+        "label": "Mother's Name*",
+        "reason": "No data available in dataset"
+      },
+      {
+        "label": "Father's/Husband's Name*",
+        "reason": "No data available in dataset"
+      },
+      {
+        "label": "Date Of Birth*",
+        "reason": "No data available in dataset"
+      },
+      {
+        "label": "Course Type*",
+        "reason": "No course type information in dataset"
+      },
+      {
+        "label": "Percentage (%)",
+        "reason": "No percentage information in dataset"
+      },
+      {
+        "label": "Salary (Monthly)",
+        "reason": "Data not present in dataset"
+      },
+      {
+        "label": "Please mention briefly - your job profile OR the work that you did at this position.(minimum 100 words)",
+        "reason": "Data not present in dataset"
+      },
+      {
+        "label": "Please upload a scanned copy of your passport size photograph*",
+        "reason": "No document available in dataset"
+      },
+      {
+        "label": "Tick the box to state that you have carefully read and agree to terms and conditions of applying for this position.",
+        "reason": "No checkbox status available in dataset"
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 7,
+    "successfulChunks": 6
+  }
+}

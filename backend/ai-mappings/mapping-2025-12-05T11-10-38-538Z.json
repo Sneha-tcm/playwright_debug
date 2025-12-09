@@ -1,0 +1,191 @@
+{
+  "timestamp": "2025-12-05T11:10:38.538Z",
+  "url": "https://www.zoho.com/forms/signup.html",
+  "commands": [
+    {
+      "fieldId": "r_account.account_name",
+      "selector": "#r_account\\.account_name",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "R Account.Account Name",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "email",
+      "selector": "#email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country_code",
+      "selector": "#country_code",
+      "value": "India (+91)",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country Code",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "rmobile",
+      "selector": "#rmobile",
+      "value": "9087767524",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Rmobile",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "r_address/1.phone",
+      "selector": "#r_address\\/1\\.phone",
+      "value": "9087767524",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "R Address/1.Phone",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "country",
+      "selector": "#country",
+      "value": "India",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "country_state",
+      "selector": "#country_state",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Country State",
+      "confidence": 0.9
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "r_account.account_name",
+        "label": "R Account.Account Name",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Matched organization name from dataset.",
+        "selector": "#r_account\\.account_name"
+      },
+      {
+        "fieldId": "email",
+        "label": "Email",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Matched email address from dataset.",
+        "selector": "#email"
+      },
+      {
+        "fieldId": "password",
+        "label": "Password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No password information available in the dataset.",
+        "selector": "#password"
+      },
+      {
+        "fieldId": "country_code",
+        "label": "Country Code",
+        "mappedValue": "India (+91)",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Assuming India as the country based on address and phone number.",
+        "selector": "#country_code"
+      },
+      {
+        "fieldId": "rmobile",
+        "label": "Rmobile",
+        "mappedValue": "9087767524",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched mobile number from dataset.",
+        "selector": "#rmobile"
+      },
+      {
+        "fieldId": "r_address/1.phone",
+        "label": "R Address/1.Phone",
+        "mappedValue": "9087767524",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched phone number from dataset.",
+        "selector": "#r_address\\/1\\.phone"
+      },
+      {
+        "fieldId": "country",
+        "label": "Country",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "The organization is located in India.",
+        "selector": "#country"
+      },
+      {
+        "fieldId": "country_state",
+        "label": "Country State",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "The organization's address is in Chennai, Tamil Nadu.",
+        "selector": "#country_state"
+      },
+      {
+        "fieldId": "tos",
+        "label": "I agree to the Terms of Service and Privacy Policy.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "No explicit agreement to terms of service found in the data.",
+        "selector": "#tos"
+      },
+      {
+        "fieldId": "otp",
+        "label": "Otp",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No OTP information available in the dataset.",
+        "selector": "#otp"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Password",
+        "reason": "No password information available in the dataset."
+      },
+      {
+        "label": "Enter the word seen in the below image *",
+        "reason": "Captcha value not available in the dataset."
+      },
+      {
+        "label": "Yes, I would like to receive marketing communication regarding Zoho’s products, services, and events from Zoho and its regional partners.",
+        "reason": "No information about newsletter preference in the dataset."
+      },
+      {
+        "label": "Otp",
+        "reason": "No OTP information available in the dataset."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 3,
+    "successfulChunks": 2
+  }
+}

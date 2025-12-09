@@ -2,32 +2,77 @@
 // BACKGROUND SERVICE WORKER - DIRECT AUTOFILL
 // ========================================
 
-const BACKEND_URL = "http://localhost:3000";
+const BACKEND_URL = "http://localhost:3000"; // still supported if needed
+let nativePort = null;
 
-// Listen for messages from popup and content scripts
+// ========================================
+// CONNECT TO NATIVE MESSAGING HOST
+// ========================================
+function connectNativeHost() {
+  console.log("🔌 Connecting to native host...");
+
+  try {
+    nativePort = chrome.runtime.connectNative("com.example.myhost");
+
+    nativePort.onMessage.addListener((msg) => {
+      console.log("📥 Message from Native Host:", msg);
+
+      // If native host replied to a request
+      if (msg.autofillResponse) {
+        handleNativeAutofillResponse(msg.autofillResponse);
+      }
+    });
+
+    nativePort.onDisconnect.addListener(() => {
+      console.warn("❌ Native host disconnected.");
+      nativePort = null;
+    });
+
+    console.log("✅ Native host connected");
+  } catch (err) {
+    console.error("❌ Failed to connect to native host:", err);
+  }
+}
+
+connectNativeHost();
+
+function sendToNativeHost(payload) {
+  if (!nativePort) {
+    console.warn("⚠️ Host not connected; reconnecting...");
+    connectNativeHost();
+  }
+  console.log("📤 Sending to Native Host:", payload);
+  nativePort.postMessage(payload);
+}
+
+// ========================================
+// LISTENERS FROM POPUP + CONTENT SCRIPTS
+// ========================================
+
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (!msg || !msg.action) return;
 
   if (msg.action === "SCAN_PAGE") {
     handleScanRequest(msg.payload)
       .then(sendResponse)
-      .catch(err => {
+      .catch((err) => {
         console.error("handleScanRequest error:", err);
         sendResponse({ status: "error", message: err.message });
       });
-    return true; // Keep channel open for async response
+    return true;
   }
 
   if (msg.action === "REQUEST_AUTOFILL") {
     handleDirectAutofill(msg.url, msg.dataset, sender.tab?.id)
       .then(sendResponse)
-      .catch(error => sendResponse({ success: false, error: error.message }));
+      .catch((error) =>
+        sendResponse({ success: false, error: error.message })
+      );
     return true;
   }
 
   if (msg.action === "GET_DATASET") {
-    // Return stored dataset from chrome.storage
-    chrome.storage.local.get(['datasetConfig'], (result) => {
+    chrome.storage.local.get(["datasetConfig"], (result) => {
       sendResponse({ dataset: result.datasetConfig || null });
     });
     return true;
@@ -48,42 +93,37 @@ async function handleScanRequest(payload = {}) {
     const tab = tabs[0];
     const url = tab.url;
 
-    // Store dataset in chrome.storage for later use
+    // Store dataset
     if (payload.dataset) {
       await chrome.storage.local.set({ datasetConfig: payload.dataset });
       console.log("✅ Dataset stored in chrome.storage");
     }
 
-    // Send dataset to backend for configuration
-    if (payload.dataset) {
-      await fetch(`${BACKEND_URL}/api/dataset/configure`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload.dataset)
-      });
-      console.log("✅ Dataset sent to backend");
-    }
+    // Also send dataset to native host
+    sendToNativeHost({
+      type: "STORE_DATASET",
+      dataset: payload.dataset,
+    });
 
-    // Trigger autofill immediately
+    // Trigger autofill
     const result = await handleDirectAutofill(url, payload.dataset, tab.id);
 
     return {
       status: "success",
       message: `Autofilled ${result.fieldsCount || 0} fields`,
-      ...result
+      ...result,
     };
-
   } catch (err) {
     console.error("❌ Scan failed:", err);
     return {
       status: "error",
-      message: err.message
+      message: err.message,
     };
   }
 }
 
 // ========================================
-// HANDLE DIRECT AUTOFILL
+// HANDLE DIRECT AUTOFILL (NOW VIA NATIVE HOST)
 // ========================================
 async function handleDirectAutofill(url, dataset, tabId) {
   try {
@@ -91,72 +131,58 @@ async function handleDirectAutofill(url, dataset, tabId) {
     console.log("URL:", url);
     console.log("Tab ID:", tabId);
 
-    // If no tabId provided, get active tab
     if (!tabId) {
       const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
       if (!tabs || tabs.length === 0) throw new Error("No active tab");
       tabId = tabs[0].id;
     }
 
-    // Call backend for autofill commands
-    const response = await fetch(`${BACKEND_URL}/api/autofill/direct`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ 
-        url: url,
-        dataset: dataset 
-      })
+    // Send request to Native Host
+    sendToNativeHost({
+      type: "AUTOFILL_REQUEST",
+      url,
+      dataset
     });
 
-    const data = await response.json();
-
-    if (!data.success) {
-      throw new Error(data.error || "Autofill request failed");
-    }
-
-    console.log(`✅ Received ${data.commands.length} autofill commands`);
-
-    // Send commands to content script for execution
-    await chrome.tabs.sendMessage(tabId, {
-      action: "EXECUTE_AUTOFILL",
-      commands: data.commands,
-      metadata: data.metadata
-    });
-
-    return { 
-      success: true, 
-      fieldsCount: data.commands.length,
-      metadata: data.metadata
-    };
-
+    // The native host will respond asynchronously
+    return { success: true, waiting: true };
   } catch (error) {
     console.error("❌ Autofill error:", error);
-    
-    // Show error notification to user
+
     chrome.notifications.create({
       type: "basic",
       iconUrl: "assets/icon.png",
       title: "Autofill Failed",
-      message: error.message
+      message: error.message,
     });
 
-    return { 
-      success: false, 
-      error: error.message 
-    };
+    return { success: false, error: error.message };
   }
 }
 
 // ========================================
-// CONTEXT MENU - RIGHT CLICK AUTOFILL
+// HANDLE RESPONSE FROM NATIVE HOST
+// ========================================
+async function handleNativeAutofillResponse(response) {
+  const { commands, metadata, tabId } = response;
+
+  console.log(`📥 Host returned ${commands.length} autofill commands`);
+
+  await chrome.tabs.sendMessage(tabId, {
+    action: "EXECUTE_AUTOFILL",
+    commands,
+    metadata,
+  });
+}
+
+// ========================================
+// CONTEXT MENU
 // ========================================
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "autofill-form",
     title: "🤖 AI Autofill This Form",
-    contexts: ["page"]
+    contexts: ["page"],
   });
 });
 
@@ -164,8 +190,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "autofill-form") {
     console.log("🖱️ Context menu clicked - triggering autofill");
 
-    // Get stored dataset
-    const storage = await chrome.storage.local.get(['datasetConfig']);
+    const storage = await chrome.storage.local.get(["datasetConfig"]);
     const dataset = storage.datasetConfig;
 
     if (!dataset) {
@@ -173,27 +198,36 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
         type: "basic",
         iconUrl: "assets/icon.png",
         title: "No Dataset",
-        message: "Please configure a dataset first in the extension popup"
+        message: "Please configure a dataset first in the extension popup",
       });
       return;
     }
 
-    // Trigger autofill
-    await handleDirectAutofill(tab.url, dataset, tab.id);
+    sendToNativeHost({
+      type: "AUTOFILL_REQUEST",
+      url: tab.url,
+      dataset,
+      tabId: tab.id,
+    });
   }
 });
 
 // ========================================
-// KEYBOARD SHORTCUT (OPTIONAL)
+// KEYBOARD SHORTCUT
 // ========================================
 chrome.commands.onCommand.addListener(async (command) => {
   if (command === "trigger-autofill") {
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     if (tabs.length > 0) {
-      const storage = await chrome.storage.local.get(['datasetConfig']);
-      await handleDirectAutofill(tabs[0].url, storage.datasetConfig, tabs[0].id);
+      const storage = await chrome.storage.local.get(["datasetConfig"]);
+      sendToNativeHost({
+        type: "AUTOFILL_REQUEST",
+        url: tabs[0].url,
+        dataset: storage.datasetConfig,
+        tabId: tabs[0].id,
+      });
     }
   }
 });
 
-console.log("✅ Background service worker initialized");
+console.log("✅ Background service worker initialized with Native Messaging");

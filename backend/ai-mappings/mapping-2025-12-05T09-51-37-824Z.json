@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-12-05T09:51:37.835Z",
+  "url": "https://www.tickingminds.com/contact-us/",
+  "commands": [
+    {
+      "fieldId": "your-name",
+      "selector": "#your-name",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Your Name (Required)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "your-phone",
+      "selector": "#your-phone",
+      "value": "9841095001",
+      "type": "text",
+      "fieldType": "tel",
+      "action": "fill",
+      "label": "Your Phone Number (Required)",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "your-message",
+      "selector": "#your-message",
+      "value": "Champion a Woman She will build a nation is the tag line.  ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent.  This is done by conducting Chmapionwoman training on life leadership for women and girls.  The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc.  The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "Your Message",
+      "confidence": 0.8
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched Founder's name from dataset.",
+        "selector": "#your-name"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "Email address not found in dataset.",
+        "selector": "#your-email"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": "9841095001",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Matched mobile number from dataset.",
+        "selector": "#your-phone"
+      },
+      {
+        "fieldId": "services[]",
+        "label": "Services",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No specific services data found in the dataset.",
+        "selector": "[name='services[]']"
+      },
+      {
+        "fieldId": "your-message",
+        "label": "Your Message",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line.  ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent.  This is done by conducting Chmapionwoman training on life leadership for women and girls.  The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc.  The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Matched organization description from dataset.",
+        "selector": "#your-message"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Your Email (Required)",
+        "reason": "Email address not found in dataset."
+      }
+    ]
+  }
+}

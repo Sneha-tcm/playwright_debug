@@ -32,7 +32,7 @@ let config = {
 };
 
 let selectedFiles = [];
-const CLIENT_ID = "34886981519-nulbqqf8k4jb71a889vpva6j3eb61906.apps.googleusercontent.com";
+const CLIENT_ID = "683128185472-l9him8sjbo77df2mvuvelpu90p02c4qi.apps.googleusercontent.com";
 const SCOPES = ["https://www.googleapis.com/auth/drive.readonly"];
 let OAUTH_TOKEN = null;
 
