@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "git-filter-repo": "^0.0.30"
   }
 }

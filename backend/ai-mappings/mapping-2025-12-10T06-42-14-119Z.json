@@ -1,0 +1,403 @@
+{
+  "timestamp": "2025-12-10T06:42:14.120Z",
+  "url": "https://atalfoundation.ind.in/online-application/",
+  "commands": [
+    {
+      "fieldId": "input_217",
+      "selector": "#input_217",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Father's/Husband's Name*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "input_16",
+      "selector": "#input_16",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Date Of Birth*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_17",
+      "selector": "#input_17",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_18",
+      "selector": "#input_18",
+      "value": "Female",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Gender*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_226",
+      "selector": "#input_226",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Mobile*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_218",
+      "selector": "#input_218",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence House No./ Street*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_219",
+      "selector": "#input_219",
+      "value": "R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence City/Town/Village*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "input_220",
+      "selector": "#input_220",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence Pincode*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_210",
+      "selector": "#input_210",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Correspondence State*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_62",
+      "selector": "#input_62",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Board/University*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_65",
+      "selector": "#input_65",
+      "value": "2016",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Passing year*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "input_231",
+      "selector": "#input_231",
+      "value": "100",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Percentage (%)*",
+      "confidence": 0.7
+    },
+    {
+      "fieldId": "input_153",
+      "selector": "#input_153",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name Of Organization",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_155",
+      "selector": "#input_155",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Designation",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_159",
+      "selector": "input[name='input_159']",
+      "value": "23-03-2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "From",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "input_161",
+      "selector": "input[name='input_161']",
+      "value": "2025",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "To",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_166",
+      "selector": "#input_166",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "Please mention briefly - your job profile OR the work that you did at this position.(minimum 100 words)",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "input_217",
+        "label": "Father's/Husband's Name*",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Mapped to 'Founder's name' in organization profile as closest match for father's/husband's name",
+        "selector": "#input_217"
+      },
+      {
+        "fieldId": "input_16",
+        "label": "Date Of Birth*",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to 'Date of Establishment (as per PAN card)' as no personal DOB available; organization establishment date used as proxy",
+        "selector": "#input_16"
+      },
+      {
+        "fieldId": "input_17",
+        "label": "Email*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped directly from 'Email' field in organization profile",
+        "selector": "#input_17"
+      },
+      {
+        "fieldId": "input_18",
+        "label": "Gender*",
+        "mappedValue": "Female",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Gender field matches the organization's gender value in dataset.",
+        "selector": "#input_18"
+      },
+      {
+        "fieldId": "input_226",
+        "label": "Mobile*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number directly mapped from dataset's mobile number field.",
+        "selector": "#input_226"
+      },
+      {
+        "fieldId": "input_218",
+        "label": "Correspondence House No./ Street*",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Address mapped from 'Office location(address)' in dataset.",
+        "selector": "#input_218"
+      },
+      {
+        "fieldId": "input_219",
+        "label": "Correspondence City/Town/Village*",
+        "mappedValue": "R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Mapped from 'Office location(address)' in dataset, extracting city/town part",
+        "selector": "#input_219"
+      },
+      {
+        "fieldId": "input_220",
+        "label": "Correspondence Pincode*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match from 'Pincode' in dataset",
+        "selector": "#input_220"
+      },
+      {
+        "fieldId": "input_210",
+        "label": "Correspondence State*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match from 'State' in dataset and matches form options",
+        "selector": "#input_210"
+      },
+      {
+        "fieldId": "input_62",
+        "label": "Board/University*",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to organization name as the closest entity representing board/university",
+        "selector": "#input_62"
+      },
+      {
+        "fieldId": "input_63",
+        "label": "Course Type*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No course type information found in dataset",
+        "selector": "#input_63"
+      },
+      {
+        "fieldId": "input_65",
+        "label": "Passing year*",
+        "mappedValue": "2016",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Mapped to Date of Establishment year as closest passing year available",
+        "selector": "#input_65"
+      },
+      {
+        "fieldId": "input_231",
+        "label": "Percentage (%)*",
+        "mappedValue": "100",
+        "valueType": "text",
+        "confidence": 0.7,
+        "reasoning": "No explicit percentage found; assumed 100% as default for percentage field",
+        "selector": "#input_231"
+      },
+      {
+        "fieldId": "input_153",
+        "label": "Name Of Organization",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Matched organization name from dataset profile sheet",
+        "selector": "#input_153"
+      },
+      {
+        "fieldId": "input_155",
+        "label": "Designation",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Used founder's name as designation proxy from dataset profile",
+        "selector": "#input_155"
+      },
+      {
+        "fieldId": "input_159",
+        "label": "From",
+        "mappedValue": "23-03-2016",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Mapped 'From' to 'Date of Establishment (as per PAN card)' from organization profile data",
+        "selector": "input[name='input_159']"
+      },
+      {
+        "fieldId": "input_161",
+        "label": "To",
+        "mappedValue": "2025",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped 'To' to the latest year 2025 from events data indicating current activity year",
+        "selector": "input[name='input_161']"
+      },
+      {
+        "fieldId": "input_164",
+        "label": "Salary (Monthly)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No salary or monthly payment data found in dataset",
+        "selector": "input[name='input_164']"
+      },
+      {
+        "fieldId": "input_166",
+        "label": "Please mention briefly - your job profile OR the work that you did at this position.(minimum 100 words)",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped from organization's brief description of work and job profile in dataset.",
+        "selector": "#input_166"
+      },
+      {
+        "fieldId": "input_7",
+        "label": "Please upload a scanned copy of your passport size photograph*",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0,
+        "reasoning": "No photograph document or image content found in dataset.",
+        "selector": "#input_7"
+      },
+      {
+        "fieldId": "input_322.1",
+        "label": "Tick the box to state that you have careefully read and agree to terms and conditions of applying for this position.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No explicit confirmation or agreement data found in dataset.",
+        "selector": "#input_322\\.1"
+      },
+      {
+        "fieldId": "input_368",
+        "label": "Comments",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No comments or similar text found in the dataset",
+        "selector": "#input_368"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Course Type*",
+        "reason": "No relevant course type data found in dataset to map"
+      },
+      {
+        "label": "Salary (Monthly)",
+        "reason": "No salary or monthly payment information available in the dataset"
+      },
+      {
+        "label": "Please upload a scanned copy of your passport size photograph*",
+        "reason": "No photograph document or image content found in dataset."
+      },
+      {
+        "label": "Tick the box to state that you have careefully read and agree to terms and conditions of applying for this position.",
+        "reason": "No explicit confirmation or agreement data found in dataset."
+      },
+      {
+        "label": "Comments",
+        "reason": "No matching data found in the dataset for comments field"
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 13,
+    "successfulChunks": 8
+  }
+}

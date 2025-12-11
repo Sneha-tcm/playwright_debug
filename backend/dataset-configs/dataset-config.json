@@ -1,28 +1,21 @@
 {
-  "type": "google-drive",
-  "local": {
-    "items": [],
-    "totalFiles": 0,
-    "processedData": null
-  },
   "drive": {
-    "link": "https://drive.google.com/drive/folders/1ch2i4E4JSFK2bcEq8WsYUtuNDm4BNBpW",
     "id": "1ch2i4E4JSFK2bcEq8WsYUtuNDm4BNBpW",
+    "link": "https://drive.google.com/drive/folders/1ch2i4E4JSFK2bcEq8WsYUtuNDm4BNBpW",
     "name": "NGO_dataset",
-    "type": "folder",
     "processedData": {
       "totalFiles": 2,
       "successCount": 2,
       "errorCount": 0,
-      "processedAt": "2025-12-09T06:32:01.061Z",
+      "processedAt": "2025-12-10T06:23:30.647Z",
       "files": [
         {
           "filename": "Sample_Testing_Sheet.xlsx",
           "fileType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
           "extension": "xlsx",
           "size": 9455,
-          "lastModified": "2025-12-09T06:31:58.934Z",
-          "extractedAt": "2025-12-09T06:32:00.560Z",
+          "lastModified": "2025-12-10T06:23:27.914Z",
+          "extractedAt": "2025-12-10T06:23:30.103Z",
           "data": {
             "Sheet1": [
               [
@@ -1087,8 +1080,8 @@
           "fileType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
           "extension": "xlsx",
           "size": 479608,
-          "lastModified": "2025-12-09T06:32:00.471Z",
-          "extractedAt": "2025-12-09T06:32:01.060Z",
+          "lastModified": "2025-12-10T06:23:30.005Z",
+          "extractedAt": "2025-12-10T06:23:30.647Z",
           "data": {
             "2019": [
               [
@@ -25246,7 +25239,14 @@
           }
         }
       ]
-    }
+    },
+    "type": "folder"
   },
-  "lastSaved": 1765261921061
+  "lastSaved": 1765347810647,
+  "local": {
+    "items": [],
+    "processedData": null,
+    "totalFiles": 0
+  },
+  "type": "google-drive"
 }

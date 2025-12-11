@@ -28,10 +28,10 @@ console.log("Initializing server...");
 // ========================================
 
 // FIXED: Use correct model name
-const MODEL_NAME = "ministral-3:14b";
+const MODEL_NAME = "gpt-4.1-mini";
 
 // FIXED: Use v1 endpoint for stable models
-const API_ENDPOINT = "https://ollama.com/api/generate";
+const API_ENDPOINT = "https://api.openai.com/v1/chat/completions";
 
 const AI_MAPPING_PROMPT = `You are an AI Field-Mapping Engine. Generate ONLY valid JSON with no additional text.
 
@@ -69,12 +69,29 @@ MAPPING RULES:
 6. For project fields: select most relevant project from dataset
 7. If data missing: set mappedValue to null and add to missingFields
 8. Include CSS selector for each field (use id, name, or aria-label)
+9.While mapping, give more concentration on dates, map dates in the correct format, and correct date for example, if asked for date of registration, then map the date of registration only, not other dates and vice versa.
 
 CRITICAL: Return ONLY the JSON object. No explanations, no markdown, no extra text.`;
 
 // ========================================
 // HELPER: GET LATEST DATASET CONFIG
 // ========================================
+function analyzeOutputStats(text) {
+  if (!text || typeof text !== "string") {
+    return { characters: 0, tokens: 0 };
+  }
+
+  const characters = text.length;
+
+  // OpenAI heuristic: ~4 chars per token on average
+  const estimatedTokens = Math.ceil(characters / 4);
+
+  return {
+    characters,
+    estimatedTokens
+  };
+}
+
 function getLatestDatasetConfig() {
   try {
     const configPath = path.join(__dirname, "dataset-configs", "dataset-config.json");
@@ -116,7 +133,7 @@ function chunkFields(fields, size = 10) {
 // AI MAPPING FUNCTION - FIXED
 //==========================================
 async function performAIMapping(formSchema, datasetConfig) {
-  console.log("\n🤖 Starting AI Mapping with Ollama Cloud...");
+  console.log("\n🤖 Starting AI Mapping with OpenAI...");
 
   try {
     const promptText = `${AI_MAPPING_PROMPT}
@@ -129,38 +146,38 @@ ${JSON.stringify(datasetConfig, null, 2)}
 
 IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }.`;
 
-    console.log("📤 Sending request to Ollama Cloud...");
+    console.log("📤 Sending request to OpenAI...");
     console.log("📏 Prompt length:", promptText.length);
 
-    const response = await fetch(API_ENDPOINT,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.OLLAMA_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: MODEL_NAME, 
-          messages: [
-            { role: "user", content: promptText }
-          ],
-          temperature: 0.1,
-          max_tokens: 4096
-        }),
-      }
-    )
+    const response = await fetch(API_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: MODEL_NAME,
+        messages: [{ role: "user", content: promptText }],
+        temperature: 0.1,
+        max_tokens: 4096
+      }),
+    });
 
     if (!response.ok) {
       const errorText = await response.text();
       console.error("❌ API Error Response:", errorText);
-      throw new Error(`Ollama Cloud Error (${response.status}): ${errorText}`);
+      throw new Error(`OpenAI Error (${response.status}): ${errorText}`);
     }
 
     const data = await response.json();
-
     const textOutput = data?.choices?.[0]?.message?.content;
-    if (!textOutput) throw new Error("Ollama Cloud returned no content.");
 
+    if (!textOutput) throw new Error("OpenAI returned no content.");
+     
+    const metrics = analyzeOutputStats(textOutput);
+    console.log("📏 Output Characters:", metrics.characters);
+    console.log("🔢 Estimated Tokens:", metrics.estimatedTokens);
+    // Remove markdown code blocks if any
     let cleanText = textOutput.replace(/```json|```/g, "").trim();
 
     const first = cleanText.indexOf("{");
@@ -170,16 +187,17 @@ IMPORTANT: Your response must be ONLY a valid JSON object starting with { and en
     return JSON.parse(cleanText);
 
   } catch (err) {
-    console.error("❌ Ollama Cloud Mapping Error:", err.message);
+    console.error("❌ OpenAI Mapping Error:", err.message);
     return { error: err.message, mappedFields: [], missingFields: [] };
   }
 }
 
 
+
 async function performChunkedMapping(formSchema, datasetConfig) {
   console.log("🔄 Running Chunked AI Mapping...");
 
-  const chunks = chunkFields(formSchema.fields, 6); // Smaller chunks for reliability
+  const chunks = chunkFields(formSchema.fields, 10); // Smaller chunks for reliability
 
   let finalMapped = [];
   let finalMissing = [];
