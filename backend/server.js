@@ -28,17 +28,8 @@ console.log("Initializing server...");
 // ========================================
 
 // ========================================
-// OLLAMA CONFIG
-// ========================================
-// ========================================
-// OPENAI CONFIG
-// ========================================
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-
-// ========================================
 // OLLAMA CONFIG (LOCAL DESKTOP)
 // ========================================
-
 const API_ENDPOINT = "http://localhost:11435/api/chat";
 
 // Recommended models
@@ -46,8 +37,6 @@ const MODEL_NAME = "qwen2.5:3b";
 // Alternatives:
 // "mistral"
 // "qwen2.5:7b"
-
-
 
 const AI_MAPPING_PROMPT = `You are an AI Field-Mapping Engine. Generate ONLY valid JSON with no additional text.
 
@@ -121,9 +110,8 @@ MAPPING RULES:
 
 CRITICAL: Return ONLY the JSON object. No explanations, no markdown, no extra text.`;
 
-
 // ========================================
-// HELPER: GET LATEST DATASET CONFIG
+// HELPER FUNCTIONS
 // ========================================
 function analyzeOutputStats(text) {
   if (!text || typeof text !== "string") {
@@ -131,8 +119,6 @@ function analyzeOutputStats(text) {
   }
 
   const characters = text.length;
-
-  // OpenAI heuristic: ~4 chars per token on average
   const estimatedTokens = Math.ceil(characters / 4);
 
   return {
@@ -153,13 +139,41 @@ function getLatestDatasetConfig() {
     const configData = fs.readFileSync(configPath, "utf-8");
     const config = JSON.parse(configData);
     
-    console.log("✅ Loaded dataset config:", {
-      type: config.type,
-      lastSaved: config.lastSaved,
-      hasProcessedData: !!config.local?.processedData
-    });
+    console.log("📦 Loaded dataset config:");
+    console.log("  Type:", config.type);
+    console.log("  Last Saved:", config.lastSaved);
     
-    return config;
+    // 🔍 NEW: Validate and extract actual data
+    let actualData = null;
+    
+    if (config.type === "local") {
+      if (config.local?.processedData) {
+        actualData = config.local.processedData;
+        console.log("  ✅ Has processedData with keys:", Object.keys(actualData));
+      } else {
+        console.warn("  ⚠️ No processedData found in local config!");
+        
+        // Try to load from processed-data folder as fallback
+        const processedDataPath = path.join(__dirname, "processed-data");
+        if (fs.existsSync(processedDataPath)) {
+          const files = fs.readdirSync(processedDataPath)
+            .filter(f => f.startsWith("processed-data-") && f.endsWith(".json"))
+            .sort()
+            .reverse();
+          
+          if (files.length > 0) {
+            const latestFile = files[0];
+            const data = JSON.parse(fs.readFileSync(path.join(processedDataPath, latestFile), "utf-8"));
+            actualData = data;
+            console.log("  ✅ Loaded from fallback file:", latestFile);
+          }
+        }
+      }
+    }
+    
+    // Return the processed data directly, not the config wrapper
+    return actualData || config;
+    
   } catch (error) {
     console.error("❌ Error loading dataset config:", error.message);
     return null;
@@ -179,25 +193,56 @@ function chunkFields(fields, size = 10) {
 }
 
 // ========================================
-// AI MAPPING FUNCTION - FIXED
-//==========================================
+// AI MAPPING FUNCTION - ENHANCED WITH DEBUG
+// ========================================
 async function performAIMapping(formSchema, datasetConfig) {
   console.log("\n🤖 Starting AI Mapping with Ollama (Local)...");
 
   try {
+    // 🔍 DEBUG SECTION
+    console.log("\n📊 DEBUG: Dataset Config Structure:");
+    console.log("Type:", datasetConfig?.type);
+    console.log("Has local data:", !!datasetConfig?.local);
+    console.log("Has processedData:", !!datasetConfig?.local?.processedData);
+    
+    // Log the actual data structure
+    if (datasetConfig?.local?.processedData) {
+      console.log("\n✅ ProcessedData Keys:", Object.keys(datasetConfig.local.processedData));
+      console.log("Sample Data:", JSON.stringify(datasetConfig.local.processedData, null, 2).substring(0, 500) + "...");
+    } else if (datasetConfig && !datasetConfig.type) {
+      // Data was passed directly without wrapper
+      console.log("\n✅ Direct Data Keys:", Object.keys(datasetConfig));
+      console.log("Sample Data:", JSON.stringify(datasetConfig, null, 2).substring(0, 500) + "...");
+    } else {
+      console.log("\n❌ WARNING: No processedData found!");
+      console.log("Full config:", JSON.stringify(datasetConfig, null, 2).substring(0, 300));
+    }
+    
+    // Extract the actual data to send to AI
+    let actualDataset = datasetConfig;
+    
+    // If processedData exists, use that instead of the config wrapper
+    if (datasetConfig?.local?.processedData) {
+      actualDataset = datasetConfig.local.processedData;
+      console.log("\n✅ Using processedData directly");
+    } else if (datasetConfig?.type) {
+      console.warn("\n⚠️ Config wrapper detected but no processedData - this may cause empty mappings!");
+    }
+
     const promptText = `${AI_MAPPING_PROMPT}
 
 FORM FIELDS:
 ${JSON.stringify(formSchema.fields || formSchema, null, 2)}
 
 DATASET:
-${JSON.stringify(datasetConfig, null, 2)}
+${JSON.stringify(actualDataset, null, 2)}
 
 IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }.
 `;
 
     console.log("📤 Sending request to Ollama...");
     console.log("📏 Prompt length:", promptText.length);
+    console.log("📏 Dataset length:", JSON.stringify(actualDataset).length);
 
     const response = await fetch(API_ENDPOINT, {
       method: "POST",
@@ -208,13 +253,13 @@ IMPORTANT: Your response must be ONLY a valid JSON object starting with { and en
         model: MODEL_NAME,
         stream: false,
         options: {
-          temperature: 0.1,   // critical for JSON stability
+          temperature: 0.1,
           top_p: 0.9
         },
         messages: [
           {
             role: "system",
-            content: "You are a strict JSON-only AI mapping engine."
+            content: "You are a strict JSON-only AI mapping engine. You must analyze the provided dataset and map form fields to the available data."
           },
           {
             role: "user",
@@ -231,20 +276,18 @@ IMPORTANT: Your response must be ONLY a valid JSON object starting with { and en
     }
 
     const data = await response.json();
-
-    // Ollama response format
     const textOutput = data?.message?.content;
+    
     if (!textOutput) throw new Error("Ollama returned no content.");
 
-    console.log(textOutput);
+    console.log("📥 Raw Ollama Response (first 500 chars):", textOutput.substring(0, 500));
 
     const metrics = analyzeOutputStats(textOutput);
     console.log("📏 Output Characters:", metrics.characters);
     console.log("🔢 Estimated Tokens:", metrics.estimatedTokens);
 
-    // 🧹 Strict JSON extraction (Ollama-safe)
+    // 🧹 Strict JSON extraction
     let cleanText = textOutput.trim();
-
     const first = cleanText.indexOf("{");
     const last = cleanText.lastIndexOf("}");
 
@@ -253,8 +296,15 @@ IMPORTANT: Your response must be ONLY a valid JSON object starting with { and en
     }
 
     cleanText = cleanText.substring(first, last + 1);
-
-    return JSON.parse(cleanText);
+    const parsedResult = JSON.parse(cleanText);
+    
+    // 🔍 Validate the result
+    console.log("\n📋 Mapping Result Summary:");
+    console.log("  Mapped fields:", parsedResult.mappedFields?.length || 0);
+    console.log("  Missing fields:", parsedResult.missingFields?.length || 0);
+    console.log("  Fields with values:", parsedResult.mappedFields?.filter(f => f.mappedValue !== null).length || 0);
+    
+    return parsedResult;
 
   } catch (err) {
     console.error("❌ Ollama Mapping Error:", err.message);
@@ -263,9 +313,9 @@ IMPORTANT: Your response must be ONLY a valid JSON object starting with { and en
 }
 
 async function performChunkedMapping(formSchema, datasetConfig) {
-  console.log("🔄 Running Chunked AI Mapping...");
+  console.log("📄 Running Chunked AI Mapping...");
 
-  const chunks = chunkFields(formSchema.fields, 5); // Smaller chunks for reliability
+  const chunks = chunkFields(formSchema.fields, 5);
 
   let finalMapped = [];
   let finalMissing = [];
@@ -294,7 +344,6 @@ async function performChunkedMapping(formSchema, datasetConfig) {
       failCount++;
     }
     
-    // Add delay between chunks to avoid rate limiting
     if (i < chunks.length - 1) {
       console.log(`   ⏳ Waiting 1 second before next chunk...`);
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -319,15 +368,12 @@ async function performChunkedMapping(formSchema, datasetConfig) {
 // ========================================
 // TRANSFORM TO AUTOFILL COMMANDS
 // ========================================
-
 function transformToAutofillCommands(mappedFields, formFields) {
   return mappedFields
     .filter(field => field.mappedValue !== null)
     .map(field => {
-      // Find the original field definition
       const originalField = formFields[field.fieldId];
       
-      // Generate selector
       let selector = field.selector;
       if (!selector && originalField) {
         if (originalField.id) {
@@ -341,7 +387,7 @@ function transformToAutofillCommands(mappedFields, formFields) {
 
       return {
         fieldId: field.fieldId,
-        selector: selector || [id="${field.fieldId}"],
+        selector: selector || `[id="${field.fieldId}"]`,
         value: field.mappedValue,
         type: field.valueType || "text",
         fieldType: originalField?.type || "text",
@@ -351,137 +397,6 @@ function transformToAutofillCommands(mappedFields, formFields) {
       };
     });
 }
-// ========================================
-// DIRECT AUTOFILL ENDPOINT
-// ========================================
-app.post("/api/autofill/direct", async (req, res) => {
-  try {
-    const { url, dataset } = req.body;
-
-    console.log("\n🤖 Direct Autofill Request");
-    console.log("URL:", url);
-    console.log("Dataset provided:", !!dataset);
-
-    // 1. Get dataset config (use provided or load saved)
-    let datasetConfig = dataset || getLatestDatasetConfig();
-    
-    if (!datasetConfig) {
-      return res.status(400).json({
-        success: false,
-        error: "No dataset configuration found"
-      });
-    }
-
-    // 2. Check if we have cached form schema for this URL
-    let formSchema;
-    const formSchemaPath = path.join(__dirname, "contact-form-schema.json");
-    
-    if (fs.existsSync(formSchemaPath)) {
-      const existingSchema = JSON.parse(fs.readFileSync(formSchemaPath, "utf-8"));
-      
-      // Use cached schema if URL matches
-      if (existingSchema.url === url) {
-        console.log("✅ Using cached form schema");
-        formSchema = existingSchema;
-      }
-    }
-
-    // 3. If no cached schema, scan the form
-    if (!formSchema) {
-      console.log("📊 Scanning form...");
-      const page = await loadPage(url);
-      const browser = page.context().browser();
-      
-      try {
-        const extractedData = await extractDom(page);
-        const domFields = Array.isArray(extractedData) ? extractedData : (extractedData.fields || []);
-        const detected = detectField(domFields);
-        const finalJson = convertToJson(detected);
-        
-        formSchema = {
-          url: url,
-          fields: finalJson,
-          scannedAt: new Date().toISOString()
-        };
-        
-        // Save for future use
-        fs.writeFileSync(formSchemaPath, JSON.stringify(formSchema, null, 2));
-        console.log("✅ Form schema saved");
-      }finally {
-  if (page) {
-    console.log("🔌 Closing Playwright context only (user Chrome stays open)");
-    await page.context().close();    // ✔ Correct
-  }
-}
-    }
-    // 4. Run AI mapping
-    console.log("🤖 Running AI mapping...");
-    
-    // Check if form is too large and needs chunking
-    const fieldCount = Object.keys(formSchema.fields).length;
-    console.log(`📋 Total fields to map: ${fieldCount}`);
-    
-    let aiResult;
-    if (fieldCount > 10) {  // Changed from 15 to 10 for better reliability
-      console.log("⚠️ Large form detected, using chunked mapping...");
-      aiResult = await performChunkedMapping(formSchema, datasetConfig);
-    } else {
-      aiResult = await performAIMapping(formSchema, datasetConfig);
-    }
-
-    if (aiResult.error && !aiResult.mappedFields?.length) {
-      return res.status(500).json({
-        success: false,
-        error: aiResult.error
-      });
-    }
-
-    // 5. Transform to autofill commands
-    const autofillCommands = transformToAutofillCommands(
-      aiResult.mappedFields, 
-      formSchema.fields
-    );
-
-    console.log(`✅ Generated ${autofillCommands.length} autofill commands`);
-
-    // 6. Save mapping result
-    const mappingDir = path.join(__dirname, "ai-mappings");
-    if (!fs.existsSync(mappingDir)) {
-      fs.mkdirSync(mappingDir, { recursive: true });
-    }
-
-    const timestamp = new Date().toISOString().replace(/[:.]/g, "-").split(".")[0];
-    const mappingResult = {
-      timestamp: new Date().toISOString(),
-      url: url,
-      commands: autofillCommands,
-      aiResult: aiResult
-    };
-
-    fs.writeFileSync(
-      path.join(mappingDir, `mapping-${timestamp}.json`),
-      JSON.stringify(mappingResult, null, 2)
-    );
-
-    res.json({
-      success: true,
-      action: "AUTOFILL",
-      commands: autofillCommands,
-      metadata: {
-        totalFields: autofillCommands.length,
-        missingFields: aiResult.missingFields?.length || 0,
-        timestamp: new Date().toISOString()
-      }
-    });
-
-  } catch (error) {
-    console.error("❌ Direct autofill error:", error.message);
-    res.status(500).json({
-      success: false,
-      error: error.message
-    });
-  }
-});
 
 // ========================================
 // HELPER: RUN AI MAPPING AUTOMATICALLY
@@ -506,7 +421,7 @@ async function runAutoAIMapping(formSchema, datasetConfig) {
     
     let llmResult;
     if (fieldCount > 10) {
-      console.log("🔄 Using chunked mapping for large form...");
+      console.log("📄 Using chunked mapping for large form...");
       llmResult = await performChunkedMapping(formSchema, datasetConfig);
     } else {
       llmResult = await performAIMapping(formSchema, datasetConfig);
@@ -527,11 +442,9 @@ async function runAutoAIMapping(formSchema, datasetConfig) {
       formFieldCount: fieldCount,
       chunkedProcessing: llmResult.chunkedProcessing || false,
       datasetUsed: {
-        type: datasetConfig.type,
+        type: datasetConfig.type || "direct",
         lastSaved: datasetConfig.lastSaved,
-        summary: datasetConfig.type === "local" 
-          ? `${datasetConfig.local?.totalFiles || 0} files`
-          : `Google Drive ${datasetConfig.drive?.type}`
+        hasData: !!(datasetConfig.profile || datasetConfig.organization || datasetConfig.local?.processedData)
       },
       mappingResult: llmResult
     };
@@ -555,7 +468,142 @@ async function runAutoAIMapping(formSchema, datasetConfig) {
 }
 
 // ========================================
-// DATASET CONFIGURATION ENDPOINT
+// SAVE PROCESSED DATA
+// ========================================
+async function saveProcessedData(processedData) {
+  try {
+    const dataDir = path.join(__dirname, "processed-data");
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    const timestamp = new Date(processedData.processedAt || new Date())
+      .toISOString()
+      .replace(/[:.]/g, "-")
+      .split(".")[0];
+    const filename = `processed-data-${timestamp}.json`;
+    const filepath = path.join(dataDir, filename);
+
+    fs.writeFileSync(filepath, JSON.stringify(processedData, null, 2));
+    console.log(`✅ Processed data saved to: ${filename}`);
+
+    return filename;
+  } catch (error) {
+    console.error("❌ Error saving processed data:", error.message);
+    throw error;
+  }
+}
+
+// ========================================
+// TEST DATASET ENDPOINT
+// ========================================
+app.get("/api/dataset/test", async (req, res) => {
+  try {
+    console.log("\n🧪 Testing Dataset Configuration...\n");
+    
+    const configPath = path.join(__dirname, "dataset-configs", "dataset-config.json");
+    const configExists = fs.existsSync(configPath);
+    console.log("1. Config file exists:", configExists);
+    
+    if (!configExists) {
+      return res.json({
+        success: false,
+        error: "No dataset configuration file found",
+        hint: "Upload your dataset first using POST /api/dataset/configure"
+      });
+    }
+    
+    const configData = fs.readFileSync(configPath, "utf-8");
+    const config = JSON.parse(configData);
+    console.log("2. Config type:", config.type);
+    console.log("3. Config keys:", Object.keys(config));
+    
+    let dataAnalysis = {
+      hasLocalData: !!config.local,
+      hasProcessedData: !!config.local?.processedData,
+      processedDataKeys: config.local?.processedData ? Object.keys(config.local.processedData) : [],
+      sampleData: null
+    };
+    
+    if (config.local?.processedData) {
+      const data = config.local.processedData;
+      
+      dataAnalysis.hasProfile = !!data.profile;
+      dataAnalysis.hasOrganization = !!data.organization;
+      dataAnalysis.hasProjects = !!data.projects;
+      dataAnalysis.hasFinancials = !!data.financials;
+      
+      if (data.profile) {
+        dataAnalysis.sampleData = {
+          profile: data.profile
+        };
+      } else if (data.organization) {
+        dataAnalysis.sampleData = {
+          organization: data.organization
+        };
+      }
+    }
+    
+    console.log("4. Data analysis:", JSON.stringify(dataAnalysis, null, 2));
+    
+    const processedDataPath = path.join(__dirname, "processed-data");
+    const processedDataExists = fs.existsSync(processedDataPath);
+    let processedFiles = [];
+    
+    if (processedDataExists) {
+      processedFiles = fs.readdirSync(processedDataPath)
+        .filter(f => f.endsWith(".json"));
+    }
+    
+    console.log("5. Processed data folder exists:", processedDataExists);
+    console.log("6. Processed files count:", processedFiles.length);
+    
+    const recommendations = [];
+    
+    if (!dataAnalysis.hasProcessedData) {
+      recommendations.push("❌ No processedData found - ensure your extension is sending the processed data correctly");
+    }
+    
+    if (dataAnalysis.processedDataKeys.length === 0) {
+      recommendations.push("❌ ProcessedData is empty - check your file upload and processing logic");
+    }
+    
+    if (!dataAnalysis.hasProfile && !dataAnalysis.hasOrganization) {
+      recommendations.push("⚠️ No profile or organization data - the AI won't be able to map personal/company fields");
+    }
+    
+    if (recommendations.length === 0) {
+      recommendations.push("✅ Dataset looks good! Ready for AI mapping");
+    }
+    
+    res.json({
+      success: true,
+      tests: {
+        configExists,
+        configType: config.type,
+        dataStructure: dataAnalysis,
+        processedDataFolder: {
+          exists: processedDataExists,
+          filesCount: processedFiles.length,
+          latestFile: processedFiles[0] || null
+        }
+      },
+      config: config,
+      recommendations: recommendations
+    });
+    
+  } catch (error) {
+    console.error("❌ Test failed:", error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      stack: error.stack
+    });
+  }
+});
+
+// ========================================
+// DATASET CONFIGURATION ENDPOINT - ENHANCED
 // ========================================
 app.post("/api/dataset/configure", async (req, res) => {
   try {
@@ -565,15 +613,30 @@ app.post("/api/dataset/configure", async (req, res) => {
     console.log("Type:", config.type);
 
     if (config.type === "local") {
-      console.log(`Local Files: ${config.local.totalFiles} files`);
+      console.log(`Local Files: ${config.local?.totalFiles || 0} files`);
 
-      if (config.local.processedData) {
+      if (config.local?.processedData) {
         console.log("\n📊 Processed Data Received:");
-        console.log(`  - Total files: ${config.local.processedData.totalFiles}`);
-        console.log(`  - Successfully processed: ${config.local.processedData.successCount}`);
-        console.log(`  - Failed: ${config.local.processedData.errorCount}`);
+        console.log(`  - Total files: ${config.local.processedData.totalFiles || 0}`);
+        console.log(`  - Successfully processed: ${config.local.processedData.successCount || 0}`);
+        console.log(`  - Failed: ${config.local.processedData.errorCount || 0}`);
+        
+        const dataKeys = Object.keys(config.local.processedData);
+        console.log(`  - Data sections: ${dataKeys.join(", ")}`);
+        
+        const hasProfile = !!config.local.processedData.profile;
+        const hasOrganization = !!config.local.processedData.organization;
+        console.log(`  - Has profile data: ${hasProfile}`);
+        console.log(`  - Has organization data: ${hasOrganization}`);
+        
+        if (!hasProfile && !hasOrganization) {
+          console.warn("  ⚠️ WARNING: No profile or organization data found!");
+        }
 
         await saveProcessedData(config.local.processedData);
+      } else {
+        console.warn("  ⚠️ WARNING: No processedData in config!");
+        console.log("  Config structure:", JSON.stringify(config, null, 2).substring(0, 300));
       }
     } else if (config.type === "google-drive") {
       console.log(`Google Drive ${config.drive.type}:`, config.drive.id);
@@ -598,8 +661,8 @@ app.post("/api/dataset/configure", async (req, res) => {
         type: config.type,
         timestamp: config.lastSaved,
         summary: config.type === "local"
-          ? `${config.local.totalFiles} local files${config.local.processedData ? " (processed)" : ""}`
-          : `Google Drive ${config.drive.type}`,
+          ? `${config.local?.totalFiles || 0} local files${config.local?.processedData ? " (processed)" : ""}`
+          : `Google Drive ${config.drive?.type}`,
       },
     });
   } catch (error) {
@@ -610,33 +673,6 @@ app.post("/api/dataset/configure", async (req, res) => {
     });
   }
 });
-
-// ========================================
-// SAVE PROCESSED DATA
-// ========================================
-async function saveProcessedData(processedData) {
-  try {
-    const dataDir = path.join(__dirname, "processed-data");
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-
-    const timestamp = new Date(processedData.processedAt)
-      .toISOString()
-      .replace(/[:.]/g, "-")
-      .split(".")[0];
-    const filename = `processed-data-${timestamp}.json`;
-    const filepath = path.join(dataDir, filename);
-
-    fs.writeFileSync(filepath, JSON.stringify(processedData, null, 2));
-    console.log(`✅ Processed data saved to: ${filename}`);
-
-    return filename;
-  } catch (error) {
-    console.error("❌ Error saving processed data:", error.message);
-    throw error;
-  }
-}
 
 // ========================================
 // GET PROCESSED DATA ENDPOINT
@@ -682,6 +718,130 @@ app.get("/api/dataset/processed-data", async (req, res) => {
     res.status(500).json({
       success: false,
       error: error.message,
+    });
+  }
+});
+
+// ========================================
+// DIRECT AUTOFILL ENDPOINT - ENHANCED
+// ========================================
+app.post("/api/autofill/direct", async (req, res) => {
+  try {
+    const { url, dataset } = req.body;
+
+    console.log("\n🤖 Direct Autofill Request");
+    console.log("URL:", url);
+    console.log("Dataset provided:", !!dataset);
+
+    let datasetConfig = dataset || getLatestDatasetConfig();
+    
+    if (!datasetConfig) {
+      return res.status(400).json({
+        success: false,
+        error: "No dataset configuration found"
+      });
+    }
+
+    let formSchema;
+    const formSchemaPath = path.join(__dirname, "contact-form-schema.json");
+    
+    if (fs.existsSync(formSchemaPath)) {
+      const existingSchema = JSON.parse(fs.readFileSync(formSchemaPath, "utf-8"));
+      
+      if (existingSchema.url === url) {
+        console.log("✅ Using cached form schema");
+        formSchema = existingSchema;
+      }
+    }
+
+    if (!formSchema) {
+      console.log("📊 Scanning form...");
+      const page = await loadPage(url);
+      const browser = page.context().browser();
+      
+      try {
+        const extractedData = await extractDom(page);
+        const domFields = Array.isArray(extractedData) ? extractedData : (extractedData.fields || []);
+        const detected = detectField(domFields);
+        const finalJson = convertToJson(detected);
+        
+        formSchema = {
+          url: url,
+          fields: finalJson,
+          scannedAt: new Date().toISOString()
+        };
+        
+        fs.writeFileSync(formSchemaPath, JSON.stringify(formSchema, null, 2));
+        console.log("✅ Form schema saved");
+      } finally {
+        if (page) {
+          console.log("🔌 Closing Playwright context");
+          await page.context().close();
+        }
+      }
+    }
+
+    console.log("🤖 Running AI mapping...");
+    
+    const fieldCount = Object.keys(formSchema.fields).length;
+    console.log(`📋 Total fields to map: ${fieldCount}`);
+    
+    let aiResult;
+    if (fieldCount > 10) {
+      console.log("⚠️ Large form detected, using chunked mapping...");
+      aiResult = await performChunkedMapping(formSchema, datasetConfig);
+    } else {
+      aiResult = await performAIMapping(formSchema, datasetConfig);
+    }
+
+    if (aiResult.error && !aiResult.mappedFields?.length) {
+      return res.status(500).json({
+        success: false,
+        error: aiResult.error
+      });
+    }
+
+    const autofillCommands = transformToAutofillCommands(
+      aiResult.mappedFields, 
+      formSchema.fields
+    );
+
+    console.log(`✅ Generated ${autofillCommands.length} autofill commands`);
+
+    const mappingDir = path.join(__dirname, "ai-mappings");
+    if (!fs.existsSync(mappingDir)) {
+      fs.mkdirSync(mappingDir, { recursive: true });
+    }
+
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-").split(".")[0];
+    const mappingResult = {
+      timestamp: new Date().toISOString(),
+      url: url,
+      commands: autofillCommands,
+      aiResult: aiResult
+    };
+
+    fs.writeFileSync(
+      path.join(mappingDir, `mapping-${timestamp}.json`),
+      JSON.stringify(mappingResult, null, 2)
+    );
+
+    res.json({
+      success: true,
+      action: "AUTOFILL",
+      commands: autofillCommands,
+      metadata: {
+        totalFields: autofillCommands.length,
+        missingFields: aiResult.missingFields?.length || 0,
+        timestamp: new Date().toISOString()
+      }
+    });
+
+  } catch (error) {
+    console.error("❌ Direct autofill error:", error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message
     });
   }
 });
@@ -744,17 +904,10 @@ app.post("/scan-form", async (req, res) => {
 
     const datasetConfig = getLatestDatasetConfig();
     
-    // Check field count and decide on chunking
     const fieldCount = Object.keys(result.fields).length;
     console.log(`📋 Form has ${fieldCount} fields`);
     
-    let aiMappingResult;
-    if (fieldCount > 10) {
-      console.log("⚠️ Large form detected, will use chunked mapping");
-      aiMappingResult = await runAutoAIMapping(result, datasetConfig);
-    } else {
-      aiMappingResult = await runAutoAIMapping(result, datasetConfig);
-    }
+    const aiMappingResult = await runAutoAIMapping(result, datasetConfig);
 
     res.json({
       success: true,
@@ -827,33 +980,40 @@ app.get("/api/ai-mapping/latest", async (req, res) => {
   }
 });
 
-// Health check
+// ========================================
+// HEALTH CHECK
+// ========================================
 app.get("/", (req, res) => {
   res.json({
     message: "AI Autofill Backend is running!",
-    version: "5.0-DIRECT-AUTOFILL-FIXED",
-    aiProvider: "Google Gemini",
+    version: "6.0-ENHANCED-DEBUG",
+    aiProvider: "Ollama Local",
     model: MODEL_NAME,
     endpoints: {
       "POST /api/autofill/direct": "Get autofill commands for URL",
       "POST /api/dataset/configure": "Configure dataset",
+      "GET  /api/dataset/test": "Test dataset configuration",
       "POST /scan-form": "Scan form structure",
       "GET  /api/ai-mapping/latest": "Get latest mapping",
+      "GET  /api/dataset/processed-data": "Get processed data"
     },
   });
 });
 
-// Start server
+// ========================================
+// START SERVER
+// ========================================
 const server = app.listen(PORT, () => {
   console.log(`\n${"=".repeat(60)}`);
-  console.log(`🚀 AI Autofill Backend Server - Direct Autofill Mode`);
+  console.log(`🚀 AI Autofill Backend Server - Enhanced Debug Mode`);
   console.log(`${"=".repeat(60)}`);
   console.log(`🌐 Running on: http://localhost:${PORT}`);
-  console.log(`📊 Version: 5.0-DIRECT-AUTOFILL-FIXED`);
+  console.log(`📊 Version: 6.0-ENHANCED-DEBUG`);
   console.log(`🤖 AI Model: ${MODEL_NAME}`);
-  console.log(`\n✨ New Feature: Direct Autofill API`);
-  console.log(`   - Endpoint: POST /api/autofill/direct`);
-  console.log(`   - Returns: Ready-to-use autofill commands`);
+  console.log(`\n🆕 New Features:`);
+  console.log(`   - Enhanced dataset debugging`);
+  console.log(`   - Dataset validation endpoint: GET /api/dataset/test`);
+  console.log(`   - Improved error logging`);
   console.log(`${"=".repeat(60)}\n`);
 });
 

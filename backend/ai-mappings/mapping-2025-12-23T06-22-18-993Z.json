@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-12-23T06:22:18.993Z",
+  "url": "https://www.tickingminds.com/contact-us/",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No name field found in the dataset.",
+        "selector": "input[name='your-name']"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No email field found in the dataset.",
+        "selector": "input[name='your-email']"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No phone number field found in the dataset.",
+        "selector": "input[name='your-phone']"
+      },
+      {
+        "fieldId": "services[]",
+        "label": "Services",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No service field found in the dataset.",
+        "selector": "input[name='services[]']"
+      },
+      {
+        "fieldId": "your-message",
+        "label": "Your Message",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No message field found in the dataset.",
+        "selector": "textarea[name='your-message']"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Your Name (Required)",
+        "reason": "Name field not found in the dataset."
+      },
+      {
+        "label": "Your Email (Required)",
+        "reason": "Email field not found in the dataset."
+      },
+      {
+        "label": "Your Phone Number (Required)",
+        "reason": "Phone number field not found in the dataset."
+      },
+      {
+        "label": "Services",
+        "reason": "Service fields not found in the dataset."
+      },
+      {
+        "label": "Your Message",
+        "reason": "Message field not found in the dataset."
+      }
+    ]
+  }
+}
