@@ -1,0 +1,649 @@
+{
+  "timestamp": "2025-12-11T06:19:42.816Z",
+  "url": "https://www.roboform.com/filling-test-all-fields?utm_source=chatgpt.com",
+  "commands": [
+    {
+      "fieldId": "02frstname",
+      "selector": "#02frstname",
+      "value": "Ranjini",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "02frstname",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "04lastname",
+      "selector": "#04lastname",
+      "value": "Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "04lastname",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "04fullname",
+      "selector": "#04fullname",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "04fullname",
+      "confidence": 1
+    },
+    {
+      "fieldId": "05_company",
+      "selector": "#05_company",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "05 Company",
+      "confidence": 1
+    },
+    {
+      "fieldId": "10address1",
+      "selector": "#10address1",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "10address1",
+      "confidence": 1
+    },
+    {
+      "fieldId": "13adr_city",
+      "selector": "#13adr_city",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "13adr City",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "14adrstate",
+      "selector": "#14adrstate",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "14adrstate",
+      "confidence": 1
+    },
+    {
+      "fieldId": "15_country",
+      "selector": "#15_country",
+      "value": "India",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "15 Country",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "16addr_zip",
+      "selector": "#16addr_zip",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "16addr Zip",
+      "confidence": 1
+    },
+    {
+      "fieldId": "21workphon",
+      "selector": "#21workphon",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "21workphon",
+      "confidence": 1
+    },
+    {
+      "fieldId": "23cellphon",
+      "selector": "#23cellphon",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "23cellphon",
+      "confidence": 1
+    },
+    {
+      "fieldId": "24emailadr",
+      "selector": "#24emailadr",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "24emailadr",
+      "confidence": 1
+    },
+    {
+      "fieldId": "60pers_sex",
+      "selector": "#60pers_sex",
+      "value": "Female",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "60pers Sex",
+      "confidence": 1
+    },
+    {
+      "fieldId": "66mm",
+      "selector": "#66mm",
+      "value": "Mar",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "66mm",
+      "confidence": 1
+    },
+    {
+      "fieldId": "67dd",
+      "selector": "#67dd",
+      "value": "23",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "67dd",
+      "confidence": 1
+    },
+    {
+      "fieldId": "68yy",
+      "selector": "#68yy",
+      "value": "2016",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "68yy",
+      "confidence": 1
+    },
+    {
+      "fieldId": "68__income",
+      "selector": "#68__income",
+      "value": "Yes",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "68  Income",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "71__custom",
+      "selector": "#71__custom",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "71  Custom",
+      "confidence": 1
+    },
+    {
+      "fieldId": "72__commnt",
+      "selector": "#72__commnt",
+      "value": "Female",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "72  Commnt",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "01___title",
+        "label": "01   Title",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No title information for a person or signatory in dataset",
+        "selector": "#01___title"
+      },
+      {
+        "fieldId": "02frstname",
+        "label": "02frstname",
+        "mappedValue": "Ranjini",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to authorized signatory/point of contact first name from dataset",
+        "selector": "#02frstname"
+      },
+      {
+        "fieldId": "03middle_i",
+        "label": "03middle I",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No middle initial available for authorized signatory or any person in dataset",
+        "selector": "#03middle_i"
+      },
+      {
+        "fieldId": "04lastname",
+        "label": "04lastname",
+        "mappedValue": "Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to authorized signatory/point of contact last name from dataset",
+        "selector": "#04lastname"
+      },
+      {
+        "fieldId": "04fullname",
+        "label": "04fullname",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Full name of authorized signatory/point of contact from dataset",
+        "selector": "#04fullname"
+      },
+      {
+        "fieldId": "05_company",
+        "label": "05 Company",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization name as per PAN from dataset",
+        "selector": "#05_company"
+      },
+      {
+        "fieldId": "06position",
+        "label": "06position",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No position or designation information for authorized signatory or contact person in dataset",
+        "selector": "#06position"
+      },
+      {
+        "fieldId": "10address1",
+        "label": "10address1",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to office location address from dataset",
+        "selector": "#10address1"
+      },
+      {
+        "fieldId": "11address2",
+        "label": "11address2",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No secondary address line available in dataset",
+        "selector": "#11address2"
+      },
+      {
+        "fieldId": "13adr_city",
+        "label": "13adr City",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "City inferred from office location address in dataset",
+        "selector": "#13adr_city"
+      },
+      {
+        "fieldId": "14adrstate",
+        "label": "14adrstate",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "State of the organization's registered office address matches the form field for state.",
+        "selector": "#14adrstate"
+      },
+      {
+        "fieldId": "15_country",
+        "label": "15 Country",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Organization is registered in Tamil Nadu, India; country inferred as India.",
+        "selector": "#15_country"
+      },
+      {
+        "fieldId": "16addr_zip",
+        "label": "16addr Zip",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Pincode from the organization's office location address matches the form field for zip code.",
+        "selector": "#16addr_zip"
+      },
+      {
+        "fieldId": "20homephon",
+        "label": "20homephon",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No home phone number found in the dataset.",
+        "selector": "#20homephon"
+      },
+      {
+        "fieldId": "21workphon",
+        "label": "21workphon",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number of the organization contact person found and mapped as work phone.",
+        "selector": "#21workphon"
+      },
+      {
+        "fieldId": "22faxphone",
+        "label": "22faxphone",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No fax phone number found in the dataset.",
+        "selector": "#22faxphone"
+      },
+      {
+        "fieldId": "23cellphon",
+        "label": "23cellphon",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number of the organization contact person mapped as cell phone.",
+        "selector": "#23cellphon"
+      },
+      {
+        "fieldId": "24emailadr",
+        "label": "24emailadr",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email address from organization dataset mapped to email address field.",
+        "selector": "#24emailadr"
+      },
+      {
+        "fieldId": "25web_site",
+        "label": "25web Site",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website information found in the dataset.",
+        "selector": "#25web_site"
+      },
+      {
+        "fieldId": "30_user_id",
+        "label": "30 User Id",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No user ID or similar identifier found in the dataset.",
+        "selector": "#30_user_id"
+      },
+      {
+        "fieldId": "31password",
+        "label": "31password",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No password or sensitive data available in dataset",
+        "selector": "#31password"
+      },
+      {
+        "fieldId": "40cc__type",
+        "label": "40cc  Type",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card type information in dataset",
+        "selector": "#40cc__type"
+      },
+      {
+        "fieldId": "41ccnumber",
+        "label": "41ccnumber",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card number information in dataset",
+        "selector": "#41ccnumber"
+      },
+      {
+        "fieldId": "43cvc",
+        "label": "43cvc",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No CVC information in dataset",
+        "selector": "#43cvc"
+      },
+      {
+        "fieldId": "42ccexp_mm",
+        "label": "42ccexp Mm",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card expiry month information in dataset",
+        "selector": "#42ccexp_mm"
+      },
+      {
+        "fieldId": "43ccexp_yy",
+        "label": "43ccexp Yy",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card expiry year information in dataset",
+        "selector": "#43ccexp_yy"
+      },
+      {
+        "fieldId": "44cc_uname",
+        "label": "44cc Uname",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card username information in dataset",
+        "selector": "#44cc_uname"
+      },
+      {
+        "fieldId": "45ccissuer",
+        "label": "45ccissuer",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card issuer information in dataset",
+        "selector": "#45ccissuer"
+      },
+      {
+        "fieldId": "46cccstsvc",
+        "label": "46cccstsvc",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No credit card service code information in dataset",
+        "selector": "#46cccstsvc"
+      },
+      {
+        "fieldId": "60pers_sex",
+        "label": "60pers Sex",
+        "mappedValue": "Female",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped from 'Gender' field in organization profile data",
+        "selector": "#60pers_sex"
+      },
+      {
+        "fieldId": "61pers_ssn",
+        "label": "61pers Ssn",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No personal SSN or equivalent found in organization dataset",
+        "selector": "#61pers_ssn"
+      },
+      {
+        "fieldId": "62driv_lic",
+        "label": "62driv Lic",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No driving license or equivalent found in organization dataset",
+        "selector": "#62driv_lic"
+      },
+      {
+        "fieldId": "66mm",
+        "label": "66mm",
+        "mappedValue": "Mar",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped month from Date of Establishment (23-03-2016) of organization",
+        "selector": "#66mm"
+      },
+      {
+        "fieldId": "67dd",
+        "label": "67dd",
+        "mappedValue": "23",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped day from Date of Establishment (23-03-2016) of organization",
+        "selector": "#67dd"
+      },
+      {
+        "fieldId": "68yy",
+        "label": "68yy",
+        "mappedValue": "2016",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped year from Date of Establishment (23-03-2016) of organization",
+        "selector": "#68yy"
+      },
+      {
+        "fieldId": "66pers_age",
+        "label": "66pers Age",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No personal age data available in organization dataset",
+        "selector": "#66pers_age"
+      },
+      {
+        "fieldId": "67birth_pl",
+        "label": "67birth Pl",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No birth place data available for any person in organization dataset",
+        "selector": "#67birth_pl"
+      },
+      {
+        "fieldId": "68__income",
+        "label": "68  Income",
+        "mappedValue": "Yes",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped from 'Has the organisation filed Income Tax returns for last 3 years?' field indicating 'yes'",
+        "selector": "#68__income"
+      },
+      {
+        "fieldId": "71__custom",
+        "label": "71  Custom",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped from organization description field",
+        "selector": "#71__custom"
+      },
+      {
+        "fieldId": "72__commnt",
+        "label": "72  Commnt",
+        "mappedValue": "Female",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped from organization gender field",
+        "selector": "#72__commnt"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "01   Title",
+        "reason": "No title information for authorized signatory or contact person in dataset"
+      },
+      {
+        "label": "03middle I",
+        "reason": "No middle initial available for authorized signatory or any person in dataset"
+      },
+      {
+        "label": "06position",
+        "reason": "No position or designation information for authorized signatory or contact person in dataset"
+      },
+      {
+        "label": "11address2",
+        "reason": "No secondary address line available in dataset"
+      },
+      {
+        "label": "20homephon",
+        "reason": "No home phone number available in the dataset."
+      },
+      {
+        "label": "22faxphone",
+        "reason": "No fax phone number available in the dataset."
+      },
+      {
+        "label": "25web Site",
+        "reason": "Website information is missing in the dataset."
+      },
+      {
+        "label": "30 User Id",
+        "reason": "User ID or equivalent identifier is not present in the dataset."
+      },
+      {
+        "label": "31password",
+        "reason": "No password or sensitive data available in dataset"
+      },
+      {
+        "label": "40cc  Type",
+        "reason": "No credit card type information in dataset"
+      },
+      {
+        "label": "41ccnumber",
+        "reason": "No credit card number information in dataset"
+      },
+      {
+        "label": "43cvc",
+        "reason": "No CVC information in dataset"
+      },
+      {
+        "label": "42ccexp Mm",
+        "reason": "No credit card expiry month information in dataset"
+      },
+      {
+        "label": "43ccexp Yy",
+        "reason": "No credit card expiry year information in dataset"
+      },
+      {
+        "label": "44cc Uname",
+        "reason": "No credit card username information in dataset"
+      },
+      {
+        "label": "45ccissuer",
+        "reason": "No credit card issuer information in dataset"
+      },
+      {
+        "label": "46cccstsvc",
+        "reason": "No credit card service code information in dataset"
+      },
+      {
+        "label": "61pers Ssn",
+        "reason": "No personal SSN or equivalent found in organization dataset"
+      },
+      {
+        "label": "62driv Lic",
+        "reason": "No driving license or equivalent found in organization dataset"
+      },
+      {
+        "label": "66pers Age",
+        "reason": "No personal age data available in organization dataset"
+      },
+      {
+        "label": "67birth Pl",
+        "reason": "No birth place data available for any person in organization dataset"
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 4,
+    "successfulChunks": 4
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "timestamp": "2025-12-18T10:07:52.339Z",
+  "url": "https://atalfoundation.ind.in/csr-grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "input_3",
+      "selector": "#input_3",
+      "value": "Section 8 Company",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Category Applying For CSR Funding*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "input_323",
+      "selector": "#input_323",
+      "value": "TAMIL NADU",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "State Applying For*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_349",
+      "selector": "#input_349",
+      "value": "CHENNAI",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "District Applying For*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_366",
+      "selector": "#input_366",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "PIN CODE*",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "input_213",
+      "selector": "#input_213",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Applicant Name*",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_17",
+      "selector": "#input_17",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_18",
+      "selector": "#input_18",
+      "value": "Female",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Gender*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_226",
+      "selector": "#input_226",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Mobile*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_218",
+      "selector": "#input_218",
+      "value": "NO 5, 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence House No./ Street*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_219",
+      "selector": "#input_219",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence City/Town/Village*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_220",
+      "selector": "#input_220",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence Pincode*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_210",
+      "selector": "#input_210",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Correspondence State*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_351.2",
+      "selector": "#input_351\\.2",
+      "value": "Organization PAN number: AAGCG8730N",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "PAN CARD of Organisation",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_351.4",
+      "selector": "#input_351\\.4",
+      "value": "yes",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "ITR of Last 03 years",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_351.5",
+      "selector": "#input_351\\.5",
+      "value": "yes",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "Last 03 years CA audited Balance Sheet",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_351.12",
+      "selector": "#input_351\\.12",
+      "value": "Life coaching Workshops conducted from 2019 to 2025 with detailed participant data and event descriptions including audio events and video supported sessions as per NGO_event_details.xlsx dataset.",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "Organizations Activity Reports with audio video support",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_351.13",
+      "selector": "#input_351\\.13",
+      "value": "ChampionWoman life leadership workshops and related projects conducted from 2015 to 2025 focusing on women empowerment, leadership, mindfulness, and career development as detailed in NGO_event_details.xlsx dataset.",
+      "type": "text",
+      "fieldType": "checkbox",
+      "action": "fill",
+      "label": "Projects Reports stating purpose of Grant",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "input_374",
+      "selector": "#input_374",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "input_3",
+        "label": "Category Applying For CSR Funding*",
+        "mappedValue": "Section 8 Company",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Dataset indicates registration under 'Sec 8 of Companys act' and 'Companys ACT' for NGO type, matching 'Section 8 Company' category.",
+        "selector": "#input_3"
+      },
+      {
+        "fieldId": "input_323",
+        "label": "State Applying For*",
+        "mappedValue": "TAMIL NADU",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Dataset shows 'Tamil Nadu' as the state of the organization.",
+        "selector": "#input_323"
+      },
+      {
+        "fieldId": "input_349",
+        "label": "District Applying For*",
+        "mappedValue": "CHENNAI",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Dataset provides 'Chennai' as the district (Office location address includes Chennai).",
+        "selector": "#input_349"
+      },
+      {
+        "fieldId": "input_347",
+        "label": "Tehsil Applying For*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No specific tehsil information found in dataset for Chennai district.",
+        "selector": "#input_347"
+      },
+      {
+        "fieldId": "input_348",
+        "label": "Block Applying For*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No specific block information found in dataset for Chennai district.",
+        "selector": "#input_348"
+      },
+      {
+        "fieldId": "input_366",
+        "label": "PIN CODE*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "PIN code matches the office location's pincode in the dataset.",
+        "selector": "#input_366"
+      },
+      {
+        "fieldId": "input_213",
+        "label": "Applicant Name*",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Applicant name found as Founder's name/Applicant name in dataset.",
+        "selector": "#input_213"
+      },
+      {
+        "fieldId": "input_216",
+        "label": "Mother's Name*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No mother's name information available in dataset.",
+        "selector": "#input_216"
+      },
+      {
+        "fieldId": "input_217",
+        "label": "Father's/Husband's Name*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No father's or husband's name information available in dataset.",
+        "selector": "#input_217"
+      },
+      {
+        "fieldId": "input_16",
+        "label": "Date Of Birth*",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No date of birth or birthdate information available in dataset.",
+        "selector": "#input_16"
+      },
+      {
+        "fieldId": "input_17",
+        "label": "Email*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email found in dataset under organization contact details.",
+        "selector": "#input_17"
+      },
+      {
+        "fieldId": "input_18",
+        "label": "Gender*",
+        "mappedValue": "Female",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Gender specified as Female in dataset for organization contact person.",
+        "selector": "#input_18"
+      },
+      {
+        "fieldId": "input_226",
+        "label": "Mobile*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number found in dataset for contact person.",
+        "selector": "#input_226"
+      },
+      {
+        "fieldId": "input_218",
+        "label": "Correspondence House No./ Street*",
+        "mappedValue": "NO 5, 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Correspondence address house number and street found in dataset.",
+        "selector": "#input_218"
+      },
+      {
+        "fieldId": "input_219",
+        "label": "Correspondence City/Town/Village*",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Correspondence city found in dataset.",
+        "selector": "#input_219"
+      },
+      {
+        "fieldId": "input_220",
+        "label": "Correspondence Pincode*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped from dataset's 'Pincode' field under organization address.",
+        "selector": "#input_220"
+      },
+      {
+        "fieldId": "input_210",
+        "label": "Correspondence State*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped from dataset's 'State' field under organization address.",
+        "selector": "#input_210"
+      },
+      {
+        "fieldId": "choice_351_select_all",
+        "label": "Select All",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No direct mapping for 'Select All' checkbox in dataset.",
+        "selector": "#choice_351_select_all"
+      },
+      {
+        "fieldId": "input_351.1",
+        "label": "Bylaws / Memorandum of Organisation",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No bylaws or memorandum document found in dataset.",
+        "selector": "#input_351\\.1"
+      },
+      {
+        "fieldId": "input_351.2",
+        "label": "PAN CARD of Organisation",
+        "mappedValue": "Organization PAN number: AAGCG8730N",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped PAN number from dataset's organization PAN number field.",
+        "selector": "#input_351\\.2"
+      },
+      {
+        "fieldId": "input_351.3",
+        "label": "Niti Aayog Registration",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information about Niti Aayog registration found in dataset",
+        "selector": "#input_351\\.3"
+      },
+      {
+        "fieldId": "input_351.4",
+        "label": "ITR of Last 03 years",
+        "mappedValue": "yes",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Dataset confirms Income Tax returns filed for last 3 years",
+        "selector": "#input_351\\.4"
+      },
+      {
+        "fieldId": "input_351.5",
+        "label": "Last 03 years CA audited Balance Sheet",
+        "mappedValue": "yes",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Dataset confirms audit reports available for last 3 years",
+        "selector": "#input_351\\.5"
+      },
+      {
+        "fieldId": "input_351.6",
+        "label": "Last 03 years P L Statement",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No explicit information about P L Statement found in dataset",
+        "selector": "#input_351\\.6"
+      },
+      {
+        "fieldId": "input_351.7",
+        "label": "Experience Certificate (If Any)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No experience certificate or related document found in dataset",
+        "selector": "#input_351\\.7"
+      },
+      {
+        "fieldId": "input_351.8",
+        "label": "Last 03 years Auditors Report",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No auditors report documents or data found in dataset for last 3 years",
+        "selector": "#input_351\\.8"
+      },
+      {
+        "fieldId": "input_351.9",
+        "label": "Account Books (Last 03 years)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No account books documents or data found in dataset for last 3 years",
+        "selector": "#input_351\\.9"
+      },
+      {
+        "fieldId": "input_351.11",
+        "label": "Bank Statements (Last 03 years)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No bank statements documents or data found in dataset for last 3 years",
+        "selector": "#input_351\\.11"
+      },
+      {
+        "fieldId": "input_351.12",
+        "label": "Organizations Activity Reports with audio video support",
+        "mappedValue": "Life coaching Workshops conducted from 2019 to 2025 with detailed participant data and event descriptions including audio events and video supported sessions as per NGO_event_details.xlsx dataset.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to detailed activity reports data extracted from NGO_event_details.xlsx including audio events and multimedia support",
+        "selector": "#input_351\\.12"
+      },
+      {
+        "fieldId": "input_351.13",
+        "label": "Projects Reports stating purpose of Grant",
+        "mappedValue": "ChampionWoman life leadership workshops and related projects conducted from 2015 to 2025 focusing on women empowerment, leadership, mindfulness, and career development as detailed in NGO_event_details.xlsx dataset.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to project reports data describing purpose of grant and project activities from NGO_event_details.xlsx",
+        "selector": "#input_351\\.13"
+      },
+      {
+        "fieldId": "input_322.1",
+        "label": "Tick the box to state that you have careefully read and agree to terms and conditions of applying for this position.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No explicit confirmation or checkbox data available in dataset.",
+        "selector": "#input_322\\.1"
+      },
+      {
+        "fieldId": "input_374",
+        "label": "Email",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email found exactly in dataset under organization profile.",
+        "selector": "#input_374"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Tehsil Applying For*",
+        "reason": "No tehsil information available in dataset for the organization's district."
+      },
+      {
+        "label": "Block Applying For*",
+        "reason": "No block information available in dataset for the organization's district."
+      },
+      {
+        "label": "Mother's Name*",
+        "reason": "No mother's name information available in dataset."
+      },
+      {
+        "label": "Father's/Husband's Name*",
+        "reason": "No father's or husband's name information available in dataset."
+      },
+      {
+        "label": "Date Of Birth*",
+        "reason": "No date of birth or birthdate information available in dataset."
+      },
+      {
+        "label": "Select All",
+        "reason": "No relevant information in dataset to map this checkbox."
+      },
+      {
+        "label": "Bylaws / Memorandum of Organisation",
+        "reason": "No bylaws or memorandum document found in dataset."
+      },
+      {
+        "label": "Niti Aayog Registration",
+        "reason": "No information about Niti Aayog registration found in dataset"
+      },
+      {
+        "label": "Last 03 years P L Statement",
+        "reason": "No explicit information about P L Statement found in dataset"
+      },
+      {
+        "label": "Experience Certificate (If Any)",
+        "reason": "No experience certificate or related document found in dataset"
+      },
+      {
+        "label": "Last 03 years Auditors Report",
+        "reason": "No auditors report documents or data found in dataset for last 3 years"
+      },
+      {
+        "label": "Account Books (Last 03 years)",
+        "reason": "No account books documents or data found in dataset for last 3 years"
+      },
+      {
+        "label": "Bank Statements (Last 03 years)",
+        "reason": "No bank statements documents or data found in dataset for last 3 years"
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 8,
+    "successfulChunks": 7
+  }
+}

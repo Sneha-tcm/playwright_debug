@@ -1,0 +1,442 @@
+{
+  "timestamp": "2025-12-11T06:09:09.749Z",
+  "url": "https://mozilla.github.io/form-fill-examples/multiple_sections/section_autocomplete.html",
+  "commands": [
+    {
+      "fieldId": "name",
+      "selector": "#name",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "organization",
+      "selector": "#organization",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Organization:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "street-address-a",
+      "selector": "#street-address-a",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Street Address:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "address-level2-a",
+      "selector": "#address-level2-a",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address Level 2:",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "address-level1-a",
+      "selector": "#address-level1-a",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address Level 1:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "postal-code-a",
+      "selector": "#postal-code-a",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Postal Code:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country-a",
+      "selector": "#country-a",
+      "value": "India",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Country:",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "postal-code-b",
+      "selector": "#postal-code-b",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Postal Code:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country-b",
+      "selector": "#country-b",
+      "value": "India",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Country:",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "street-address-c",
+      "selector": "#street-address-c",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Street Address:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "address-level2-c",
+      "selector": "#address-level2-c",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address Level 2:",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "address-level1-c",
+      "selector": "#address-level1-c",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Address Level 1:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "postal-code-c",
+      "selector": "#postal-code-c",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Postal Code:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "country-c",
+      "selector": "#country-c",
+      "value": "India",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Country:",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "tel-a",
+      "selector": "#tel-a",
+      "value": "+91-90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Telephone:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "email-a",
+      "selector": "#email-a",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email:",
+      "confidence": 1
+    },
+    {
+      "fieldId": "email-b",
+      "selector": "#email-b",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email:",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "name",
+        "label": "Name:",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to authorized signatory / point of contact name as the field is 'Name:' and dataset provides 'Mobile number' and 'Founder's name' but only 'Ranjini Manian' matches a person name related to organization contact.",
+        "selector": "#name"
+      },
+      {
+        "fieldId": "organization",
+        "label": "Organization:",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to organization name as per PAN from dataset.",
+        "selector": "#organization"
+      },
+      {
+        "fieldId": "street-address-a",
+        "label": "Street Address:",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to office location address from dataset for address A.",
+        "selector": "#street-address-a"
+      },
+      {
+        "fieldId": "address-level2-a",
+        "label": "Address Level 2:",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "City inferred from office location address for address level 2 A.",
+        "selector": "#address-level2-a"
+      },
+      {
+        "fieldId": "address-level1-a",
+        "label": "Address Level 1:",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to state from dataset for address level 1 A.",
+        "selector": "#address-level1-a"
+      },
+      {
+        "fieldId": "postal-code-a",
+        "label": "Postal Code:",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to pincode from dataset for postal code A.",
+        "selector": "#postal-code-a"
+      },
+      {
+        "fieldId": "country-a",
+        "label": "Country:",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.8,
+        "reasoning": "Country not explicitly stated but inferred as India from dataset context.",
+        "selector": "#country-a"
+      },
+      {
+        "fieldId": "street-address-b",
+        "label": "Street Address:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No second address street address found in dataset.",
+        "selector": "#street-address-b"
+      },
+      {
+        "fieldId": "address-level2-b",
+        "label": "Address Level 2:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No second address level 2 found in dataset.",
+        "selector": "#address-level2-b"
+      },
+      {
+        "fieldId": "address-level1-b",
+        "label": "Address Level 1:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No second address level 1 found in dataset.",
+        "selector": "#address-level1-b"
+      },
+      {
+        "fieldId": "postal-code-b",
+        "label": "Postal Code:",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Postal code matches the organization's office location postal code from dataset.",
+        "selector": "#postal-code-b"
+      },
+      {
+        "fieldId": "country-b",
+        "label": "Country:",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Country inferred as India based on state and address context in dataset.",
+        "selector": "#country-b"
+      },
+      {
+        "fieldId": "street-address-c",
+        "label": "Street Address:",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact office location address from dataset matches street address field.",
+        "selector": "#street-address-c"
+      },
+      {
+        "fieldId": "address-level2-c",
+        "label": "Address Level 2:",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "City extracted from office location address in dataset.",
+        "selector": "#address-level2-c"
+      },
+      {
+        "fieldId": "address-level1-c",
+        "label": "Address Level 1:",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "State field in dataset matches address level 1.",
+        "selector": "#address-level1-c"
+      },
+      {
+        "fieldId": "postal-code-c",
+        "label": "Postal Code:",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Postal code for the organization's address matches postal-code-c field.",
+        "selector": "#postal-code-c"
+      },
+      {
+        "fieldId": "country-c",
+        "label": "Country:",
+        "mappedValue": "India",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Country inferred as India based on state and address context in dataset.",
+        "selector": "#country-c"
+      },
+      {
+        "fieldId": "tel-a",
+        "label": "Telephone:",
+        "mappedValue": "+91-90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mobile number from dataset formatted as telephone with country code.",
+        "selector": "#tel-a"
+      },
+      {
+        "fieldId": "email-a",
+        "label": "Email:",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email from dataset matches email field.",
+        "selector": "#email-a"
+      },
+      {
+        "fieldId": "tel-b",
+        "label": "Telephone:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No second telephone number found in dataset.",
+        "selector": "#tel-b"
+      },
+      {
+        "fieldId": "email-b",
+        "label": "Email:",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email matches the organization's contact email in the dataset.",
+        "selector": "#email-b"
+      },
+      {
+        "fieldId": "card_holder_name_",
+        "label": "Card Holder Name:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No personal or authorized signatory name related to card holder found in dataset.",
+        "selector": "#card_holder_name_"
+      },
+      {
+        "fieldId": "card_number_",
+        "label": "Card Number:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No card number or similar financial data found in dataset.",
+        "selector": "#card_number_"
+      },
+      {
+        "fieldId": "exp_month_",
+        "label": "Exp Month:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No card expiration month data found in dataset.",
+        "selector": "#exp_month_"
+      },
+      {
+        "fieldId": "exp_year_",
+        "label": "Exp Year:",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No card expiration year data found in dataset.",
+        "selector": "#exp_year_"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Street Address:",
+        "reason": "No second address street address found in dataset."
+      },
+      {
+        "label": "Address Level 2:",
+        "reason": "No second address level 2 found in dataset."
+      },
+      {
+        "label": "Address Level 1:",
+        "reason": "No second address level 1 found in dataset."
+      },
+      {
+        "label": "Telephone:",
+        "reason": "Second telephone number not available in dataset."
+      },
+      {
+        "label": "Card Holder Name:",
+        "reason": "No relevant card holder name found in dataset."
+      },
+      {
+        "label": "Card Number:",
+        "reason": "No card number or equivalent financial data found in dataset."
+      },
+      {
+        "label": "Exp Month:",
+        "reason": "No card expiration month data found in dataset."
+      },
+      {
+        "label": "Exp Year:",
+        "reason": "No card expiration year data found in dataset."
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 3,
+    "successfulChunks": 3
+  }
+}

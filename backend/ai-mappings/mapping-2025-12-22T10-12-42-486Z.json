@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-12-22T10:12:42.487Z",
+  "url": "https://www.tickingminds.com/contact-us/",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No personal name data available in dataset",
+        "selector": "#your-name"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No email data available in dataset",
+        "selector": "#your-email"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No phone number data available in dataset",
+        "selector": "#your-phone"
+      },
+      {
+        "fieldId": "services[]",
+        "label": "Services",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No service information available in dataset",
+        "selector": "[name='services[]']"
+      },
+      {
+        "fieldId": "your-message",
+        "label": "Your Message",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No message content available in dataset",
+        "selector": "#your-message"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Your Name (Required)",
+        "reason": "No personal name data found in dataset"
+      },
+      {
+        "label": "Your Email (Required)",
+        "reason": "No email data found in dataset"
+      },
+      {
+        "label": "Your Phone Number (Required)",
+        "reason": "No phone number data found in dataset"
+      }
+    ]
+  }
+}

@@ -27,11 +27,27 @@ console.log("Initializing server...");
 // AI MAPPING CONFIGURATION - FIXED
 // ========================================
 
-// FIXED: Use correct model name
-const MODEL_NAME = "gpt-4.1-mini";
+// ========================================
+// OLLAMA CONFIG
+// ========================================
+// ========================================
+// OPENAI CONFIG
+// ========================================
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-// FIXED: Use v1 endpoint for stable models
-const API_ENDPOINT = "https://api.openai.com/v1/chat/completions";
+// ========================================
+// OLLAMA CONFIG (LOCAL DESKTOP)
+// ========================================
+
+const API_ENDPOINT = "http://localhost:11435/api/chat";
+
+// Recommended models
+const MODEL_NAME = "qwen2.5:3b";
+// Alternatives:
+// "mistral"
+// "qwen2.5:7b"
+
+
 
 const AI_MAPPING_PROMPT = `You are an AI Field-Mapping Engine. Generate ONLY valid JSON with no additional text.
 
@@ -61,17 +77,50 @@ OUTPUT FORMAT (STRICTLY VALID JSON):
 }
 
 MAPPING RULES:
-1. Match by meaning, not exact labels
-2. For TEXT fields: provide exact value from dataset
-3. For FILE UPLOAD fields: generate full document content as text (no file paths)
-4. Format dates/phone numbers as required by form
-5. Map PAN, registration numbers, addresses exactly (or portion if form requires it)
-6. For project fields: select most relevant project from dataset
-7. If data missing: set mappedValue to null and add to missingFields
-8. Include CSS selector for each field (use id, name, or aria-label)
-9.While mapping, give more concentration on dates, map dates in the correct format, and correct date for example, if asked for date of registration, then map the date of registration only, not other dates and vice versa.
+1. Match by semantic meaning, not by similar words.
+2. For TEXT fields: provide exact values from the dataset.
+3. For FILE UPLOAD fields: generate full document content as text (no file paths).
+4. Format dates and phone numbers exactly as required by the form.
+
+5. STRICT DATE-MAPPING RULES:
+   - Never mix unrelated dates.
+   - **Date of Birth (DOB)** MUST map ONLY to birthdate fields.
+   - **Registration / Incorporation / Establishment Date** MUST map ONLY to registration-related fields.
+   - **Project Start/End Dates** MUST map ONLY to project timeline fields.
+   - **Certificate Issue/Expiry Dates** MUST map ONLY to certificate fields.
+   - NEVER swap DOB with registration dates or vice versa.
+   - NEVER guess dates. If the correct date is missing, mappedValue = null.
+
+   **DATE FORMAT INTERPRETATION RULES:**
+   - If a value is formatted like DD/MM or MM/DD (e.g., "06/07"), treat it as **day + month**, NEVER as a year or year range.
+   - If a value appears as DD-MM (e.g., "06-07"), also treat it as **day + month**, not a year.
+   - If the value looks like DD/MM/YYYY or DD-MM-YYYY, treat it as a **full date**.
+   - If a value contains a hyphen or en-dash between two two-digit numbers representing years (e.g., "25–27", "2020–22", "2019-2021"):
+       • Interpret it as a **year span or year range**, NOT a date.
+       • Only map to fields explicitly asking for year ranges.
+   - If the form requires a full date but the dataset contains only partial information (e.g., only year or only month+year), mappedValue = null.
+   - Always output dates in the exact format required by the form field.
+
+6. STRICT NAME-MAPPING RULES:
+   - Map the **correct role-specific name**:
+     • Organization/NGO/Company Name → ONLY for organization name fields.
+     • Authorized Signatory / Point of Contact Name → ONLY for contact or signatory fields.
+     • Founder / Director Name → ONLY for founder/director fields.
+     • Applicant Name → ONLY for applicant fields.
+   - NEVER mix organization names with personal names.
+   - NEVER mix different role-based names.
+   - If no correct role-specific name exists in the dataset, mappedValue = null.
+
+7.FILEUPLOAD FIELD MAPPING RULES:
+ - for fields that require fileupload, search for files in the provided dataset, if the exact files available, map the entire file or documents, if not availabe, then only generate content of the files to be uploaded so that iusers can download the content and upload the same by themselves.For example, if they asked to upload PAN card, then search for a PAN card there, if not available, you cannot generate certificates like PAN so map null, other tan certificates, if they ask for a document containing all the project details, you can always generate one accordingto the size of the respective form field.
+7. PAN, registration numbers, and addresses must match exactly (or appropriate portions if required).
+8. For project fields, choose the most semantically relevant project.
+9. Don't select the same option for dropdowns, after mapping a vaue, if you dont find any other values relevant for next fielsd, instead of duplicating, give mapped value as null reason: no relevant information in dataset.
+10. If data is missing, set mappedValue to null and add an entry to missingFields.
+11. Include a valid CSS selector for each field (prefer id → name → aria-label).
 
 CRITICAL: Return ONLY the JSON object. No explanations, no markdown, no extra text.`;
+
 
 // ========================================
 // HELPER: GET LATEST DATASET CONFIG
@@ -133,7 +182,7 @@ function chunkFields(fields, size = 10) {
 // AI MAPPING FUNCTION - FIXED
 //==========================================
 async function performAIMapping(formSchema, datasetConfig) {
-  console.log("\n🤖 Starting AI Mapping with OpenAI...");
+  console.log("\n🤖 Starting AI Mapping with Ollama (Local)...");
 
   try {
     const promptText = `${AI_MAPPING_PROMPT}
@@ -144,60 +193,79 @@ ${JSON.stringify(formSchema.fields || formSchema, null, 2)}
 DATASET:
 ${JSON.stringify(datasetConfig, null, 2)}
 
-IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }.`;
+IMPORTANT: Your response must be ONLY a valid JSON object starting with { and ending with }.
+`;
 
-    console.log("📤 Sending request to OpenAI...");
+    console.log("📤 Sending request to Ollama...");
     console.log("📏 Prompt length:", promptText.length);
 
     const response = await fetch(API_ENDPOINT, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         model: MODEL_NAME,
-        messages: [{ role: "user", content: promptText }],
-        temperature: 0.1,
-        max_tokens: 4096
-      }),
+        stream: false,
+        options: {
+          temperature: 0.1,   // critical for JSON stability
+          top_p: 0.9
+        },
+        messages: [
+          {
+            role: "system",
+            content: "You are a strict JSON-only AI mapping engine."
+          },
+          {
+            role: "user",
+            content: promptText
+          }
+        ]
+      })
     });
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("❌ API Error Response:", errorText);
-      throw new Error(`OpenAI Error (${response.status}): ${errorText}`);
+      console.error("❌ Ollama API Error:", errorText);
+      throw new Error(`Ollama Error (${response.status}): ${errorText}`);
     }
 
     const data = await response.json();
-    const textOutput = data?.choices?.[0]?.message?.content;
 
-    if (!textOutput) throw new Error("OpenAI returned no content.");
-     
+    // Ollama response format
+    const textOutput = data?.message?.content;
+    if (!textOutput) throw new Error("Ollama returned no content.");
+
+    console.log(textOutput);
+
     const metrics = analyzeOutputStats(textOutput);
     console.log("📏 Output Characters:", metrics.characters);
     console.log("🔢 Estimated Tokens:", metrics.estimatedTokens);
-    // Remove markdown code blocks if any
-    let cleanText = textOutput.replace(/```json|```/g, "").trim();
+
+    // 🧹 Strict JSON extraction (Ollama-safe)
+    let cleanText = textOutput.trim();
 
     const first = cleanText.indexOf("{");
     const last = cleanText.lastIndexOf("}");
+
+    if (first === -1 || last === -1) {
+      throw new Error("No valid JSON object found in Ollama response");
+    }
+
     cleanText = cleanText.substring(first, last + 1);
 
     return JSON.parse(cleanText);
 
   } catch (err) {
-    console.error("❌ OpenAI Mapping Error:", err.message);
+    console.error("❌ Ollama Mapping Error:", err.message);
     return { error: err.message, mappedFields: [], missingFields: [] };
   }
 }
 
-
-
 async function performChunkedMapping(formSchema, datasetConfig) {
   console.log("🔄 Running Chunked AI Mapping...");
 
-  const chunks = chunkFields(formSchema.fields, 10); // Smaller chunks for reliability
+  const chunks = chunkFields(formSchema.fields, 5); // Smaller chunks for reliability
 
   let finalMapped = [];
   let finalMissing = [];

@@ -1,0 +1,302 @@
+{
+  "timestamp": "2025-12-11T06:14:26.964Z",
+  "url": "https://www.jotform.com/build/253441099123454?s=templates&salesforceTemplate=1",
+  "commands": [
+    {
+      "fieldId": "q3_fullName[first]",
+      "selector": "#q3_fullName_first",
+      "value": "Ranjini",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Q3 FullNamefirst",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "q3_fullName[last]",
+      "selector": "#q3_fullName_last",
+      "value": "Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Q3 FullNamelast",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "q4_email",
+      "selector": "#q4_email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "ex: myname@example.com",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q9_address[addr_line1]",
+      "selector": "#q9_address_addr_line1",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Q9 Addressaddr Line1",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q9_address[city]",
+      "selector": "#q9_address_city",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Q9 Addresscity",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q9_address[state]",
+      "selector": "#q9_address_state",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Q9 Addressstate",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q9_address[postal]",
+      "selector": "#q9_address_postal",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Q9 Addresspostal",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q5_phoneNumber[full]",
+      "selector": "#q5_phoneNumber_full",
+      "value": "(908) 776-7524",
+      "type": "text",
+      "fieldType": "tel",
+      "action": "fill",
+      "label": "(000) 000-0000",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q13_companygrouporganization",
+      "selector": "#q13_companygrouporganization",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": " ",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q14_howMany",
+      "selector": "#q14_howMany",
+      "value": "5",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": " ",
+      "confidence": 1
+    },
+    {
+      "fieldId": "q17_anySpecial",
+      "selector": "#q17_anySpecial",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "Q17 AnySpecial",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "previewSwitch",
+        "label": "Preview Form",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No checkbox value available in dataset",
+        "selector": "#previewSwitch"
+      },
+      {
+        "fieldId": "q3_fullName[first]",
+        "label": "Q3 FullNamefirst",
+        "mappedValue": "Ranjini",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to Founder's first name as no other person name roles available",
+        "selector": "#q3_fullName_first"
+      },
+      {
+        "fieldId": "q3_fullName[last]",
+        "label": "Q3 FullNamelast",
+        "mappedValue": "Manian",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to Founder's last name as no other person name roles available",
+        "selector": "#q3_fullName_last"
+      },
+      {
+        "fieldId": "q4_email",
+        "label": "ex: myname@example.com",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to organization email from dataset",
+        "selector": "#q4_email"
+      },
+      {
+        "fieldId": "q9_address[addr_line1]",
+        "label": "Q9 Addressaddr Line1",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to office location address from dataset",
+        "selector": "#q9_address_addr_line1"
+      },
+      {
+        "fieldId": "q9_address[addr_line2]",
+        "label": "Q9 Addressaddr Line2",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No second line address available in dataset",
+        "selector": "#q9_address_addr_line2"
+      },
+      {
+        "fieldId": "q9_address[city]",
+        "label": "Q9 Addresscity",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "City extracted from office location address",
+        "selector": "#q9_address_city"
+      },
+      {
+        "fieldId": "q9_address[state]",
+        "label": "Q9 Addressstate",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to state from dataset",
+        "selector": "#q9_address_state"
+      },
+      {
+        "fieldId": "q9_address[postal]",
+        "label": "Q9 Addresspostal",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to pincode from dataset",
+        "selector": "#q9_address_postal"
+      },
+      {
+        "fieldId": "q5_phoneNumber[full]",
+        "label": "(000) 000-0000",
+        "mappedValue": "(908) 776-7524",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to mobile number formatted as (xxx) xxx-xxxx from dataset",
+        "selector": "#q5_phoneNumber_full"
+      },
+      {
+        "fieldId": "q11_areYou",
+        "label": "No",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No semantic match found for this radio field in dataset",
+        "selector": "#q11_areYou"
+      },
+      {
+        "fieldId": "q19_whereDid",
+        "label": "Q19 WhereDid",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No source data for referral/source options in dataset",
+        "selector": "#q19_whereDid"
+      },
+      {
+        "fieldId": "q12_isYour",
+        "label": "No",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No semantic match found for this radio field in dataset",
+        "selector": "#q12_isYour"
+      },
+      {
+        "fieldId": "q13_companygrouporganization",
+        "label": " ",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to organization name as per PAN from dataset",
+        "selector": "#q13_companygrouporganization"
+      },
+      {
+        "fieldId": "q14_howMany",
+        "label": " ",
+        "mappedValue": "5",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to number of office bearers including members from dataset",
+        "selector": "#q14_howMany"
+      },
+      {
+        "fieldId": "q15_preferredArea[]",
+        "label": "Put me where you need me.",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No data about preferred areas or checkbox options in dataset",
+        "selector": "#q15_preferredArea"
+      },
+      {
+        "fieldId": "q17_anySpecial",
+        "label": "Q17 AnySpecial",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to brief description of the organization/agency including Goals and Objectives",
+        "selector": "#q17_anySpecial"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Preview Form",
+        "reason": "No checkbox value available in dataset"
+      },
+      {
+        "label": "Q9 Addressaddr Line2",
+        "reason": "No second line address available in dataset"
+      },
+      {
+        "label": "No",
+        "reason": "No matching data found for this radio field"
+      },
+      {
+        "label": "Q19 WhereDid",
+        "reason": "No source data for referral/source options in dataset"
+      },
+      {
+        "label": "No",
+        "reason": "No matching data found for this radio field"
+      },
+      {
+        "label": "Put me where you need me.",
+        "reason": "No data about preferred areas or checkbox options in dataset"
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 2,
+    "successfulChunks": 2
+  }
+}

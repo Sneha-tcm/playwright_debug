@@ -1,0 +1,255 @@
+{
+  "timestamp": "2025-12-17T10:05:09.727Z",
+  "url": "https://atalfoundation.ind.in/csr-grant-application-form/",
+  "commands": [
+    {
+      "fieldId": "input_17",
+      "selector": "#input_17",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Email*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_18",
+      "selector": "#input_18",
+      "value": "Female",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Gender*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_226",
+      "selector": "#input_226",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Mobile*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_218",
+      "selector": "#input_218",
+      "value": "NO 5, 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence House No./ Street*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_219",
+      "selector": "#input_219",
+      "value": "Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence City/Town/Village*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_220",
+      "selector": "#input_220",
+      "value": "600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Correspondence Pincode*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "input_210",
+      "selector": "#input_210",
+      "value": "Tamil Nadu",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "Correspondence State*",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "input_17",
+        "label": "Email*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_17"
+      },
+      {
+        "fieldId": "input_18",
+        "label": "Gender*",
+        "mappedValue": "Female",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_18"
+      },
+      {
+        "fieldId": "input_226",
+        "label": "Mobile*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_226"
+      },
+      {
+        "fieldId": "input_218",
+        "label": "Correspondence House No./ Street*",
+        "mappedValue": "NO 5, 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_218"
+      },
+      {
+        "fieldId": "input_219",
+        "label": "Correspondence City/Town/Village*",
+        "mappedValue": "Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_219"
+      },
+      {
+        "fieldId": "input_220",
+        "label": "Correspondence Pincode*",
+        "mappedValue": "600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_220"
+      },
+      {
+        "fieldId": "input_210",
+        "label": "Correspondence State*",
+        "mappedValue": "Tamil Nadu",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Exact match found in the dataset.",
+        "selector": "#input_210"
+      },
+      {
+        "fieldId": "input_351.1",
+        "label": "Bylaws / Memorandum of Organisation",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0,
+        "reasoning": "No relevant document found in the dataset.",
+        "selector": "#input_351.1"
+      },
+      {
+        "fieldId": "input_351.2",
+        "label": "PAN CARD of Organisation",
+        "mappedValue": null,
+        "valueType": "document",
+        "confidence": 0,
+        "reasoning": "No PAN card document found in the dataset.",
+        "selector": "#input_351.2"
+      },
+      {
+        "fieldId": "input_351.3",
+        "label": "Niti Aayog Registration",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No information regarding Niti Aayog Registration found in the dataset.",
+        "selector": "#input_351\\.3"
+      },
+      {
+        "fieldId": "input_351.4",
+        "label": "ITR of Last 03 years",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No ITR documents available in the dataset.",
+        "selector": "#input_351\\.4"
+      },
+      {
+        "fieldId": "input_351.5",
+        "label": "Last 03 years CA audited Balance Sheet",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No CA audited balance sheet found in the dataset.",
+        "selector": "#input_351\\.5"
+      },
+      {
+        "fieldId": "input_351.6",
+        "label": "Last 03 years P L Statement",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No P&L statement available in the dataset.",
+        "selector": "#input_351\\.6"
+      },
+      {
+        "fieldId": "input_351.7",
+        "label": "Experience Certificate (If Any)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No experience certificate found in the dataset.",
+        "selector": "#input_351\\.7"
+      },
+      {
+        "fieldId": "input_351.8",
+        "label": "Last 03 years Auditors Report",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No auditors report available in the dataset.",
+        "selector": "#input_351\\.8"
+      },
+      {
+        "fieldId": "input_351.9",
+        "label": "Account Books (Last 03 years)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No account books found in the dataset.",
+        "selector": "#input_351\\.9"
+      },
+      {
+        "fieldId": "input_351.11",
+        "label": "Bank Statements (Last 03 years)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No bank statements available in the dataset.",
+        "selector": "#input_351\\.11"
+      },
+      {
+        "fieldId": "input_351.12",
+        "label": "Organizations Activity Reports with audio video support",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No activity reports with audio/video support found in the dataset.",
+        "selector": "#input_351\\.12"
+      },
+      {
+        "fieldId": "input_351.13",
+        "label": "Projects Reports stating purpose of Grant",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No project reports stating the purpose of grant found in the dataset.",
+        "selector": "#input_351\\.13"
+      }
+    ],
+    "missingFields": [],
+    "chunkedProcessing": true,
+    "totalChunks": 4,
+    "successfulChunks": 2
+  }
+}

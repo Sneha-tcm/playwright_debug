@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-12-23T05:37:08.997Z",
+  "url": "https://www.tickingminds.com/contact-us/",
+  "commands": [],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "your-name",
+        "label": "Your Name (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No name found in the dataset.",
+        "selector": "#your-name"
+      },
+      {
+        "fieldId": "your-email",
+        "label": "Your Email (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No email found in the dataset.",
+        "selector": "#your-email"
+      },
+      {
+        "fieldId": "your-phone",
+        "label": "Your Phone Number (Required)",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No phone number found in the dataset.",
+        "selector": "#your-phone"
+      },
+      {
+        "fieldId": "services[]",
+        "label": "Services",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No services found in the dataset.",
+        "selector": "#services"
+      },
+      {
+        "fieldId": "your-message",
+        "label": "Your Message",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "No message found in the dataset.",
+        "selector": "#your-message"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Your Name (Required)",
+        "reason": "No name found in the dataset."
+      },
+      {
+        "label": "Your Email (Required)",
+        "reason": "No email found in the dataset."
+      },
+      {
+        "label": "Your Phone Number (Required)",
+        "reason": "No phone number found in the dataset."
+      },
+      {
+        "label": "Services",
+        "reason": "No services found in the dataset."
+      },
+      {
+        "label": "Your Message",
+        "reason": "No message found in the dataset."
+      }
+    ]
+  }
+}

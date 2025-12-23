@@ -1,0 +1,722 @@
+{
+  "timestamp": "2025-12-12T08:55:05.455Z",
+  "url": "https://svpindia.org/get-involved/apply-for-a-grant/",
+  "commands": [
+    {
+      "fieldId": "form_fields[email]",
+      "selector": "#form_fields[email]",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of the organization",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_803ef81]",
+      "selector": "#form_fields[field_803ef81]",
+      "value": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Areas of Operation",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "form_fields[field_4b5dffc]",
+      "selector": "#form_fields[field_4b5dffc]",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Founder’s name",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_f1ab3a7]",
+      "selector": "#form_fields[field_f1ab3a7]",
+      "value": "NO 5 3rd main road, R A Puram Chennai",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Head office Address",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_b6c391c]",
+      "selector": "#form_fields[field_b6c391c]",
+      "value": "AAGCG8730N23ch01",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "12A",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_1c4cfc0]",
+      "selector": "#form_fields[field_1c4cfc0]",
+      "value": "AAGCG8730N23ch02 ",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "80G",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_c25c6c4]",
+      "selector": "#form_fields[field_c25c6c4]",
+      "value": "No",
+      "type": "text",
+      "fieldType": "select-one",
+      "action": "fill",
+      "label": "FCRA",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_0cb653d]",
+      "selector": "#form_fields\\[field_0cb653d\\]",
+      "value": "Organization name(as per PAN): Global Adjustments Foundation\nOrganization PAN number: AAGCG8730N\n12A / 10(23C) Validity: 23-03-2016\nRegistered under which Act?*: Sec 8 of Companys act\nOffice location(address): NO 5 3rd main road, R A Puram Chennai\nPincode: 600018\nRegistration number of 12A / 10(23C): AAGCG8730N23ch01\nRegistration number of 80G: AAGCG8730N23ch02 \nFCRA Validity: null\nRegistration number: null\nDate of registration: null\nNPO type: Not for profit public benefit organisation\nLast registration renewal date: null\nState: Tamil Nadu\nRegistration authority: Comapnys ACT\nNumber of office bearers including members: 5\nFounder's name: Ranjini Manian\nMobile number: 90877675242\nIs the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?: yes\nDoes the organisation have a valid 12A or 10(23C), as applicable?: null\nHas the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered): yes\nDoes the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered): yes\nRegistered under which Act?: Companys ACT\nBrief description of the organization/agency including Goals and Objectives.: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.\nGender: Female\nEmail: sneha@gmail.com\n12A / 10(23C) Validity: 46972",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Upload Document",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_4429618]",
+      "selector": "#form_fields\\[field_4429618\\]",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_ad5d667]",
+      "selector": "#form_fields\\[field_ad5d667\\]",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "tel",
+      "action": "fill",
+      "label": "Mobile Number",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_8e270be]",
+      "selector": "#form_fields\\[field_8e270be\\]",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Email Address",
+      "confidence": 1
+    },
+    {
+      "fieldId": "form_fields[field_e7534ba]",
+      "selector": "#form_fields\\[field_e7534ba\\]",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "Type your answer",
+      "confidence": 1
+    },
+    {
+      "fieldId": "react-select-2-input",
+      "selector": "#react-select-2-input",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "React-Select-2-Input",
+      "confidence": 1
+    },
+    {
+      "fieldId": "Organisation",
+      "selector": "#Organisation",
+      "value": "Global Adjustments Foundation",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name of the organisation",
+      "confidence": 1
+    },
+    {
+      "fieldId": "year-of-founding",
+      "selector": "#year-of-founding",
+      "value": "2016",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Year of Founding",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "area-of-operation",
+      "selector": "#area-of-operation",
+      "value": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc.",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Areas of Operation",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "founders-name",
+      "selector": "#founders-name",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Founder’s name",
+      "confidence": 1
+    },
+    {
+      "fieldId": "Address",
+      "selector": "#Address",
+      "value": "NO 5 3rd main road, R A Puram Chennai, Tamil Nadu, 600018",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Head office Address",
+      "confidence": 1
+    },
+    {
+      "fieldId": "12A",
+      "selector": "#12A",
+      "value": "AAGCG8730N23ch01",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "12A",
+      "confidence": 1
+    },
+    {
+      "fieldId": "12A-file-upload",
+      "selector": "#12A-file-upload",
+      "value": "12A / 10(23C) Validity: 23-03-2016\nRegistered under Act: Sec 8 of Companys act\nRegistration number: AAGCG8730N23ch01\nOrganization: Global Adjustments Foundation\nOffice location: NO 5 3rd main road, R A Puram Chennai, Tamil Nadu, 600018\nPAN: AAGCG8730N\nRegistration authority: Comapnys ACT\nNumber of office bearers including members: 5\nFounder: Ranjini Manian\nMobile number: 90877675242\nEmail: sneha@gmail.com\nNPO type: Not for profit public benefit organisation\nDescription: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Upload 12A Document",
+      "confidence": 0.95
+    },
+    {
+      "fieldId": "80G",
+      "selector": "#80G",
+      "value": "AAGCG8730N23ch02",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "80G",
+      "confidence": 1
+    },
+    {
+      "fieldId": "80G-file-upload",
+      "selector": "#80G-file-upload",
+      "value": "80G Registration Number: AAGCG8730N23ch02\nOrganization: Global Adjustments Foundation\nPAN: AAGCG8730N\nRegistered under Act: Sec 8 of Companys act\nOffice location: NO 5 3rd main road, R A Puram Chennai, Tamil Nadu, 600018\nRegistration authority: Comapnys ACT\nNPO type: Not for profit public benefit organisation\nDescription: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc.",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Upload 80G Document",
+      "confidence": 0.9
+    },
+    {
+      "fieldId": "FCRA-file-upload",
+      "selector": "#FCRA-file-upload",
+      "value": "FCRA Document: No FCRA registration or validity information found in dataset for this organization.",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Upload FCRA Document",
+      "confidence": 0.8
+    },
+    {
+      "fieldId": "Co-ordinate-name",
+      "selector": "#Co-ordinate-name",
+      "value": "Ranjini Manian",
+      "type": "text",
+      "fieldType": "text",
+      "action": "fill",
+      "label": "Name",
+      "confidence": 1
+    },
+    {
+      "fieldId": "Co-ordinate-Mobile-Number",
+      "selector": "#Co-ordinate-Mobile-Number",
+      "value": "90877675242",
+      "type": "text",
+      "fieldType": "tel",
+      "action": "fill",
+      "label": "Mobile Number \t\t\t\t\t*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "Co-ordinate-Email-Address",
+      "selector": "#Co-ordinate-Email-Address",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Email Address \t\t\t\t\t*",
+      "confidence": 1
+    },
+    {
+      "fieldId": "domain-textarea",
+      "selector": "#domain-textarea",
+      "value": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+      "type": "text",
+      "fieldType": "textarea",
+      "action": "fill",
+      "label": "Type Your Answer ",
+      "confidence": 1
+    },
+    {
+      "fieldId": "Upload_12A_Document",
+      "selector": "#Upload_12A_Document",
+      "value": "Organization name(as per PAN): Global Adjustments Foundation\nOrganization PAN number: AAGCG8730N\n12A / 10(23C) Validity: 23-03-2016\nRegistered under which Act?: Sec 8 of Companys act\nOffice location(address): NO 5 3rd main road, R A Puram Chennai\nPincode: 600018\nRegistration number of 12A / 10(23C): AAGCG8730N23ch01\nRegistration number of 80G: AAGCG8730N23ch02\nNPO type: Not for profit public benefit organisation\nState: Tamil Nadu\nRegistration authority: Comapnys ACT\nNumber of office bearers including members: 5\nFounder's name: Ranjini Manian\nMobile number: 90877675242\nIs the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?: yes\nHas the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered): yes\nDoes the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered): yes\nRegistered under which Act?: Companys ACT\nBrief description of the organization/agency including Goals and Objectives.: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.\nGender: Female\nEmail: sneha@gmail.com\n12A / 10(23C) Validity: 46972",
+      "type": "document",
+      "fieldType": "file",
+      "action": "document",
+      "label": "Upload 12A Document",
+      "confidence": 1
+    },
+    {
+      "fieldId": "mf-email",
+      "selector": "#mf-email",
+      "value": "sneha@gmail.com",
+      "type": "text",
+      "fieldType": "email",
+      "action": "fill",
+      "label": "Enter E-mail Address ",
+      "confidence": 1
+    }
+  ],
+  "aiResult": {
+    "mappedFields": [
+      {
+        "fieldId": "form_fields[field_a58ce83]",
+        "label": "Form Fieldsfield A58ce83",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No explicit city information found in dataset matching form city options",
+        "selector": "#form_fields[field_a58ce83]"
+      },
+      {
+        "fieldId": "form_fields[email]",
+        "label": "Name of the organization",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Organization name as per PAN matches organization name field",
+        "selector": "#form_fields[email]"
+      },
+      {
+        "fieldId": "form_fields[field_31014a5]",
+        "label": "Website Link",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website link found in dataset",
+        "selector": "#form_fields[field_31014a5]"
+      },
+      {
+        "fieldId": "form_fields[field_2a21e17]",
+        "label": "Year of Founding",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No explicit founding year found; date of registration missing",
+        "selector": "#form_fields[field_2a21e17]"
+      },
+      {
+        "fieldId": "form_fields[field_803ef81]",
+        "label": "Areas of Operation",
+        "mappedValue": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped from brief description of the organization/agency including Goals and Objectives",
+        "selector": "#form_fields[field_803ef81]"
+      },
+      {
+        "fieldId": "form_fields[field_4b5dffc]",
+        "label": "Founder’s name",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Founder's name explicitly present in dataset",
+        "selector": "#form_fields[field_4b5dffc]"
+      },
+      {
+        "fieldId": "form_fields[field_f1ab3a7]",
+        "label": "Head office Address",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Office location address found in dataset",
+        "selector": "#form_fields[field_f1ab3a7]"
+      },
+      {
+        "fieldId": "form_fields[field_b6c391c]",
+        "label": "12A",
+        "mappedValue": "AAGCG8730N23ch01",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "12A registration number found in dataset",
+        "selector": "#form_fields[field_b6c391c]"
+      },
+      {
+        "fieldId": "form_fields[field_1c4cfc0]",
+        "label": "80G",
+        "mappedValue": "AAGCG8730N23ch02 ",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "80G registration number found in dataset",
+        "selector": "#form_fields[field_1c4cfc0]"
+      },
+      {
+        "fieldId": "form_fields[field_c25c6c4]",
+        "label": "FCRA",
+        "mappedValue": "No",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "FCRA validity is null indicating no FCRA registration",
+        "selector": "#form_fields[field_c25c6c4]"
+      },
+      {
+        "fieldId": "form_fields[field_0cb653d]",
+        "label": "Upload Document",
+        "mappedValue": "Organization name(as per PAN): Global Adjustments Foundation\nOrganization PAN number: AAGCG8730N\n12A / 10(23C) Validity: 23-03-2016\nRegistered under which Act?*: Sec 8 of Companys act\nOffice location(address): NO 5 3rd main road, R A Puram Chennai\nPincode: 600018\nRegistration number of 12A / 10(23C): AAGCG8730N23ch01\nRegistration number of 80G: AAGCG8730N23ch02 \nFCRA Validity: null\nRegistration number: null\nDate of registration: null\nNPO type: Not for profit public benefit organisation\nLast registration renewal date: null\nState: Tamil Nadu\nRegistration authority: Comapnys ACT\nNumber of office bearers including members: 5\nFounder's name: Ranjini Manian\nMobile number: 90877675242\nIs the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?: yes\nDoes the organisation have a valid 12A or 10(23C), as applicable?: null\nHas the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered): yes\nDoes the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered): yes\nRegistered under which Act?: Companys ACT\nBrief description of the organization/agency including Goals and Objectives.: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.\nGender: Female\nEmail: sneha@gmail.com\n12A / 10(23C) Validity: 46972",
+        "valueType": "document",
+        "confidence": 1,
+        "reasoning": "Mapped full document content from the organization's registration and profile data in dataset.",
+        "selector": "#form_fields\\[field_0cb653d\\]"
+      },
+      {
+        "fieldId": "form_fields[field_4429618]",
+        "label": "Name",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped Founder's name as the closest personal name relevant for 'Name' field.",
+        "selector": "#form_fields\\[field_4429618\\]"
+      },
+      {
+        "fieldId": "form_fields[field_d0da3a3]",
+        "label": "Designation",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No designation information available in dataset.",
+        "selector": "#form_fields\\[field_d0da3a3\\]"
+      },
+      {
+        "fieldId": "form_fields[field_ad5d667]",
+        "label": "Mobile Number",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped mobile number from organization contact data.",
+        "selector": "#form_fields\\[field_ad5d667\\]"
+      },
+      {
+        "fieldId": "form_fields[field_8e270be]",
+        "label": "Email Address",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped email address from organization contact data.",
+        "selector": "#form_fields\\[field_8e270be\\]"
+      },
+      {
+        "fieldId": "form_fields[field_e7534ba]",
+        "label": "Type your answer",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped organization's brief description as answer to open text field.",
+        "selector": "#form_fields\\[field_e7534ba\\]"
+      },
+      {
+        "fieldId": "form_fields[field_0b8b2a2]",
+        "label": "Type your answer",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No additional relevant text data found for this field.",
+        "selector": "#form_fields\\[field_0b8b2a2\\]"
+      },
+      {
+        "fieldId": "react-select-2-input",
+        "label": "React-Select-2-Input",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped organization name for React-Select input field.",
+        "selector": "#react-select-2-input"
+      },
+      {
+        "fieldId": "Organisation",
+        "label": "Name of the organisation",
+        "mappedValue": "Global Adjustments Foundation",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped organization name from dataset.",
+        "selector": "#Organisation"
+      },
+      {
+        "fieldId": "website-link",
+        "label": "Website Link",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No website link found in dataset.",
+        "selector": "#website-link"
+      },
+      {
+        "fieldId": "year-of-founding",
+        "label": "Year of Founding",
+        "mappedValue": "2016",
+        "valueType": "text",
+        "confidence": 0.9,
+        "reasoning": "Mapped to Date of registration field in dataset as year of founding",
+        "selector": "#year-of-founding"
+      },
+      {
+        "fieldId": "area-of-operation",
+        "label": "Areas of Operation",
+        "mappedValue": "ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc.",
+        "valueType": "text",
+        "confidence": 0.95,
+        "reasoning": "Mapped to Brief description of the organization/agency including Goals and Objectives from dataset",
+        "selector": "#area-of-operation"
+      },
+      {
+        "fieldId": "founders-name",
+        "label": "Founder’s name",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to Founder's name field in dataset",
+        "selector": "#founders-name"
+      },
+      {
+        "fieldId": "Address",
+        "label": "Head office Address",
+        "mappedValue": "NO 5 3rd main road, R A Puram Chennai, Tamil Nadu, 600018",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to Office location(address), State and Pincode fields concatenated",
+        "selector": "#Address"
+      },
+      {
+        "fieldId": "12A",
+        "label": "12A",
+        "mappedValue": "AAGCG8730N23ch01",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to Registration number of 12A / 10(23C) from dataset",
+        "selector": "#12A"
+      },
+      {
+        "fieldId": "12A-file-upload",
+        "label": "Upload 12A Document",
+        "mappedValue": "12A / 10(23C) Validity: 23-03-2016\nRegistered under Act: Sec 8 of Companys act\nRegistration number: AAGCG8730N23ch01\nOrganization: Global Adjustments Foundation\nOffice location: NO 5 3rd main road, R A Puram Chennai, Tamil Nadu, 600018\nPAN: AAGCG8730N\nRegistration authority: Comapnys ACT\nNumber of office bearers including members: 5\nFounder: Ranjini Manian\nMobile number: 90877675242\nEmail: sneha@gmail.com\nNPO type: Not for profit public benefit organisation\nDescription: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "document",
+        "confidence": 0.95,
+        "reasoning": "Generated full 12A document content from dataset fields related to 12A registration",
+        "selector": "#12A-file-upload"
+      },
+      {
+        "fieldId": "80G",
+        "label": "80G",
+        "mappedValue": "AAGCG8730N23ch02",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to Registration number of 80G from dataset",
+        "selector": "#80G"
+      },
+      {
+        "fieldId": "80G-file-upload",
+        "label": "Upload 80G Document",
+        "mappedValue": "80G Registration Number: AAGCG8730N23ch02\nOrganization: Global Adjustments Foundation\nPAN: AAGCG8730N\nRegistered under Act: Sec 8 of Companys act\nOffice location: NO 5 3rd main road, R A Puram Chennai, Tamil Nadu, 600018\nRegistration authority: Comapnys ACT\nNPO type: Not for profit public benefit organisation\nDescription: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc.",
+        "valueType": "document",
+        "confidence": 0.9,
+        "reasoning": "Generated full 80G document content from dataset fields related to 80G registration",
+        "selector": "#80G-file-upload"
+      },
+      {
+        "fieldId": "react-select-3-input",
+        "label": "React-Select-3-Input",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No relevant information found in dataset for this field",
+        "selector": "#react-select-3-input"
+      },
+      {
+        "fieldId": "FCRA-file-upload",
+        "label": "Upload FCRA Document",
+        "mappedValue": "FCRA Document: No FCRA registration or validity information found in dataset for this organization.",
+        "valueType": "document",
+        "confidence": 0.8,
+        "reasoning": "No FCRA document or registration found in dataset, generated placeholder text",
+        "selector": "#FCRA-file-upload"
+      },
+      {
+        "fieldId": "Co-ordinate-name",
+        "label": "Name",
+        "mappedValue": "Ranjini Manian",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped to the authorized signatory or point of contact name from dataset's mobile number and name field",
+        "selector": "#Co-ordinate-name"
+      },
+      {
+        "fieldId": "Co-ordinate-Designation",
+        "label": "Designation",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No designation information available in dataset for the contact person",
+        "selector": "#Co-ordinate-Designation"
+      },
+      {
+        "fieldId": "Co-ordinate-Mobile-Number",
+        "label": "Mobile Number \t\t\t\t\t*",
+        "mappedValue": "90877675242",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped exact mobile number of authorized contact from dataset",
+        "selector": "#Co-ordinate-Mobile-Number"
+      },
+      {
+        "fieldId": "Co-ordinate-Email-Address",
+        "label": "Email Address \t\t\t\t\t*",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped exact email address from dataset",
+        "selector": "#Co-ordinate-Email-Address"
+      },
+      {
+        "fieldId": "domain-textarea",
+        "label": "Type Your Answer ",
+        "mappedValue": "Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Mapped brief description of the organization including goals and objectives from dataset",
+        "selector": "#domain-textarea"
+      },
+      {
+        "fieldId": "challenges-textarea",
+        "label": "Type Your Answer ",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No challenges or similar information found in dataset",
+        "selector": "#challenges-textarea"
+      },
+      {
+        "fieldId": "g-recaptcha-response",
+        "label": "G-Recaptcha-Response",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No captcha response data available in dataset",
+        "selector": "#g-recaptcha-response"
+      },
+      {
+        "fieldId": "react-select-4-input",
+        "label": "React-Select-4-Input",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No relevant data found for this field in dataset",
+        "selector": "#react-select-4-input"
+      },
+      {
+        "fieldId": "Upload_12A_Document",
+        "label": "Upload 12A Document",
+        "mappedValue": "Organization name(as per PAN): Global Adjustments Foundation\nOrganization PAN number: AAGCG8730N\n12A / 10(23C) Validity: 23-03-2016\nRegistered under which Act?: Sec 8 of Companys act\nOffice location(address): NO 5 3rd main road, R A Puram Chennai\nPincode: 600018\nRegistration number of 12A / 10(23C): AAGCG8730N23ch01\nRegistration number of 80G: AAGCG8730N23ch02\nNPO type: Not for profit public benefit organisation\nState: Tamil Nadu\nRegistration authority: Comapnys ACT\nNumber of office bearers including members: 5\nFounder's name: Ranjini Manian\nMobile number: 90877675242\nIs the organisation registered as a Trust/ Society/ Section 8 or Section 25 Company/ Liaison Office / other Non Profit Organisation in India?: yes\nHas the organisation filed Income Tax returns for last 3 years? (Or from the time the organisation has been registered): yes\nDoes the organisation have audit reports for last 3 years? (Or from the time the organisation has been registered): yes\nRegistered under which Act?: Companys ACT\nBrief description of the organization/agency including Goals and Objectives.: Champion a Woman She will build a nation is the tag line. ChampionWoman strives to impact women and girls to becone carrer intentional and be financially independent. This is done by conducting Chmapionwoman training on life leadership for women and girls. The popular broad topics are Self Esteem building, Managing relationships, Stress Management, work life integration, parenting etc. The vision is to create a generation of calm, resilient and powerful women.\nGender: Female\nEmail: sneha@gmail.com\n12A / 10(23C) Validity: 46972",
+        "valueType": "document",
+        "confidence": 1,
+        "reasoning": "Mapped full content of 12A document from dataset file content as text",
+        "selector": "#Upload_12A_Document"
+      },
+      {
+        "fieldId": "react-select-5-input",
+        "label": "React-Select-5-Input",
+        "mappedValue": null,
+        "valueType": "text",
+        "confidence": 0,
+        "reasoning": "No relevant data found for this field in dataset",
+        "selector": "#react-select-5-input"
+      },
+      {
+        "fieldId": "mf-email",
+        "label": "Enter E-mail Address ",
+        "mappedValue": "sneha@gmail.com",
+        "valueType": "text",
+        "confidence": 1,
+        "reasoning": "Email address found in the organization's profile data under 'Email' field.",
+        "selector": "#mf-email"
+      }
+    ],
+    "missingFields": [
+      {
+        "label": "Form Fieldsfield A58ce83",
+        "reason": "No explicit city information found in dataset matching form city options"
+      },
+      {
+        "label": "Website Link",
+        "reason": "No website link found in dataset"
+      },
+      {
+        "label": "Year of Founding",
+        "reason": "No explicit founding year found; date of registration missing"
+      },
+      {
+        "label": "Designation",
+        "reason": "No designation information available in dataset."
+      },
+      {
+        "label": "Type your answer",
+        "reason": "No additional relevant text data found for this field."
+      },
+      {
+        "label": "Website Link",
+        "reason": "No website link found in dataset."
+      },
+      {
+        "label": "React-Select-3-Input",
+        "reason": "No relevant information in dataset for this field"
+      },
+      {
+        "label": "Designation",
+        "reason": "No designation information available in dataset for the contact person"
+      },
+      {
+        "label": "Type Your Answer ",
+        "reason": "No challenges or similar information found in dataset"
+      },
+      {
+        "label": "G-Recaptcha-Response",
+        "reason": "No captcha response data available in dataset"
+      },
+      {
+        "label": "React-Select-4-Input",
+        "reason": "No relevant data found for this field in dataset"
+      },
+      {
+        "label": "React-Select-5-Input",
+        "reason": "No relevant data found for this field in dataset"
+      }
+    ],
+    "chunkedProcessing": true,
+    "totalChunks": 5,
+    "successfulChunks": 5
+  }
+}

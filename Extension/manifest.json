@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "AI Autofill Extension - Direct Fill",
-  "version": "2.0.0",
+  "name": "cogniFill",
+  "version": "1.0.0",
   "description": "Automatically fill forms using AI-powered field mapping with direct autofill",
 
   "action": {
